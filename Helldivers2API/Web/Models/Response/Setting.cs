@@ -8,7 +8,7 @@ namespace Helldivers2API.Web
     /// <summary>
     /// Nested property in Assignment
     /// </summary>
-    internal class Setting
+    public class Setting
     {
 
         // TODO: define enums for types

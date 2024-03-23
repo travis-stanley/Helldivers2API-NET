@@ -23,7 +23,7 @@ namespace Helldivers2API.Web.Clients.Interfaces
         /// <param name="warId">The season to get assignments from</param>
         /// <param name="cancel"></param>
         /// <returns></returns>
-        Task<List<Assignment>> Get(int warId, CancellationToken cancel = default);
+        Task<Assignment[]> Get(int warId, CancellationToken cancel = default);
 
     }
 }

@@ -17,11 +17,11 @@ namespace Helldivers2API.Web.Clients
             return API.Get<AssignmentResponse>(URLs.Assignment(request.WarId), request.BuildQueryParams(), cancel);
         }
 
-        public Task<List<Assignment>> Get(int warId, CancellationToken cancel = default)
+        public Task<Assignment[]> Get(int warId, CancellationToken cancel = default)
         {
             Ensure.ArgumentNotNull(warId, nameof(warId));
 
-            return API.Get<List<Assignment>>(URLs.Assignment(warId), cancel);
+            return API.Get<Assignment[]>(URLs.Assignment(warId), cancel);
         }
 
     }

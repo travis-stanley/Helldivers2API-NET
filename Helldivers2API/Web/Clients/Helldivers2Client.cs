@@ -12,14 +12,17 @@ namespace Helldivers2API.Web.Clients
 {
     internal class Helldivers2Client : IHelldivers2Client
     {
-        private readonly IAPIConnector _apiConnector;
+        public readonly int warId;
+        private readonly IAPIConnector _apiConnector;        
 
-        public Helldivers2Client() : this(Helldivers2ClientConfig.CreateCustomHeaders()) { }
+        public Helldivers2Client(int warId) : this(warId, Helldivers2ClientConfig.CreateCustomHeaders()) { }
 
-        public Helldivers2Client(Helldivers2ClientConfig config)
+        public Helldivers2Client(int warId, Helldivers2ClientConfig config)
         {
+            Ensure.ArgumentNotNull(warId, nameof(warId));
             Ensure.ArgumentNotNull(config, nameof(config));
 
+            this.warId = warId;
             _apiConnector = config.BuildAPIConnector();
             _apiConnector.ResponseReceived += (sender, response) =>
             {

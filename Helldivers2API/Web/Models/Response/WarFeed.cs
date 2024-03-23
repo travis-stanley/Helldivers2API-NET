@@ -9,7 +9,7 @@ namespace Helldivers2API.Web
     /// WarFeed model, aka news feed.  
     /// This is said to be the data that is shown under Dispatch but the data in-game does not match the response.
     /// </summary>
-    internal class WarFeed
+    public class WarFeed
     {
         [JsonProperty("id")]
         public long Id { get; set; } = default!;
