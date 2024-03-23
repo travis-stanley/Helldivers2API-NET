@@ -6,7 +6,7 @@ using Helldivers2API.Web.Http;
 namespace Helldivers2API.Web
 {
   [Serializable]
-  public class APITooManyRequestsException : APIException
+  internal class APITooManyRequestsException : APIException
   {
     public TimeSpan RetryAfter { get; }
 

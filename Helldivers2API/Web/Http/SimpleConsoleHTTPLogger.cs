@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Helldivers2API.Web.Http
 {
-  public class SimpleConsoleHTTPLogger : IHTTPLogger
+  internal class SimpleConsoleHTTPLogger : IHTTPLogger
   {
     private const string OnRequestFormat = "\n{0} {1} [{2}] {3}";
 

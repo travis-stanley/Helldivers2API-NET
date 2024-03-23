@@ -8,7 +8,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace Helldivers2API.Web.Http
 {
-  public class NewtonsoftJSONSerializer : IJSONSerializer
+  internal class NewtonsoftJSONSerializer : IJSONSerializer
   {
     private readonly JsonSerializerSettings _serializerSettings;
 

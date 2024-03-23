@@ -1,6 +1,6 @@
 namespace Helldivers2API.Web
 {
-  public class AssignmentResponse
+  internal class AssignmentResponse
   {
     public List<Assignment> Assignments { get; set; } = default!;
   }

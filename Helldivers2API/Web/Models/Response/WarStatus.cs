@@ -8,7 +8,7 @@ namespace Helldivers2API.Web
     /// <summary>
     /// WarStatus model 
     /// </summary>
-    public class WarStatus
+    internal class WarStatus
     {
         [JsonProperty("warId")]
         public int WarId { get; set; } = default!;

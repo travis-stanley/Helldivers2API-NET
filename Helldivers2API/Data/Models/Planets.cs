@@ -14,7 +14,7 @@ using Helldivers2API.Data.Cache;
 namespace Helldivers2API.Data.Models
 {
 
-    public class SuperEarth : IPlanet, IDataCache
+    internal class SuperEarth : IPlanet, IDataCache
     {
         const int Id = 0;
         const string Name = "Super Earth";
@@ -32,7 +32,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class KlenDahthII : IPlanet, IDataCache
+    internal class KlenDahthII : IPlanet, IDataCache
     {
         const int Id = 1;
         const string Name = "Klen Dahth II";
@@ -50,7 +50,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PathfinderV : IPlanet, IDataCache
+    internal class PathfinderV : IPlanet, IDataCache
     {
         const int Id = 2;
         const string Name = "Pathfinder V";
@@ -68,7 +68,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class WidowsHarbor : IPlanet, IDataCache
+    internal class WidowsHarbor : IPlanet, IDataCache
     {
         const int Id = 3;
         const string Name = "Widow's Harbor";
@@ -86,7 +86,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class NewHaven : IPlanet, IDataCache
+    internal class NewHaven : IPlanet, IDataCache
     {
         const int Id = 4;
         const string Name = "New Haven";
@@ -104,7 +104,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PilenV : IPlanet, IDataCache
+    internal class PilenV : IPlanet, IDataCache
     {
         const int Id = 5;
         const string Name = "Pilen V";
@@ -122,7 +122,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class HydrofallPrime : IPlanet, IDataCache
+    internal class HydrofallPrime : IPlanet, IDataCache
     {
         const int Id = 6;
         const string Name = "Hydrofall Prime";
@@ -140,7 +140,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ZeaRugosia : IPlanet, IDataCache
+    internal class ZeaRugosia : IPlanet, IDataCache
     {
         const int Id = 7;
         const string Name = "Zea Rugosia";
@@ -158,7 +158,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Darrowsport : IPlanet, IDataCache
+    internal class Darrowsport : IPlanet, IDataCache
     {
         const int Id = 8;
         const string Name = "Darrowsport";
@@ -176,7 +176,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class FornskogurII : IPlanet, IDataCache
+    internal class FornskogurII : IPlanet, IDataCache
     {
         const int Id = 9;
         const string Name = "Fornskogur II";
@@ -194,7 +194,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Midasburg : IPlanet, IDataCache
+    internal class Midasburg : IPlanet, IDataCache
     {
         const int Id = 10;
         const string Name = "Midasburg";
@@ -212,7 +212,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class CerberusIIIc : IPlanet, IDataCache
+    internal class CerberusIIIc : IPlanet, IDataCache
     {
         const int Id = 11;
         const string Name = "Cerberus IIIc";
@@ -230,7 +230,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ProsperityFalls : IPlanet, IDataCache
+    internal class ProsperityFalls : IPlanet, IDataCache
     {
         const int Id = 12;
         const string Name = "Prosperity Falls";
@@ -248,7 +248,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class OkulVI : IPlanet, IDataCache
+    internal class OkulVI : IPlanet, IDataCache
     {
         const int Id = 13;
         const string Name = "Okul VI";
@@ -266,7 +266,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class MartyrsBay : IPlanet, IDataCache
+    internal class MartyrsBay : IPlanet, IDataCache
     {
         const int Id = 14;
         const string Name = "Martyr's Bay";
@@ -284,7 +284,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class FreedomPeak : IPlanet, IDataCache
+    internal class FreedomPeak : IPlanet, IDataCache
     {
         const int Id = 15;
         const string Name = "Freedom Peak";
@@ -302,7 +302,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class FortUnion : IPlanet, IDataCache
+    internal class FortUnion : IPlanet, IDataCache
     {
         const int Id = 16;
         const string Name = "Fort Union";
@@ -320,7 +320,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Kelvinor : IPlanet, IDataCache
+    internal class Kelvinor : IPlanet, IDataCache
     {
         const int Id = 17;
         const string Name = "Kelvinor";
@@ -338,7 +338,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Wraith : IPlanet, IDataCache
+    internal class Wraith : IPlanet, IDataCache
     {
         const int Id = 18;
         const string Name = "Wraith";
@@ -356,7 +356,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Igla : IPlanet, IDataCache
+    internal class Igla : IPlanet, IDataCache
     {
         const int Id = 19;
         const string Name = "Igla";
@@ -374,7 +374,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class NewKiruna : IPlanet, IDataCache
+    internal class NewKiruna : IPlanet, IDataCache
     {
         const int Id = 20;
         const string Name = "New Kiruna";
@@ -392,7 +392,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class FortJustice : IPlanet, IDataCache
+    internal class FortJustice : IPlanet, IDataCache
     {
         const int Id = 21;
         const string Name = "Fort Justice";
@@ -410,7 +410,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ZegemaParadise : IPlanet, IDataCache
+    internal class ZegemaParadise : IPlanet, IDataCache
     {
         const int Id = 22;
         const string Name = "Zegema Paradise";
@@ -428,7 +428,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Providence : IPlanet, IDataCache
+    internal class Providence : IPlanet, IDataCache
     {
         const int Id = 23;
         const string Name = "Providence";
@@ -446,7 +446,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Primordia : IPlanet, IDataCache
+    internal class Primordia : IPlanet, IDataCache
     {
         const int Id = 24;
         const string Name = "Primordia";
@@ -464,7 +464,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Sulfura : IPlanet, IDataCache
+    internal class Sulfura : IPlanet, IDataCache
     {
         const int Id = 25;
         const string Name = "Sulfura";
@@ -482,7 +482,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class NublariaI : IPlanet, IDataCache
+    internal class NublariaI : IPlanet, IDataCache
     {
         const int Id = 26;
         const string Name = "Nublaria I";
@@ -500,7 +500,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Krakatwo : IPlanet, IDataCache
+    internal class Krakatwo : IPlanet, IDataCache
     {
         const int Id = 27;
         const string Name = "Krakatwo";
@@ -518,7 +518,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Volterra : IPlanet, IDataCache
+    internal class Volterra : IPlanet, IDataCache
     {
         const int Id = 28;
         const string Name = "Volterra";
@@ -536,7 +536,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Crucible : IPlanet, IDataCache
+    internal class Crucible : IPlanet, IDataCache
     {
         const int Id = 29;
         const string Name = "Crucible";
@@ -554,7 +554,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Veil : IPlanet, IDataCache
+    internal class Veil : IPlanet, IDataCache
     {
         const int Id = 30;
         const string Name = "Veil";
@@ -572,7 +572,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class MarreIV : IPlanet, IDataCache
+    internal class MarreIV : IPlanet, IDataCache
     {
         const int Id = 31;
         const string Name = "Marre IV";
@@ -590,7 +590,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class FortSanctuary : IPlanet, IDataCache
+    internal class FortSanctuary : IPlanet, IDataCache
     {
         const int Id = 32;
         const string Name = "Fort Sanctuary";
@@ -608,7 +608,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class SeyshelBeach : IPlanet, IDataCache
+    internal class SeyshelBeach : IPlanet, IDataCache
     {
         const int Id = 33;
         const string Name = "Seyshel Beach";
@@ -626,7 +626,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Hellmire : IPlanet, IDataCache
+    internal class Hellmire : IPlanet, IDataCache
     {
         const int Id = 34;
         const string Name = "Hellmire";
@@ -644,7 +644,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Effluvia : IPlanet, IDataCache
+    internal class Effluvia : IPlanet, IDataCache
     {
         const int Id = 35;
         const string Name = "Effluvia";
@@ -662,7 +662,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Solghast : IPlanet, IDataCache
+    internal class Solghast : IPlanet, IDataCache
     {
         const int Id = 36;
         const string Name = "Solghast";
@@ -680,7 +680,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Diluvia : IPlanet, IDataCache
+    internal class Diluvia : IPlanet, IDataCache
     {
         const int Id = 37;
         const string Name = "Diluvia";
@@ -698,7 +698,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ViridiaPrime : IPlanet, IDataCache
+    internal class ViridiaPrime : IPlanet, IDataCache
     {
         const int Id = 38;
         const string Name = "Viridia Prime";
@@ -716,7 +716,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Obari : IPlanet, IDataCache
+    internal class Obari : IPlanet, IDataCache
     {
         const int Id = 39;
         const string Name = "Obari";
@@ -734,7 +734,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Myradesh : IPlanet, IDataCache
+    internal class Myradesh : IPlanet, IDataCache
     {
         const int Id = 40;
         const string Name = "Myradesh";
@@ -752,7 +752,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Atrama : IPlanet, IDataCache
+    internal class Atrama : IPlanet, IDataCache
     {
         const int Id = 41;
         const string Name = "Atrama";
@@ -770,7 +770,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Emeria : IPlanet, IDataCache
+    internal class Emeria : IPlanet, IDataCache
     {
         const int Id = 42;
         const string Name = "Emeria";
@@ -788,7 +788,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Barabos : IPlanet, IDataCache
+    internal class Barabos : IPlanet, IDataCache
     {
         const int Id = 43;
         const string Name = "Barabos";
@@ -806,7 +806,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Fenmire : IPlanet, IDataCache
+    internal class Fenmire : IPlanet, IDataCache
     {
         const int Id = 44;
         const string Name = "Fenmire";
@@ -824,7 +824,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mastia : IPlanet, IDataCache
+    internal class Mastia : IPlanet, IDataCache
     {
         const int Id = 45;
         const string Name = "Mastia";
@@ -842,7 +842,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Shallus : IPlanet, IDataCache
+    internal class Shallus : IPlanet, IDataCache
     {
         const int Id = 46;
         const string Name = "Shallus";
@@ -860,7 +860,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Krakabos : IPlanet, IDataCache
+    internal class Krakabos : IPlanet, IDataCache
     {
         const int Id = 47;
         const string Name = "Krakabos";
@@ -878,7 +878,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Iridica : IPlanet, IDataCache
+    internal class Iridica : IPlanet, IDataCache
     {
         const int Id = 48;
         const string Name = "Iridica";
@@ -896,7 +896,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Azterra : IPlanet, IDataCache
+    internal class Azterra : IPlanet, IDataCache
     {
         const int Id = 49;
         const string Name = "Azterra";
@@ -914,7 +914,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AzurSecundus : IPlanet, IDataCache
+    internal class AzurSecundus : IPlanet, IDataCache
     {
         const int Id = 50;
         const string Name = "Azur Secundus";
@@ -932,7 +932,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Ivis : IPlanet, IDataCache
+    internal class Ivis : IPlanet, IDataCache
     {
         const int Id = 51;
         const string Name = "Ivis";
@@ -950,7 +950,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Slif : IPlanet, IDataCache
+    internal class Slif : IPlanet, IDataCache
     {
         const int Id = 52;
         const string Name = "Slif";
@@ -968,7 +968,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Caramoor : IPlanet, IDataCache
+    internal class Caramoor : IPlanet, IDataCache
     {
         const int Id = 53;
         const string Name = "Caramoor";
@@ -986,7 +986,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Kharst : IPlanet, IDataCache
+    internal class Kharst : IPlanet, IDataCache
     {
         const int Id = 54;
         const string Name = "Kharst";
@@ -1004,7 +1004,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Eukoria : IPlanet, IDataCache
+    internal class Eukoria : IPlanet, IDataCache
     {
         const int Id = 55;
         const string Name = "Eukoria";
@@ -1022,7 +1022,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Myrium : IPlanet, IDataCache
+    internal class Myrium : IPlanet, IDataCache
     {
         const int Id = 56;
         const string Name = "Myrium";
@@ -1040,7 +1040,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class KerthSecundus : IPlanet, IDataCache
+    internal class KerthSecundus : IPlanet, IDataCache
     {
         const int Id = 57;
         const string Name = "Kerth Secundus";
@@ -1058,7 +1058,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Parsh : IPlanet, IDataCache
+    internal class Parsh : IPlanet, IDataCache
     {
         const int Id = 58;
         const string Name = "Parsh";
@@ -1076,7 +1076,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Reaf : IPlanet, IDataCache
+    internal class Reaf : IPlanet, IDataCache
     {
         const int Id = 59;
         const string Name = "Reaf";
@@ -1094,7 +1094,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Irulta : IPlanet, IDataCache
+    internal class Irulta : IPlanet, IDataCache
     {
         const int Id = 60;
         const string Name = "Irulta";
@@ -1112,7 +1112,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Emorath : IPlanet, IDataCache
+    internal class Emorath : IPlanet, IDataCache
     {
         const int Id = 61;
         const string Name = "Emorath";
@@ -1130,7 +1130,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class IldunaPrime : IPlanet, IDataCache
+    internal class IldunaPrime : IPlanet, IDataCache
     {
         const int Id = 62;
         const string Name = "Ilduna Prime";
@@ -1148,7 +1148,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Maw : IPlanet, IDataCache
+    internal class Maw : IPlanet, IDataCache
     {
         const int Id = 63;
         const string Name = "Maw";
@@ -1166,7 +1166,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Meridia : IPlanet, IDataCache
+    internal class Meridia : IPlanet, IDataCache
     {
         const int Id = 64;
         const string Name = "Meridia";
@@ -1184,7 +1184,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Borea : IPlanet, IDataCache
+    internal class Borea : IPlanet, IDataCache
     {
         const int Id = 65;
         const string Name = "Borea";
@@ -1202,7 +1202,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Curia : IPlanet, IDataCache
+    internal class Curia : IPlanet, IDataCache
     {
         const int Id = 66;
         const string Name = "Curia";
@@ -1220,7 +1220,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Tarsh : IPlanet, IDataCache
+    internal class Tarsh : IPlanet, IDataCache
     {
         const int Id = 67;
         const string Name = "Tarsh";
@@ -1238,7 +1238,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Shelt : IPlanet, IDataCache
+    internal class Shelt : IPlanet, IDataCache
     {
         const int Id = 68;
         const string Name = "Shelt";
@@ -1256,7 +1256,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Imber : IPlanet, IDataCache
+    internal class Imber : IPlanet, IDataCache
     {
         const int Id = 69;
         const string Name = "Imber";
@@ -1274,7 +1274,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Blistica : IPlanet, IDataCache
+    internal class Blistica : IPlanet, IDataCache
     {
         const int Id = 70;
         const string Name = "Blistica";
@@ -1292,7 +1292,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Ratch : IPlanet, IDataCache
+    internal class Ratch : IPlanet, IDataCache
     {
         const int Id = 71;
         const string Name = "Ratch";
@@ -1310,7 +1310,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Julheim : IPlanet, IDataCache
+    internal class Julheim : IPlanet, IDataCache
     {
         const int Id = 72;
         const string Name = "Julheim";
@@ -1328,7 +1328,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Valgaard : IPlanet, IDataCache
+    internal class Valgaard : IPlanet, IDataCache
     {
         const int Id = 73;
         const string Name = "Valgaard";
@@ -1346,7 +1346,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Arkturus : IPlanet, IDataCache
+    internal class Arkturus : IPlanet, IDataCache
     {
         const int Id = 74;
         const string Name = "Arkturus";
@@ -1364,7 +1364,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Esker : IPlanet, IDataCache
+    internal class Esker : IPlanet, IDataCache
     {
         const int Id = 75;
         const string Name = "Esker";
@@ -1382,7 +1382,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Terrek : IPlanet, IDataCache
+    internal class Terrek : IPlanet, IDataCache
     {
         const int Id = 76;
         const string Name = "Terrek";
@@ -1400,7 +1400,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Cirrus : IPlanet, IDataCache
+    internal class Cirrus : IPlanet, IDataCache
     {
         const int Id = 77;
         const string Name = "Cirrus";
@@ -1418,7 +1418,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Crimsica : IPlanet, IDataCache
+    internal class Crimsica : IPlanet, IDataCache
     {
         const int Id = 78;
         const string Name = "Crimsica";
@@ -1436,7 +1436,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Heeth : IPlanet, IDataCache
+    internal class Heeth : IPlanet, IDataCache
     {
         const int Id = 79;
         const string Name = "Heeth";
@@ -1454,7 +1454,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Veld : IPlanet, IDataCache
+    internal class Veld : IPlanet, IDataCache
     {
         const int Id = 80;
         const string Name = "Veld";
@@ -1472,7 +1472,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AltaV : IPlanet, IDataCache
+    internal class AltaV : IPlanet, IDataCache
     {
         const int Id = 81;
         const string Name = "Alta V";
@@ -1490,7 +1490,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class UrsicaXI : IPlanet, IDataCache
+    internal class UrsicaXI : IPlanet, IDataCache
     {
         const int Id = 82;
         const string Name = "Ursica XI";
@@ -1508,7 +1508,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Inari : IPlanet, IDataCache
+    internal class Inari : IPlanet, IDataCache
     {
         const int Id = 83;
         const string Name = "Inari";
@@ -1526,7 +1526,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Skaash : IPlanet, IDataCache
+    internal class Skaash : IPlanet, IDataCache
     {
         const int Id = 84;
         const string Name = "Skaash";
@@ -1544,7 +1544,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Moradesh : IPlanet, IDataCache
+    internal class Moradesh : IPlanet, IDataCache
     {
         const int Id = 85;
         const string Name = "Moradesh";
@@ -1562,7 +1562,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Rasp : IPlanet, IDataCache
+    internal class Rasp : IPlanet, IDataCache
     {
         const int Id = 86;
         const string Name = "Rasp";
@@ -1580,7 +1580,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Bashyr : IPlanet, IDataCache
+    internal class Bashyr : IPlanet, IDataCache
     {
         const int Id = 87;
         const string Name = "Bashyr";
@@ -1598,7 +1598,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Regnus : IPlanet, IDataCache
+    internal class Regnus : IPlanet, IDataCache
     {
         const int Id = 88;
         const string Name = "Regnus";
@@ -1616,7 +1616,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mog : IPlanet, IDataCache
+    internal class Mog : IPlanet, IDataCache
     {
         const int Id = 89;
         const string Name = "Mog";
@@ -1634,7 +1634,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Valmox : IPlanet, IDataCache
+    internal class Valmox : IPlanet, IDataCache
     {
         const int Id = 90;
         const string Name = "Valmox";
@@ -1652,7 +1652,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Iro : IPlanet, IDataCache
+    internal class Iro : IPlanet, IDataCache
     {
         const int Id = 91;
         const string Name = "Iro";
@@ -1670,7 +1670,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Grafmere : IPlanet, IDataCache
+    internal class Grafmere : IPlanet, IDataCache
     {
         const int Id = 92;
         const string Name = "Grafmere";
@@ -1688,7 +1688,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class NewStockholm : IPlanet, IDataCache
+    internal class NewStockholm : IPlanet, IDataCache
     {
         const int Id = 93;
         const string Name = "New Stockholm";
@@ -1706,7 +1706,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Oasis : IPlanet, IDataCache
+    internal class Oasis : IPlanet, IDataCache
     {
         const int Id = 94;
         const string Name = "Oasis";
@@ -1724,7 +1724,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class GenesisPrime : IPlanet, IDataCache
+    internal class GenesisPrime : IPlanet, IDataCache
     {
         const int Id = 95;
         const string Name = "Genesis Prime";
@@ -1742,7 +1742,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Outpost32 : IPlanet, IDataCache
+    internal class Outpost32 : IPlanet, IDataCache
     {
         const int Id = 96;
         const string Name = "Outpost 32";
@@ -1760,7 +1760,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Calypso : IPlanet, IDataCache
+    internal class Calypso : IPlanet, IDataCache
     {
         const int Id = 97;
         const string Name = "Calypso";
@@ -1778,7 +1778,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ElysianMeadows : IPlanet, IDataCache
+    internal class ElysianMeadows : IPlanet, IDataCache
     {
         const int Id = 98;
         const string Name = "Elysian Meadows";
@@ -1796,7 +1796,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AlderidgeCove : IPlanet, IDataCache
+    internal class AlderidgeCove : IPlanet, IDataCache
     {
         const int Id = 99;
         const string Name = "Alderidge Cove";
@@ -1814,7 +1814,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Trandor : IPlanet, IDataCache
+    internal class Trandor : IPlanet, IDataCache
     {
         const int Id = 100;
         const string Name = "Trandor";
@@ -1832,7 +1832,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class EastIridiumTradingBay : IPlanet, IDataCache
+    internal class EastIridiumTradingBay : IPlanet, IDataCache
     {
         const int Id = 101;
         const string Name = "East Iridium Trading Bay";
@@ -1850,7 +1850,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class LibertyRidge : IPlanet, IDataCache
+    internal class LibertyRidge : IPlanet, IDataCache
     {
         const int Id = 102;
         const string Name = "Liberty Ridge";
@@ -1868,7 +1868,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class BaldrickPrime : IPlanet, IDataCache
+    internal class BaldrickPrime : IPlanet, IDataCache
     {
         const int Id = 103;
         const string Name = "Baldrick Prime";
@@ -1886,7 +1886,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class TheWeir : IPlanet, IDataCache
+    internal class TheWeir : IPlanet, IDataCache
     {
         const int Id = 104;
         const string Name = "The Weir";
@@ -1904,7 +1904,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Kuper : IPlanet, IDataCache
+    internal class Kuper : IPlanet, IDataCache
     {
         const int Id = 105;
         const string Name = "Kuper";
@@ -1922,7 +1922,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class OsloStation : IPlanet, IDataCache
+    internal class OsloStation : IPlanet, IDataCache
     {
         const int Id = 106;
         const string Name = "Oslo Station";
@@ -1940,7 +1940,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PöpliIX : IPlanet, IDataCache
+    internal class PöpliIX : IPlanet, IDataCache
     {
         const int Id = 107;
         const string Name = "Pöpli IX";
@@ -1958,7 +1958,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Gunvald : IPlanet, IDataCache
+    internal class Gunvald : IPlanet, IDataCache
     {
         const int Id = 108;
         const string Name = "Gunvald";
@@ -1976,7 +1976,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Dolph : IPlanet, IDataCache
+    internal class Dolph : IPlanet, IDataCache
     {
         const int Id = 109;
         const string Name = "Dolph";
@@ -1994,7 +1994,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class BekvamIII : IPlanet, IDataCache
+    internal class BekvamIII : IPlanet, IDataCache
     {
         const int Id = 110;
         const string Name = "Bekvam III";
@@ -2012,7 +2012,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class DumaTyr : IPlanet, IDataCache
+    internal class DumaTyr : IPlanet, IDataCache
     {
         const int Id = 111;
         const string Name = "Duma Tyr";
@@ -2030,7 +2030,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class VernenWells : IPlanet, IDataCache
+    internal class VernenWells : IPlanet, IDataCache
     {
         const int Id = 112;
         const string Name = "Vernen Wells";
@@ -2048,7 +2048,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AesirPass : IPlanet, IDataCache
+    internal class AesirPass : IPlanet, IDataCache
     {
         const int Id = 113;
         const string Name = "Aesir Pass";
@@ -2066,7 +2066,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AuroraBay : IPlanet, IDataCache
+    internal class AuroraBay : IPlanet, IDataCache
     {
         const int Id = 114;
         const string Name = "Aurora Bay";
@@ -2084,7 +2084,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Penta : IPlanet, IDataCache
+    internal class Penta : IPlanet, IDataCache
     {
         const int Id = 115;
         const string Name = "Penta";
@@ -2102,7 +2102,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Gaellivare : IPlanet, IDataCache
+    internal class Gaellivare : IPlanet, IDataCache
     {
         const int Id = 116;
         const string Name = "Gaellivare";
@@ -2120,7 +2120,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Vogsojoth : IPlanet, IDataCache
+    internal class Vogsojoth : IPlanet, IDataCache
     {
         const int Id = 117;
         const string Name = "Vog-sojoth";
@@ -2138,7 +2138,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Kirrik : IPlanet, IDataCache
+    internal class Kirrik : IPlanet, IDataCache
     {
         const int Id = 118;
         const string Name = "Kirrik";
@@ -2156,7 +2156,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class MortaxPrime : IPlanet, IDataCache
+    internal class MortaxPrime : IPlanet, IDataCache
     {
         const int Id = 119;
         const string Name = "Mortax Prime";
@@ -2174,7 +2174,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class WilfordStation : IPlanet, IDataCache
+    internal class WilfordStation : IPlanet, IDataCache
     {
         const int Id = 120;
         const string Name = "Wilford Station";
@@ -2192,7 +2192,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PioneerII : IPlanet, IDataCache
+    internal class PioneerII : IPlanet, IDataCache
     {
         const int Id = 121;
         const string Name = "Pioneer II";
@@ -2210,7 +2210,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ErsonSands : IPlanet, IDataCache
+    internal class ErsonSands : IPlanet, IDataCache
     {
         const int Id = 122;
         const string Name = "Erson Sands";
@@ -2228,7 +2228,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class SocorroIII : IPlanet, IDataCache
+    internal class SocorroIII : IPlanet, IDataCache
     {
         const int Id = 123;
         const string Name = "Socorro III";
@@ -2246,7 +2246,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class BoreRock : IPlanet, IDataCache
+    internal class BoreRock : IPlanet, IDataCache
     {
         const int Id = 124;
         const string Name = "Bore Rock";
@@ -2264,7 +2264,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class FenrirIII : IPlanet, IDataCache
+    internal class FenrirIII : IPlanet, IDataCache
     {
         const int Id = 125;
         const string Name = "Fenrir III";
@@ -2282,7 +2282,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Turing : IPlanet, IDataCache
+    internal class Turing : IPlanet, IDataCache
     {
         const int Id = 126;
         const string Name = "Turing";
@@ -2300,7 +2300,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AngelsVenture : IPlanet, IDataCache
+    internal class AngelsVenture : IPlanet, IDataCache
     {
         const int Id = 127;
         const string Name = "Angel's Venture";
@@ -2318,7 +2318,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class DariusII : IPlanet, IDataCache
+    internal class DariusII : IPlanet, IDataCache
     {
         const int Id = 128;
         const string Name = "Darius II";
@@ -2336,7 +2336,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AcamarIV : IPlanet, IDataCache
+    internal class AcamarIV : IPlanet, IDataCache
     {
         const int Id = 129;
         const string Name = "Acamar IV";
@@ -2354,7 +2354,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AchernarSecundus : IPlanet, IDataCache
+    internal class AchernarSecundus : IPlanet, IDataCache
     {
         const int Id = 130;
         const string Name = "Achernar Secundus";
@@ -2372,7 +2372,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AchirdIII : IPlanet, IDataCache
+    internal class AchirdIII : IPlanet, IDataCache
     {
         const int Id = 131;
         const string Name = "Achird III";
@@ -2390,7 +2390,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AcrabXI : IPlanet, IDataCache
+    internal class AcrabXI : IPlanet, IDataCache
     {
         const int Id = 132;
         const string Name = "Acrab XI";
@@ -2408,7 +2408,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AcruxIX : IPlanet, IDataCache
+    internal class AcruxIX : IPlanet, IDataCache
     {
         const int Id = 133;
         const string Name = "Acrux IX";
@@ -2426,7 +2426,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AcubensPrime : IPlanet, IDataCache
+    internal class AcubensPrime : IPlanet, IDataCache
     {
         const int Id = 134;
         const string Name = "Acubens Prime";
@@ -2444,7 +2444,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Adhara : IPlanet, IDataCache
+    internal class Adhara : IPlanet, IDataCache
     {
         const int Id = 135;
         const string Name = "Adhara";
@@ -2462,7 +2462,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AfoyayBay : IPlanet, IDataCache
+    internal class AfoyayBay : IPlanet, IDataCache
     {
         const int Id = 136;
         const string Name = "Afoyay Bay";
@@ -2480,7 +2480,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Ain5 : IPlanet, IDataCache
+    internal class Ain5 : IPlanet, IDataCache
     {
         const int Id = 137;
         const string Name = "Ain-5";
@@ -2498,7 +2498,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AlairtIII : IPlanet, IDataCache
+    internal class AlairtIII : IPlanet, IDataCache
     {
         const int Id = 138;
         const string Name = "Alairt III";
@@ -2516,7 +2516,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AlamakVII : IPlanet, IDataCache
+    internal class AlamakVII : IPlanet, IDataCache
     {
         const int Id = 139;
         const string Name = "Alamak VII";
@@ -2534,7 +2534,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Alaraph : IPlanet, IDataCache
+    internal class Alaraph : IPlanet, IDataCache
     {
         const int Id = 140;
         const string Name = "Alaraph";
@@ -2552,7 +2552,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AlathfarXI : IPlanet, IDataCache
+    internal class AlathfarXI : IPlanet, IDataCache
     {
         const int Id = 141;
         const string Name = "Alathfar XI";
@@ -2570,7 +2570,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Andar : IPlanet, IDataCache
+    internal class Andar : IPlanet, IDataCache
     {
         const int Id = 142;
         const string Name = "Andar";
@@ -2588,7 +2588,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class AsperothPrime : IPlanet, IDataCache
+    internal class AsperothPrime : IPlanet, IDataCache
     {
         const int Id = 143;
         const string Name = "Asperoth Prime";
@@ -2606,7 +2606,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Bellatrix : IPlanet, IDataCache
+    internal class Bellatrix : IPlanet, IDataCache
     {
         const int Id = 144;
         const string Name = "Bellatrix";
@@ -2624,7 +2624,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Botein : IPlanet, IDataCache
+    internal class Botein : IPlanet, IDataCache
     {
         const int Id = 145;
         const string Name = "Botein";
@@ -2642,7 +2642,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Osupsam : IPlanet, IDataCache
+    internal class Osupsam : IPlanet, IDataCache
     {
         const int Id = 146;
         const string Name = "Osupsam";
@@ -2660,7 +2660,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Brink2 : IPlanet, IDataCache
+    internal class Brink2 : IPlanet, IDataCache
     {
         const int Id = 147;
         const string Name = "Brink-2";
@@ -2678,7 +2678,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class BundaSecundus : IPlanet, IDataCache
+    internal class BundaSecundus : IPlanet, IDataCache
     {
         const int Id = 148;
         const string Name = "Bunda Secundus";
@@ -2696,7 +2696,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Canopus : IPlanet, IDataCache
+    internal class Canopus : IPlanet, IDataCache
     {
         const int Id = 149;
         const string Name = "Canopus";
@@ -2714,7 +2714,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Caph : IPlanet, IDataCache
+    internal class Caph : IPlanet, IDataCache
     {
         const int Id = 150;
         const string Name = "Caph";
@@ -2732,7 +2732,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Castor : IPlanet, IDataCache
+    internal class Castor : IPlanet, IDataCache
     {
         const int Id = 151;
         const string Name = "Castor";
@@ -2750,7 +2750,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Durgen : IPlanet, IDataCache
+    internal class Durgen : IPlanet, IDataCache
     {
         const int Id = 152;
         const string Name = "Durgen";
@@ -2768,7 +2768,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Draupnir : IPlanet, IDataCache
+    internal class Draupnir : IPlanet, IDataCache
     {
         const int Id = 153;
         const string Name = "Draupnir";
@@ -2786,7 +2786,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mort : IPlanet, IDataCache
+    internal class Mort : IPlanet, IDataCache
     {
         const int Id = 154;
         const string Name = "Mort";
@@ -2804,7 +2804,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Ingmar : IPlanet, IDataCache
+    internal class Ingmar : IPlanet, IDataCache
     {
         const int Id = 155;
         const string Name = "Ingmar";
@@ -2822,7 +2822,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class CharbalVII : IPlanet, IDataCache
+    internal class CharbalVII : IPlanet, IDataCache
     {
         const int Id = 156;
         const string Name = "Charbal-VII";
@@ -2840,7 +2840,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class CharonPrime : IPlanet, IDataCache
+    internal class CharonPrime : IPlanet, IDataCache
     {
         const int Id = 157;
         const string Name = "Charon Prime";
@@ -2858,7 +2858,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ChoepessaIV : IPlanet, IDataCache
+    internal class ChoepessaIV : IPlanet, IDataCache
     {
         const int Id = 158;
         const string Name = "Choepessa IV";
@@ -2876,7 +2876,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Choohe : IPlanet, IDataCache
+    internal class Choohe : IPlanet, IDataCache
     {
         const int Id = 159;
         const string Name = "Choohe";
@@ -2894,7 +2894,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ChortBay : IPlanet, IDataCache
+    internal class ChortBay : IPlanet, IDataCache
     {
         const int Id = 160;
         const string Name = "Chort Bay";
@@ -2912,7 +2912,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Claorell : IPlanet, IDataCache
+    internal class Claorell : IPlanet, IDataCache
     {
         const int Id = 161;
         const string Name = "Claorell";
@@ -2930,7 +2930,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Clasa : IPlanet, IDataCache
+    internal class Clasa : IPlanet, IDataCache
     {
         const int Id = 162;
         const string Name = "Clasa";
@@ -2948,7 +2948,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Demiurg : IPlanet, IDataCache
+    internal class Demiurg : IPlanet, IDataCache
     {
         const int Id = 163;
         const string Name = "Demiurg";
@@ -2966,7 +2966,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class DenebSecundus : IPlanet, IDataCache
+    internal class DenebSecundus : IPlanet, IDataCache
     {
         const int Id = 164;
         const string Name = "Deneb Secundus";
@@ -2984,7 +2984,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ElectraBay : IPlanet, IDataCache
+    internal class ElectraBay : IPlanet, IDataCache
     {
         const int Id = 165;
         const string Name = "Electra Bay";
@@ -3002,7 +3002,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Enuliale : IPlanet, IDataCache
+    internal class Enuliale : IPlanet, IDataCache
     {
         const int Id = 166;
         const string Name = "Enuliale";
@@ -3020,7 +3020,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class EpsilonPhoencisVI : IPlanet, IDataCache
+    internal class EpsilonPhoencisVI : IPlanet, IDataCache
     {
         const int Id = 167;
         const string Name = "Epsilon Phoencis VI";
@@ -3038,7 +3038,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ErataPrime : IPlanet, IDataCache
+    internal class ErataPrime : IPlanet, IDataCache
     {
         const int Id = 168;
         const string Name = "Erata Prime";
@@ -3056,7 +3056,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Estanu : IPlanet, IDataCache
+    internal class Estanu : IPlanet, IDataCache
     {
         const int Id = 169;
         const string Name = "Estanu";
@@ -3074,7 +3074,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ForiPrime : IPlanet, IDataCache
+    internal class ForiPrime : IPlanet, IDataCache
     {
         const int Id = 170;
         const string Name = "Fori Prime";
@@ -3092,7 +3092,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Gacrux : IPlanet, IDataCache
+    internal class Gacrux : IPlanet, IDataCache
     {
         const int Id = 171;
         const string Name = "Gacrux";
@@ -3110,7 +3110,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class GarHaren : IPlanet, IDataCache
+    internal class GarHaren : IPlanet, IDataCache
     {
         const int Id = 172;
         const string Name = "Gar Haren";
@@ -3128,7 +3128,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Gatria : IPlanet, IDataCache
+    internal class Gatria : IPlanet, IDataCache
     {
         const int Id = 173;
         const string Name = "Gatria";
@@ -3146,7 +3146,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Gemma : IPlanet, IDataCache
+    internal class Gemma : IPlanet, IDataCache
     {
         const int Id = 174;
         const string Name = "Gemma";
@@ -3164,7 +3164,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class GrandErrant : IPlanet, IDataCache
+    internal class GrandErrant : IPlanet, IDataCache
     {
         const int Id = 175;
         const string Name = "Grand Errant";
@@ -3182,7 +3182,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Hadar : IPlanet, IDataCache
+    internal class Hadar : IPlanet, IDataCache
     {
         const int Id = 176;
         const string Name = "Hadar";
@@ -3200,7 +3200,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Haka : IPlanet, IDataCache
+    internal class Haka : IPlanet, IDataCache
     {
         const int Id = 177;
         const string Name = "Haka";
@@ -3218,7 +3218,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Haldus : IPlanet, IDataCache
+    internal class Haldus : IPlanet, IDataCache
     {
         const int Id = 178;
         const string Name = "Haldus";
@@ -3236,7 +3236,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class HaliesPort : IPlanet, IDataCache
+    internal class HaliesPort : IPlanet, IDataCache
     {
         const int Id = 179;
         const string Name = "Halies Port";
@@ -3254,7 +3254,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class HerthonSecundus : IPlanet, IDataCache
+    internal class HerthonSecundus : IPlanet, IDataCache
     {
         const int Id = 180;
         const string Name = "Herthon Secundus";
@@ -3272,7 +3272,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class HesoePrime : IPlanet, IDataCache
+    internal class HesoePrime : IPlanet, IDataCache
     {
         const int Id = 181;
         const string Name = "Hesoe Prime";
@@ -3290,7 +3290,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class HezeBay : IPlanet, IDataCache
+    internal class HezeBay : IPlanet, IDataCache
     {
         const int Id = 182;
         const string Name = "Heze Bay";
@@ -3308,7 +3308,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Hort : IPlanet, IDataCache
+    internal class Hort : IPlanet, IDataCache
     {
         const int Id = 183;
         const string Name = "Hort";
@@ -3326,7 +3326,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Hydrobius : IPlanet, IDataCache
+    internal class Hydrobius : IPlanet, IDataCache
     {
         const int Id = 184;
         const string Name = "Hydrobius";
@@ -3344,7 +3344,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Karlia : IPlanet, IDataCache
+    internal class Karlia : IPlanet, IDataCache
     {
         const int Id = 185;
         const string Name = "Karlia";
@@ -3362,7 +3362,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Keid : IPlanet, IDataCache
+    internal class Keid : IPlanet, IDataCache
     {
         const int Id = 186;
         const string Name = "Keid";
@@ -3380,7 +3380,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Khandark : IPlanet, IDataCache
+    internal class Khandark : IPlanet, IDataCache
     {
         const int Id = 187;
         const string Name = "Khandark";
@@ -3398,7 +3398,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Klaka5 : IPlanet, IDataCache
+    internal class Klaka5 : IPlanet, IDataCache
     {
         const int Id = 188;
         const string Name = "Klaka 5";
@@ -3416,7 +3416,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class KnethPort : IPlanet, IDataCache
+    internal class KnethPort : IPlanet, IDataCache
     {
         const int Id = 189;
         const string Name = "Kneth Port";
@@ -3434,7 +3434,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Kraz : IPlanet, IDataCache
+    internal class Kraz : IPlanet, IDataCache
     {
         const int Id = 190;
         const string Name = "Kraz";
@@ -3452,7 +3452,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Kuma : IPlanet, IDataCache
+    internal class Kuma : IPlanet, IDataCache
     {
         const int Id = 191;
         const string Name = "Kuma";
@@ -3470,7 +3470,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Lastofe : IPlanet, IDataCache
+    internal class Lastofe : IPlanet, IDataCache
     {
         const int Id = 192;
         const string Name = "Lastofe";
@@ -3488,7 +3488,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class LengSecundus : IPlanet, IDataCache
+    internal class LengSecundus : IPlanet, IDataCache
     {
         const int Id = 193;
         const string Name = "Leng Secundus";
@@ -3506,7 +3506,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Lesath : IPlanet, IDataCache
+    internal class Lesath : IPlanet, IDataCache
     {
         const int Id = 194;
         const string Name = "Lesath";
@@ -3524,7 +3524,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Maia : IPlanet, IDataCache
+    internal class Maia : IPlanet, IDataCache
     {
         const int Id = 195;
         const string Name = "Maia";
@@ -3542,7 +3542,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class MalevelonCreek : IPlanet, IDataCache
+    internal class MalevelonCreek : IPlanet, IDataCache
     {
         const int Id = 196;
         const string Name = "Malevelon Creek";
@@ -3560,7 +3560,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mantes : IPlanet, IDataCache
+    internal class Mantes : IPlanet, IDataCache
     {
         const int Id = 197;
         const string Name = "Mantes";
@@ -3578,7 +3578,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Marfark : IPlanet, IDataCache
+    internal class Marfark : IPlanet, IDataCache
     {
         const int Id = 198;
         const string Name = "Marfark";
@@ -3596,7 +3596,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Martale : IPlanet, IDataCache
+    internal class Martale : IPlanet, IDataCache
     {
         const int Id = 199;
         const string Name = "Martale";
@@ -3614,7 +3614,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class MatarBay : IPlanet, IDataCache
+    internal class MatarBay : IPlanet, IDataCache
     {
         const int Id = 200;
         const string Name = "Matar Bay";
@@ -3632,7 +3632,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Meissa : IPlanet, IDataCache
+    internal class Meissa : IPlanet, IDataCache
     {
         const int Id = 201;
         const string Name = "Meissa";
@@ -3650,7 +3650,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mekbuda : IPlanet, IDataCache
+    internal class Mekbuda : IPlanet, IDataCache
     {
         const int Id = 202;
         const string Name = "Mekbuda";
@@ -3668,7 +3668,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Menkent : IPlanet, IDataCache
+    internal class Menkent : IPlanet, IDataCache
     {
         const int Id = 203;
         const string Name = "Menkent";
@@ -3686,7 +3686,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Merak : IPlanet, IDataCache
+    internal class Merak : IPlanet, IDataCache
     {
         const int Id = 204;
         const string Name = "Merak";
@@ -3704,7 +3704,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class MergaIV : IPlanet, IDataCache
+    internal class MergaIV : IPlanet, IDataCache
     {
         const int Id = 205;
         const string Name = "Merga IV";
@@ -3722,7 +3722,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Minchir : IPlanet, IDataCache
+    internal class Minchir : IPlanet, IDataCache
     {
         const int Id = 206;
         const string Name = "Minchir";
@@ -3740,7 +3740,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mintoria : IPlanet, IDataCache
+    internal class Mintoria : IPlanet, IDataCache
     {
         const int Id = 207;
         const string Name = "Mintoria";
@@ -3758,7 +3758,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Mordia9 : IPlanet, IDataCache
+    internal class Mordia9 : IPlanet, IDataCache
     {
         const int Id = 208;
         const string Name = "Mordia 9";
@@ -3776,7 +3776,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class NabateaSecundus : IPlanet, IDataCache
+    internal class NabateaSecundus : IPlanet, IDataCache
     {
         const int Id = 209;
         const string Name = "Nabatea Secundus";
@@ -3794,7 +3794,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class NaviVII : IPlanet, IDataCache
+    internal class NaviVII : IPlanet, IDataCache
     {
         const int Id = 210;
         const string Name = "Navi VII";
@@ -3812,7 +3812,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Nivel43 : IPlanet, IDataCache
+    internal class Nivel43 : IPlanet, IDataCache
     {
         const int Id = 211;
         const string Name = "Nivel 43";
@@ -3830,7 +3830,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Oshaune : IPlanet, IDataCache
+    internal class Oshaune : IPlanet, IDataCache
     {
         const int Id = 212;
         const string Name = "Oshaune";
@@ -3848,7 +3848,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class OvergoePrime : IPlanet, IDataCache
+    internal class OvergoePrime : IPlanet, IDataCache
     {
         const int Id = 213;
         const string Name = "Overgoe Prime";
@@ -3866,7 +3866,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PandionXXIV : IPlanet, IDataCache
+    internal class PandionXXIV : IPlanet, IDataCache
     {
         const int Id = 214;
         const string Name = "Pandion-XXIV";
@@ -3884,7 +3884,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Partion : IPlanet, IDataCache
+    internal class Partion : IPlanet, IDataCache
     {
         const int Id = 215;
         const string Name = "Partion";
@@ -3902,7 +3902,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Peacock : IPlanet, IDataCache
+    internal class Peacock : IPlanet, IDataCache
     {
         const int Id = 216;
         const string Name = "Peacock";
@@ -3920,7 +3920,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PhactBay : IPlanet, IDataCache
+    internal class PhactBay : IPlanet, IDataCache
     {
         const int Id = 217;
         const string Name = "Phact Bay";
@@ -3938,7 +3938,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PherkadSecundus : IPlanet, IDataCache
+    internal class PherkadSecundus : IPlanet, IDataCache
     {
         const int Id = 218;
         const string Name = "Pherkad Secundus";
@@ -3956,7 +3956,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class PolarisPrime : IPlanet, IDataCache
+    internal class PolarisPrime : IPlanet, IDataCache
     {
         const int Id = 219;
         const string Name = "Polaris Prime";
@@ -3974,7 +3974,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Pollux31 : IPlanet, IDataCache
+    internal class Pollux31 : IPlanet, IDataCache
     {
         const int Id = 220;
         const string Name = "Pollux 31";
@@ -3992,7 +3992,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Prasa : IPlanet, IDataCache
+    internal class Prasa : IPlanet, IDataCache
     {
         const int Id = 221;
         const string Name = "Prasa";
@@ -4010,7 +4010,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Propus : IPlanet, IDataCache
+    internal class Propus : IPlanet, IDataCache
     {
         const int Id = 222;
         const string Name = "Propus";
@@ -4028,7 +4028,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class RasAlgethi : IPlanet, IDataCache
+    internal class RasAlgethi : IPlanet, IDataCache
     {
         const int Id = 223;
         const string Name = "Ras Algethi";
@@ -4046,7 +4046,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class RD4 : IPlanet, IDataCache
+    internal class RD4 : IPlanet, IDataCache
     {
         const int Id = 224;
         const string Name = "RD-4";
@@ -4064,7 +4064,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Rogue5 : IPlanet, IDataCache
+    internal class Rogue5 : IPlanet, IDataCache
     {
         const int Id = 225;
         const string Name = "Rogue 5";
@@ -4082,7 +4082,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class RirgaBay : IPlanet, IDataCache
+    internal class RirgaBay : IPlanet, IDataCache
     {
         const int Id = 226;
         const string Name = "Rirga Bay";
@@ -4100,7 +4100,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Seasse : IPlanet, IDataCache
+    internal class Seasse : IPlanet, IDataCache
     {
         const int Id = 227;
         const string Name = "Seasse";
@@ -4118,7 +4118,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Senge23 : IPlanet, IDataCache
+    internal class Senge23 : IPlanet, IDataCache
     {
         const int Id = 228;
         const string Name = "Senge 23";
@@ -4136,7 +4136,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Setia : IPlanet, IDataCache
+    internal class Setia : IPlanet, IDataCache
     {
         const int Id = 229;
         const string Name = "Setia";
@@ -4154,7 +4154,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Shete : IPlanet, IDataCache
+    internal class Shete : IPlanet, IDataCache
     {
         const int Id = 230;
         const string Name = "Shete";
@@ -4172,7 +4172,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Siemnot : IPlanet, IDataCache
+    internal class Siemnot : IPlanet, IDataCache
     {
         const int Id = 231;
         const string Name = "Siemnot";
@@ -4190,7 +4190,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Sirius : IPlanet, IDataCache
+    internal class Sirius : IPlanet, IDataCache
     {
         const int Id = 232;
         const string Name = "Sirius";
@@ -4208,7 +4208,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class SkatBay : IPlanet, IDataCache
+    internal class SkatBay : IPlanet, IDataCache
     {
         const int Id = 233;
         const string Name = "Skat Bay";
@@ -4226,7 +4226,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Spherion : IPlanet, IDataCache
+    internal class Spherion : IPlanet, IDataCache
     {
         const int Id = 234;
         const string Name = "Spherion";
@@ -4244,7 +4244,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class StorThaPrime : IPlanet, IDataCache
+    internal class StorThaPrime : IPlanet, IDataCache
     {
         const int Id = 235;
         const string Name = "Stor Tha Prime";
@@ -4262,7 +4262,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Stout : IPlanet, IDataCache
+    internal class Stout : IPlanet, IDataCache
     {
         const int Id = 236;
         const string Name = "Stout";
@@ -4280,7 +4280,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Termadon : IPlanet, IDataCache
+    internal class Termadon : IPlanet, IDataCache
     {
         const int Id = 237;
         const string Name = "Termadon";
@@ -4298,7 +4298,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Tibit : IPlanet, IDataCache
+    internal class Tibit : IPlanet, IDataCache
     {
         const int Id = 238;
         const string Name = "Tibit";
@@ -4316,7 +4316,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class TienKwan : IPlanet, IDataCache
+    internal class TienKwan : IPlanet, IDataCache
     {
         const int Id = 239;
         const string Name = "Tien Kwan";
@@ -4334,7 +4334,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Troost : IPlanet, IDataCache
+    internal class Troost : IPlanet, IDataCache
     {
         const int Id = 240;
         const string Name = "Troost";
@@ -4352,7 +4352,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Ubanea : IPlanet, IDataCache
+    internal class Ubanea : IPlanet, IDataCache
     {
         const int Id = 241;
         const string Name = "Ubanea";
@@ -4370,7 +4370,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Ustotu : IPlanet, IDataCache
+    internal class Ustotu : IPlanet, IDataCache
     {
         const int Id = 242;
         const string Name = "Ustotu";
@@ -4388,7 +4388,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class VandalonIV : IPlanet, IDataCache
+    internal class VandalonIV : IPlanet, IDataCache
     {
         const int Id = 243;
         const string Name = "Vandalon IV";
@@ -4406,7 +4406,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Varylia5 : IPlanet, IDataCache
+    internal class Varylia5 : IPlanet, IDataCache
     {
         const int Id = 244;
         const string Name = "Varylia 5";
@@ -4424,7 +4424,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Wasat : IPlanet, IDataCache
+    internal class Wasat : IPlanet, IDataCache
     {
         const int Id = 245;
         const string Name = "Wasat";
@@ -4442,7 +4442,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class VegaBay : IPlanet, IDataCache
+    internal class VegaBay : IPlanet, IDataCache
     {
         const int Id = 246;
         const string Name = "Vega Bay";
@@ -4460,7 +4460,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Wezen : IPlanet, IDataCache
+    internal class Wezen : IPlanet, IDataCache
     {
         const int Id = 247;
         const string Name = "Wezen";
@@ -4478,7 +4478,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class VindemitarixPrime : IPlanet, IDataCache
+    internal class VindemitarixPrime : IPlanet, IDataCache
     {
         const int Id = 248;
         const string Name = "Vindemitarix Prime";
@@ -4496,7 +4496,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class X45 : IPlanet, IDataCache
+    internal class X45 : IPlanet, IDataCache
     {
         const int Id = 249;
         const string Name = "X-45";
@@ -4514,7 +4514,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class YedPrior : IPlanet, IDataCache
+    internal class YedPrior : IPlanet, IDataCache
     {
         const int Id = 250;
         const string Name = "Yed Prior";
@@ -4532,7 +4532,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Zefia : IPlanet, IDataCache
+    internal class Zefia : IPlanet, IDataCache
     {
         const int Id = 251;
         const string Name = "Zefia";
@@ -4550,7 +4550,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Zosma : IPlanet, IDataCache
+    internal class Zosma : IPlanet, IDataCache
     {
         const int Id = 252;
         const string Name = "Zosma";
@@ -4568,7 +4568,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ZzaniahPrime : IPlanet, IDataCache
+    internal class ZzaniahPrime : IPlanet, IDataCache
     {
         const int Id = 253;
         const string Name = "Zzaniah Prime";
@@ -4586,7 +4586,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Skitter : IPlanet, IDataCache
+    internal class Skitter : IPlanet, IDataCache
     {
         const int Id = 254;
         const string Name = "Skitter";
@@ -4604,7 +4604,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class EuphoriaIII : IPlanet, IDataCache
+    internal class EuphoriaIII : IPlanet, IDataCache
     {
         const int Id = 255;
         const string Name = "Euphoria III";
@@ -4622,7 +4622,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class DiasporaX : IPlanet, IDataCache
+    internal class DiasporaX : IPlanet, IDataCache
     {
         const int Id = 256;
         const string Name = "Diaspora X";
@@ -4640,7 +4640,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class GemstoneBluffs : IPlanet, IDataCache
+    internal class GemstoneBluffs : IPlanet, IDataCache
     {
         const int Id = 257;
         const string Name = "Gemstone Bluffs";
@@ -4658,7 +4658,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class ZagonPrime : IPlanet, IDataCache
+    internal class ZagonPrime : IPlanet, IDataCache
     {
         const int Id = 258;
         const string Name = "Zagon Prime";
@@ -4676,7 +4676,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Omicron : IPlanet, IDataCache
+    internal class Omicron : IPlanet, IDataCache
     {
         const int Id = 259;
         const string Name = "Omicron";
@@ -4694,7 +4694,7 @@ namespace Helldivers2API.Data.Models
         IBiome? IPlanet.Biome => DataCache<IBiome>.Get(BiomeName);
         IEnvironment?[] IPlanet.Environments => DataCache<IEnvironment>.GetMany(EnvironmentNames);
     }
-    public class Cyberstan : IPlanet, IDataCache
+    internal class Cyberstan : IPlanet, IDataCache
     {
         const int Id = 260;
         const string Name = "Cyberstan";

@@ -6,7 +6,7 @@ using URLs = Helldivers2API.Web.Helldivers2Urls;
 
 namespace Helldivers2API.Web.Clients
 {
-    public class WarFeedClient : APIClient, IWarFeedClient
+    internal class WarFeedClient : APIClient, IWarFeedClient
     {
         public WarFeedClient(IAPIConnector apiConnector) : base(apiConnector) { }
 

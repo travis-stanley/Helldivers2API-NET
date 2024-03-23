@@ -14,7 +14,7 @@ namespace Helldivers2API.Data.Cache
     /// Local data cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class DataCache<T> where T : IDataCache
+    internal class DataCache<T> where T : IDataCache
     {
         private static T[] _cache = default!;
 

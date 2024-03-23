@@ -3,7 +3,7 @@ using Helldivers2API.Web.Http;
 
 namespace Helldivers2API.Web.Clients
 {
-    public abstract class APIClient
+    internal abstract class APIClient
     {
         protected APIClient(IAPIConnector apiConnector)
         {

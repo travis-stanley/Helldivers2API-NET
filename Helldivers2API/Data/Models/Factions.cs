@@ -13,7 +13,7 @@ using Helldivers2API.Data.Models.Interfaces;
 namespace Helldivers2API.Data.Models
 {
 
-    public class Humans : IFaction
+    internal class Humans : IFaction
     {
         const int Id = 1;
         const string Name = "Humans";
@@ -27,7 +27,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => Id;
 
     }
-    public class Terminids : IFaction
+    internal class Terminids : IFaction
     {
         const int Id = 2;
         const string Name = "Terminids";
@@ -40,7 +40,7 @@ namespace Helldivers2API.Data.Models
         string IDataCache.Name => Name;
         int IDataCache.Id => Id;
     }
-    public class Automaton : IFaction
+    internal class Automaton : IFaction
     {
         const int Id = 3;
         const string Name = "Automaton";

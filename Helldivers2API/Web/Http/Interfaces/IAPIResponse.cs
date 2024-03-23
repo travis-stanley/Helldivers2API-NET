@@ -1,6 +1,6 @@
 namespace Helldivers2API.Web.Http
 {
-  public interface IAPIResponse<out T>
+  internal interface IAPIResponse<out T>
   {
     T? Body { get; }
 

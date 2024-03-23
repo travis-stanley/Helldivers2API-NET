@@ -7,7 +7,7 @@ using Helldivers2API.Web.Http;
 namespace Helldivers2API.Web
 {
   [Serializable]
-  public class APIException : Exception
+  internal class APIException : Exception
   {
     public IResponse? Response { get; set; }
 

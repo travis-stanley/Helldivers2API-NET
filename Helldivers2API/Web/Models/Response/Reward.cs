@@ -4,7 +4,7 @@ using Newtonsoft.Json.Converters;
 
 namespace Helldivers2API.Web
 {
-    public class Reward
+    internal class Reward
     {
         // TODO: define enums for type
 

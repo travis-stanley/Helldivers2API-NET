@@ -4,7 +4,7 @@ using System.Net.Http;
 
 namespace Helldivers2API.Web.Http
 {
-  public class Request : IRequest
+  internal class Request : IRequest
   {
     public Request(Uri baseAddress, Uri endpoint, HttpMethod method)
     {

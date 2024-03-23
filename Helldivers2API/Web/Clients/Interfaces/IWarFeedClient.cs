@@ -7,7 +7,7 @@ namespace Helldivers2API.Web.Clients.Interfaces
     /// <summary>
     /// Get news feed for the war
     /// </summary>
-    public interface IWarFeedClient
+    internal interface IWarFeedClient
     {
         /// <summary>
         /// Get assignments

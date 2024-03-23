@@ -7,7 +7,7 @@ using URLs = Helldivers2API.Web.Helldivers2Urls;
 
 namespace Helldivers2API.Web.Clients
 {
-    public class WarStatusClient : APIClient, IWarStatusClient
+    internal class WarStatusClient : APIClient, IWarStatusClient
     {
         public WarStatusClient(IAPIConnector apiConnector) : base(apiConnector) { }
 

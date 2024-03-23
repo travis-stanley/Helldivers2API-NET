@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Helldivers2API.Web.Http
 {
-  public class APIConnector : IAPIConnector
+  internal class APIConnector : IAPIConnector
   {
     private readonly Uri _baseAddress;
     private readonly IJSONSerializer _jsonSerializer;

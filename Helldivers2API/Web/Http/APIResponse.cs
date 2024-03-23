@@ -1,6 +1,6 @@
 namespace Helldivers2API.Web.Http
 {
-  public class APIResponse<T> : IAPIResponse<T>
+  internal class APIResponse<T> : IAPIResponse<T>
   {
     public APIResponse(IResponse response, T? body = default)
     {

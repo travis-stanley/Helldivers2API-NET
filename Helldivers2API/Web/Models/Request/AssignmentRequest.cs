@@ -2,7 +2,7 @@ using System;
 
 namespace Helldivers2API.Web
 {
-  public class AssignmentRequest : RequestParams
+  internal class AssignmentRequest : RequestParams
   {
     /// <summary>
     /// Assignment request

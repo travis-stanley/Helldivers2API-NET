@@ -7,7 +7,7 @@ namespace Helldivers2API.Web.Clients.Interfaces
     /// <summary>
     /// Get Assignments
     /// </summary>
-    public interface IAssignmentClient
+    internal interface IAssignmentClient
     {
         /// <summary>
         /// Get assignments

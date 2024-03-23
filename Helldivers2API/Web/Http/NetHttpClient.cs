@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Helldivers2API.Web.Http
 {
-  public class NetHttpClient : IHTTPClient
+  internal class NetHttpClient : IHTTPClient
   {
     private readonly HttpMessageHandler? _httpMessageHandler;
     private readonly HttpClient _httpClient;

@@ -4,7 +4,7 @@ using System.Net;
 
 namespace Helldivers2API.Web.Http
 {
-  public class Response : IResponse
+  internal class Response : IResponse
   {
     public Response(IDictionary<string, string> headers)
     {

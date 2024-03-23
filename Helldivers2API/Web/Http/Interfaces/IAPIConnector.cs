@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Helldivers2API.Web.Http
 {
-  public interface IAPIConnector
+  internal interface IAPIConnector
   {
     // IAuthenticator Authenticator { get; }
 

@@ -6,7 +6,7 @@ namespace Helldivers2API.Web.Http
   /// <summary>
   ///   The Retry Handler will be directly called after the response is retrived and before errors and body are processed.
   /// </summary>
-  public interface IRetryHandler
+  internal interface IRetryHandler
   {
     delegate Task<IResponse> RetryFunc(IRequest request, CancellationToken cancel = default);
 

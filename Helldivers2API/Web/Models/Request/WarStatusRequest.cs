@@ -2,7 +2,7 @@ using System;
 
 namespace Helldivers2API.Web
 {
-  public class WarStatusRequest : RequestParams
+  internal class WarStatusRequest : RequestParams
   {
     /// <summary>
     /// WarStatus request

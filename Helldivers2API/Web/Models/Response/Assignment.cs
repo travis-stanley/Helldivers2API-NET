@@ -9,7 +9,7 @@ namespace Helldivers2API.Web
     /// <summary>
     /// Assignment model, aka the Major Order
     /// </summary>
-    public class Assignment
+    internal class Assignment
     {
         [JsonProperty("id32")]
         public long Id32 { get; set; } = default!;

@@ -4,7 +4,7 @@ using Helldivers2API.Web.Http;
 
 namespace Helldivers2API.Web.Clients
 {
-    public class Helldivers2ClientConfig
+    internal class Helldivers2ClientConfig
     {
         public Uri BaseAddress { get; private set; }
         public IJSONSerializer JSONSerializer { get; private set; }
@@ -121,7 +121,7 @@ namespace Helldivers2API.Web.Clients
         /// </summary>
         /// <param name="language"></param>
         /// <returns></returns>
-        public static Helldivers2ClientConfig CreateCustomHeaders(string language = "en-US,en;q=0.9")
+        public static Helldivers2ClientConfig CreateCustomHeaders(string language = "en")
         {
             return new Helldivers2ClientConfig(
                 Helldivers2Urls.API,

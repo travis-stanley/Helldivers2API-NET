@@ -6,7 +6,7 @@ using URLs = Helldivers2API.Web.Helldivers2Urls;
 
 namespace Helldivers2API.Web.Clients
 {
-    public class AssignmentClient : APIClient, IAssignmentClient
+    internal class AssignmentClient : APIClient, IAssignmentClient
     {
         public AssignmentClient(IAPIConnector apiConnector) : base(apiConnector) { }
 

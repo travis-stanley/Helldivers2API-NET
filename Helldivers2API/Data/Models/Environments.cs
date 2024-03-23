@@ -14,7 +14,7 @@ using Helldivers2API.Data.Models.Interfaces;
 namespace Helldivers2API.Data.Models
 {
 
-    public class ExtremeCold : IEnvironment
+    internal class ExtremeCold : IEnvironment
     {
         const string Name = "ExtremeCold";
         const string Description = "Icy temperatures reduce rate of fire and delay heat buildup in weapons";
@@ -26,7 +26,7 @@ namespace Helldivers2API.Data.Models
         string IDataCache.Name => Name;
 
     }
-    public class ThickFog : IEnvironment
+    internal class ThickFog : IEnvironment
     {
         const string Name = "ThickFog";
         const string Description = "";
@@ -36,7 +36,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class Rainstorms : IEnvironment
+    internal class Rainstorms : IEnvironment
     {
         const string Name = "Rainstorms";
         const string Description = "Torrential rainstorms reduce visibility";
@@ -46,7 +46,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class IntenseHeat : IEnvironment
+    internal class IntenseHeat : IEnvironment
     {
         const string Name = "IntenseHeat";
         const string Description = "High temperatures increase stamina drain and speed up heat buildup in weapons";
@@ -56,7 +56,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class Tremors : IEnvironment
+    internal class Tremors : IEnvironment
     {
         const string Name = "Tremors";
         const string Description = "Frequent earthquakes stun players and enemies alike";
@@ -66,7 +66,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class Blizzards : IEnvironment
+    internal class Blizzards : IEnvironment
     {
         const string Name = "Blizzards";
         const string Description = "";
@@ -76,7 +76,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class MeteorStorms : IEnvironment
+    internal class MeteorStorms : IEnvironment
     {
         const string Name = "MeteorStorms";
         const string Description = "Meteors impact the surface causing massive damage";
@@ -86,7 +86,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class Sandstorms : IEnvironment
+    internal class Sandstorms : IEnvironment
     {
         const string Name = "Sandstorms";
         const string Description = "";
@@ -96,7 +96,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class IonStorms : IEnvironment
+    internal class IonStorms : IEnvironment
     {
         const string Name = "IonStorms";
         const string Description = "Ion storms intermittently disable Stratagems";
@@ -106,7 +106,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class AcidStorms : IEnvironment
+    internal class AcidStorms : IEnvironment
     {
         const string Name = "AcidStorms";
         const string Description = "Violent acid storms reduce visibility";
@@ -116,7 +116,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class VolcanicActivity : IEnvironment
+    internal class VolcanicActivity : IEnvironment
     {
         const string Name = "VolcanicActivity";
         const string Description = "Volcanoes throw burning rocks around this planet";
@@ -126,7 +126,7 @@ namespace Helldivers2API.Data.Models
         int IDataCache.Id => throw new NotImplementedException();
         string IDataCache.Name => Name;
     }
-    public class FireTornadoes : IEnvironment
+    internal class FireTornadoes : IEnvironment
     {
         const string Name = "FireTornadoes";
         const string Description = "Planet is ravaged by deadly fire tornadoes";

@@ -2,7 +2,7 @@ using System;
 using System.Web;
 namespace Helldivers2API.Web
 {
-  public class URIParameterFormatProvider : IFormatProvider
+  internal class URIParameterFormatProvider : IFormatProvider
   {
     private readonly URIParameterFormatter _formatter;
 

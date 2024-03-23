@@ -6,7 +6,7 @@ using Helldivers2API.Web.Http;
 
 namespace Helldivers2API.Web.Clients.Interfaces
 {
-    public interface IHelldivers2Client
+    internal interface IHelldivers2Client
     {
 
         /// <summary>

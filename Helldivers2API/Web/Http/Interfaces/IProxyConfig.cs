@@ -1,6 +1,6 @@
 namespace Helldivers2API.Web
 {
-  public interface IProxyConfig
+  internal interface IProxyConfig
   {
     string Host { get; }
     int Port { get; }

@@ -5,7 +5,7 @@ using Helldivers2API.Web.Http;
 namespace Helldivers2API.Web
 {
   [Serializable]
-  public class APIUnauthorizedException : APIException
+  internal class APIUnauthorizedException : APIException
   {
     public APIUnauthorizedException(IResponse response) : base(response) { }
 

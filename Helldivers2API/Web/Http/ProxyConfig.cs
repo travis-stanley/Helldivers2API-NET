@@ -1,6 +1,6 @@
 namespace Helldivers2API.Web
 {
-  public class ProxyConfig : IProxyConfig
+  internal class ProxyConfig : IProxyConfig
   {
     public ProxyConfig(string host, int port)
     {

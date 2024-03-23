@@ -16,7 +16,7 @@ namespace Helldivers2API.Web.Data
     /// <summary>
     /// Builds concrete classes for data gathered outside the api
     /// </summary>
-    public class BiomeParser
+    internal class BiomeParser
     {
         private static string _dataSource = "biomes.txt";
         private static string _data = "";
@@ -31,7 +31,7 @@ namespace Helldivers2API.Web.Data
         public static void ParseMetadata()
         {
             var template = """
-                    public class #NAME# : IBiome
+                    internal class #NAME# : IBiome
                     {
                         const string Name = "#PNAME#";
                         const string Description = "#DESC#";
@@ -61,7 +61,7 @@ namespace Helldivers2API.Web.Data
     /// <summary>
     /// Builds concrete classes for data gathered outside the api
     /// </summary>
-    public class PlanetParser
+    internal class PlanetParser
     {
         private static string _dataSource = "planets.txt";
         private static Dictionary<int, string>? _data;
@@ -83,7 +83,7 @@ namespace Helldivers2API.Web.Data
         public static void ParseMetadata()
         {
             var template = """
-                public class #NAME# : IPlanet, IDataCache
+                internal class #NAME# : IPlanet, IDataCache
                 {
                     const int Id = #ID#;
                     const string Name = "#PNAME#";
@@ -133,13 +133,13 @@ namespace Helldivers2API.Web.Data
         }
     }
 
-    public class SectorParser
+    internal class SectorParser
     {
 
         public static void ParseFromPlanets()
         {
             var template = """
-                public class #NAME# : ISector, IDataCache
+                internal class #NAME# : ISector, IDataCache
                 {
                     const int Id = #ID#;
                     const string Name = "#PNAME#";

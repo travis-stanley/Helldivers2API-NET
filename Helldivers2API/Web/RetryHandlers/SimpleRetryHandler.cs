@@ -8,7 +8,7 @@ using Helldivers2API.Web.Http;
 
 namespace Helldivers2API.Web
 {
-  public class SimpleRetryHandler : IRetryHandler
+  internal class SimpleRetryHandler : IRetryHandler
   {
     private readonly Func<TimeSpan, Task> _sleep;
 

@@ -7,7 +7,7 @@ namespace Helldivers2API.Web.Clients.Interfaces
     /// <summary>
     /// Get war info 
     /// </summary>
-    public interface IWarStatusClient
+    internal interface IWarStatusClient
     {
         /// <summary>
         /// Get assignments
