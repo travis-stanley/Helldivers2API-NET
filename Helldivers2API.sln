@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helldivers2API", "Helldivers2API\Helldivers2API.csproj", "{1023036C-B79D-41C1-82AF-270429B8F5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{95BA5CFF-AD93-4CED-A0EB-37E129681B08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1023036C-B79D-41C1-82AF-270429B8F5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1023036C-B79D-41C1-82AF-270429B8F5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1023036C-B79D-41C1-82AF-270429B8F5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1023036C-B79D-41C1-82AF-270429B8F5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BA5CFF-AD93-4CED-A0EB-37E129681B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BA5CFF-AD93-4CED-A0EB-37E129681B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BA5CFF-AD93-4CED-A0EB-37E129681B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BA5CFF-AD93-4CED-A0EB-37E129681B08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6E6DFDB-45D9-479C-BFDD-4C94BE9AC683}
+	EndGlobalSection
+EndGlobal

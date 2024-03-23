@@ -1,0 +1,1566 @@
+0: {
+    name: "Super Earth",
+    sector: Sol,
+    biome: null,
+    environmentals: []
+},
+1: {
+    name: "Klen Dahth II",
+    sector: Altus,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+2: {
+    name: "Pathfinder V",
+    sector: Altus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+3: {
+    name: "Widow's Harbor",
+    sector: Altus,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+4: {
+    name: "New Haven",
+    sector: Altus,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+5: {
+    name: "Pilen V",
+    sector: Altus,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+6: {
+    name: "Hydrofall Prime",
+    sector: Barnard,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+7: {
+    name: "Zea Rugosia",
+    sector: Ferris,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+8: {
+    name: "Darrowsport",
+    sector: Barnard,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+9: {
+    name: "Fornskogur II",
+    sector: Barnard,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+10: {
+    name: "Midasburg",
+    sector: Barnard,
+    biome: null,
+    environmentals: []
+},
+11: {
+    name: "Cerberus IIIc",
+    sector: Cancri,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+12: {
+    name: "Prosperity Falls",
+    sector: Cancri,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+13: {
+    name: "Okul VI",
+    sector: Gothmar,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+14: {
+    name: "Martyr's Bay",
+    sector: Cantolus,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+15: {
+    name: "Freedom Peak",
+    sector: Cantolus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+16: {
+    name: "Fort Union",
+    sector: Orion,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+17: {
+    name: "Kelvinor",
+    sector: Cantolus,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+18: {
+    name: "Wraith",
+    sector: Idun,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+19: {
+    name: "Igla",
+    sector: Kelvin,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+20: {
+    name: "New Kiruna",
+    sector: Kelvin,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+21: {
+    name: "Fort Justice",
+    sector: Kelvin,
+    biome: null,
+    environmentals: []
+},
+22: {
+    name: "Zegema Paradise",
+    sector: Kelvin,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+23: {
+    name: "Providence",
+    sector: Iptus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+24: {
+    name: "Primordia",
+    sector: Iptus,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+25: {
+    name: "Sulfura",
+    sector: Celeste,
+    biome: Ethereal,
+    environmentals: []
+},
+26: {
+    name: "Nublaria I",
+    sector: Celeste,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+27: {
+    name: "Krakatwo",
+    sector: Celeste,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+28: {
+    name: "Volterra",
+    sector: Korpus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+29: {
+    name: "Crucible",
+    sector: Korpus,
+    biome: null,
+    environmentals: []
+},
+30: {
+    name: "Veil",
+    sector: Barnard,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+31: {
+    name: "Marre IV",
+    sector: Barnard,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+32: {
+    name: "Fort Sanctuary",
+    sector: Cancri,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+33: {
+    name: "Seyshel Beach",
+    sector: Cancri,
+    biome: Ethereal,
+    environmentals: []
+},
+34: {
+    name: "Hellmire",
+    sector: Mirin,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+35: {
+    name: "Effluvia",
+    sector: Cancri,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+36: {
+    name: "Solghast",
+    sector: Gothmar,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+37: {
+    name: "Diluvia",
+    sector: Gothmar,
+    biome: null,
+    environmentals: []
+},
+38: {
+    name: "Viridia Prime",
+    sector: Cantolus,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+39: {
+    name: "Obari",
+    sector: Cantolus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+40: {
+    name: "Myradesh",
+    sector: Idun,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+41: {
+    name: "Atrama",
+    sector: Idun,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+42: {
+    name: "Emeria",
+    sector: Kelvin,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+43: {
+    name: "Barabos",
+    sector: Marspira,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+44: {
+    name: "Fenmire",
+    sector: Marspira,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+45: {
+    name: "Mastia",
+    sector: Marspira,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+46: {
+    name: "Shallus",
+    sector: Talus,
+    biome: Ethereal,
+    environmentals: []
+},
+47: {
+    name: "Krakabos",
+    sector: Iptus,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+48: {
+    name: "Iridica",
+    sector: Iptus,
+    biome: Ethereal,
+    environmentals: []
+},
+49: {
+    name: "Azterra",
+    sector: Orion,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+50: {
+    name: "Azur Secundus",
+    sector: Sten,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+51: {
+    name: "Ivis",
+    sector: Celeste,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+52: {
+    name: "Slif",
+    sector: Celeste,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+53: {
+    name: "Caramoor",
+    sector: Korpus,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+54: {
+    name: "Kharst",
+    sector: Gallux,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+55: {
+    name: "Eukoria",
+    sector: Morgon,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+56: {
+    name: "Myrium",
+    sector: Morgon,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+57: {
+    name: "Kerth Secundus",
+    sector: Rictus,
+    biome: null,
+    environmentals: []
+},
+58: {
+    name: "Parsh",
+    sector: Rictus,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+59: {
+    name: "Reaf",
+    sector: Saleria,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+60: {
+    name: "Irulta",
+    sector: Saleria,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+61: {
+    name: "Emorath",
+    sector: Meridian,
+    biome: null,
+    environmentals: []
+},
+62: {
+    name: "Ilduna Prime",
+    sector: Meridian,
+    biome: null,
+    environmentals: []
+},
+63: {
+    name: "Maw",
+    sector: Idun,
+    biome: null,
+    environmentals: [IntenseHeat]
+},
+64: {
+    name: "Meridia",
+    sector: Umlaut,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+65: {
+    name: "Borea",
+    sector: Sagan,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+66: {
+    name: "Curia",
+    sector: Marspira,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+67: {
+    name: "Tarsh",
+    sector: Marspira,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+68: {
+    name: "Shelt",
+    sector: Talus,
+    biome: null,
+    environmentals: []
+},
+69: {
+    name: "Imber",
+    sector: Talus,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+70: {
+    name: "Blistica",
+    sector: Gellert,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+71: {
+    name: "Ratch",
+    sector: Iptus,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+72: {
+    name: "Julheim",
+    sector: Nanos,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+73: {
+    name: "Valgaard",
+    sector: Iptus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+74: {
+    name: "Arkturus",
+    sector: Arturion,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+75: {
+    name: "Esker",
+    sector: Falstaff,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+76: {
+    name: "Terrek",
+    sector: Orion,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+77: {
+    name: "Cirrus",
+    sector: Orion,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+78: {
+    name: "Crimsica",
+    sector: Draco,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+79: {
+    name: "Heeth",
+    sector: Orion,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+80: {
+    name: "Veld",
+    sector: Orion,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+81: {
+    name: "Alta V",
+    sector: Korpus,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+82: {
+    name: "Ursica XI",
+    sector: Borgus,
+    biome: null,
+    environmentals: []
+},
+83: {
+    name: "Inari",
+    sector: Korpus,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+84: {
+    name: "Skaash",
+    sector: Ursa,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+85: {
+    name: "Moradesh",
+    sector: Celeste,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+86: {
+    name: "Rasp",
+    sector: Gallux,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+87: {
+    name: "Bashyr",
+    sector: Gallux,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+88: {
+    name: "Regnus",
+    sector: Morgon,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+89: {
+    name: "Mog",
+    sector: Morgon,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+90: {
+    name: "Valmox",
+    sector: Rictus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+91: {
+    name: "Iro",
+    sector: Rictus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+92: {
+    name: "Grafmere",
+    sector: Rictus,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+93: {
+    name: "New Stockholm",
+    sector: Hanzo,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+94: {
+    name: "Oasis",
+    sector: Rictus,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+95: {
+    name: "Genesis Prime",
+    sector: Rictus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+96: {
+    name: "Outpost 32",
+    sector: Saleria,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+97: {
+    name: "Calypso",
+    sector: Saleria,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+98: {
+    name: "Elysian Meadows",
+    sector: Guang,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+99: {
+    name: "Alderidge Cove",
+    sector: Guang,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+100: {
+    name: "Trandor",
+    sector: Sten,
+    biome: Tundra,
+    environmentals: []
+},
+101: {
+    name: "East Iridium Trading Bay",
+    sector: Tarragon,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+102: {
+    name: "Liberty Ridge",
+    sector: Meridian,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+103: {
+    name: "Baldrick Prime",
+    sector: Meridian,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+104: {
+    name: "The Weir",
+    sector: Theseus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+105: {
+    name: "Kuper",
+    sector: Theseus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+106: {
+    name: "Oslo Station",
+    sector: Sagan,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+107: {
+    name: "Pöpli IX",
+    sector: Xzar,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+108: {
+    name: "Gunvald",
+    sector: Sagan,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+109: {
+    name: "Dolph",
+    sector: Nanos,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+110: {
+    name: "Bekvam III",
+    sector: Nanos,
+    biome: null,
+    environmentals: []
+},
+111: {
+    name: "Duma Tyr",
+    sector: Nanos,
+    biome: null,
+    environmentals: []
+},
+112: {
+    name: "Vernen Wells",
+    sector: Hydra,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+113: {
+    name: "Aesir Pass",
+    sector: Hydra,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+114: {
+    name: "Aurora Bay",
+    sector: Valdis,
+    biome: Tundra,
+    environmentals: []
+},
+115: {
+    name: "Penta",
+    sector: Lacaille,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+116: {
+    name: "Gaellivare",
+    sector: Talus,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+117: {
+    name: "Vog-sojoth",
+    sector: Tanis,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+118: {
+    name: "Kirrik",
+    sector: Arturion,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+119: {
+    name: "Mortax Prime",
+    sector: Arturion,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+120: {
+    name: "Wilford Station",
+    sector: Arturion,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+121: {
+    name: "Pioneer II",
+    sector: Arturion,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+122: {
+    name: "Erson Sands",
+    sector: Falstaff,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+123: {
+    name: "Socorro III",
+    sector: Falstaff,
+    biome: null,
+    environmentals: []
+},
+124: {
+    name: "Bore Rock",
+    sector: Falstaff,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+125: {
+    name: "Fenrir III",
+    sector: Umlaut,
+    biome: Moon,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+126: {
+    name: "Turing",
+    sector: Umlaut,
+    biome: Ethereal,
+    environmentals: []
+},
+127: {
+    name: "Angel's Venture",
+    sector: Orion,
+    biome: Tundra,
+    environmentals: []
+},
+128: {
+    name: "Darius II",
+    sector: Borgus,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+129: {
+    name: "Acamar IV",
+    sector: JinXi,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+130: {
+    name: "Achernar Secundus",
+    sector: Borgus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+131: {
+    name: "Achird III",
+    sector: Borgus,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+132: {
+    name: "Acrab XI",
+    sector: Ursa,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+133: {
+    name: "Acrux IX",
+    sector: Ursa,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+134: {
+    name: "Acubens Prime",
+    sector: Gallux,
+    biome: null,
+    environmentals: []
+},
+135: {
+    name: "Adhara",
+    sector: Gallux,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+136: {
+    name: "Afoyay Bay",
+    sector: Gallux,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+137: {
+    name: "Ain-5",
+    sector: Hanzo,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+138: {
+    name: "Alairt III",
+    sector: Hanzo,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+139: {
+    name: "Alamak VII",
+    sector: Hanzo,
+    biome: null,
+    environmentals: []
+},
+140: {
+    name: "Alaraph",
+    sector: Akira,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+141: {
+    name: "Alathfar XI",
+    sector: Akira,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+142: {
+    name: "Andar",
+    sector: Akira,
+    biome: null,
+    environmentals: []
+},
+143: {
+    name: "Asperoth Prime",
+    sector: Akira,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+144: {
+    name: "Bellatrix",
+    sector: Guang,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+145: {
+    name: "Botein",
+    sector: Guang,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+146: {
+    name: "Osupsam",
+    sector: Tarragon,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+147: {
+    name: "Brink-2",
+    sector: Tarragon,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+148: {
+    name: "Bunda Secundus",
+    sector: Tarragon,
+    biome: null,
+    environmentals: []
+},
+149: {
+    name: "Canopus",
+    sector: Tarragon,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+150: {
+    name: "Caph",
+    sector: Theseus,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+151: {
+    name: "Castor",
+    sector: Theseus,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+152: {
+    name: "Durgen",
+    sector: Severin,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+153: {
+    name: "Draupnir",
+    sector: Xzar,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+154: {
+    name: "Mort",
+    sector: Xzar,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+155: {
+    name: "Ingmar",
+    sector: Xzar,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+156: {
+    name: "Charbal-VII",
+    sector: Andromeda,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+157: {
+    name: "Charon Prime",
+    sector: Andromeda,
+    biome: null,
+    environmentals: [IntenseHeat]
+},
+158: {
+    name: "Choepessa IV",
+    sector: Trigon,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+159: {
+    name: "Choohe",
+    sector: Lacaille,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+160: {
+    name: "Chort Bay",
+    sector: Lacaille,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+161: {
+    name: "Claorell",
+    sector: Tanis,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+162: {
+    name: "Clasa",
+    sector: Tanis,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+163: {
+    name: "Demiurg",
+    sector: Tanis,
+    biome: Tundra,
+    environmentals: []
+},
+164: {
+    name: "Deneb Secundus",
+    sector: Arturion,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+165: {
+    name: "Electra Bay",
+    sector: Arturion,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+166: {
+    name: "Enuliale",
+    sector: Lestrade,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+167: {
+    name: "Epsilon Phoencis VI",
+    sector: Lestrade,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+168: {
+    name: "Erata Prime",
+    sector: Umlaut,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+169: {
+    name: "Estanu",
+    sector: Draco,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+170: {
+    name: "Fori Prime",
+    sector: Draco,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+171: {
+    name: "Gacrux",
+    sector: JinXi,
+    biome: null,
+    environmentals: []
+},
+172: {
+    name: "Gar Haren",
+    sector: JinXi,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+173: {
+    name: "Gatria",
+    sector: JinXi,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+174: {
+    name: "Gemma",
+    sector: Ursa,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+175: {
+    name: "Grand Errant",
+    sector: Farsight,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+176: {
+    name: "Hadar",
+    sector: Ferris,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+177: {
+    name: "Haka",
+    sector: Leo,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+178: {
+    name: "Haldus",
+    sector: Ferris,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+179: {
+    name: "Halies Port",
+    sector: Leo,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+180: {
+    name: "Herthon Secundus",
+    sector: Ferris,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+181: {
+    name: "Hesoe Prime",
+    sector: Rigel,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+182: {
+    name: "Heze Bay",
+    sector: Hanzo,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+183: {
+    name: "Hort",
+    sector: Rigel,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+184: {
+    name: "Hydrobius",
+    sector: Omega,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+185: {
+    name: "Karlia",
+    sector: Omega,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+186: {
+    name: "Keid",
+    sector: Akira,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+187: {
+    name: "Khandark",
+    sector: Guang,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+188: {
+    name: "Klaka 5",
+    sector: Alstrad,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+189: {
+    name: "Kneth Port",
+    sector: Alstrad,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+190: {
+    name: "Kraz",
+    sector: Alstrad,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+191: {
+    name: "Kuma",
+    sector: Hawking,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+192: {
+    name: "Lastofe",
+    sector: Theseus,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+193: {
+    name: "Leng Secundus",
+    sector: Quintus,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+194: {
+    name: "Lesath",
+    sector: Lacaille,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+195: {
+    name: "Maia",
+    sector: Severin,
+    biome: null,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+196: {
+    name: "Malevelon Creek",
+    sector: Severin,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+197: {
+    name: "Mantes",
+    sector: Xzar,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+198: {
+    name: "Marfark",
+    sector: Andromeda,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+199: {
+    name: "Martale",
+    sector: Andromeda,
+    biome: null,
+    environmentals: []
+},
+200: {
+    name: "Matar Bay",
+    sector: Andromeda,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+201: {
+    name: "Meissa",
+    sector: Ymir,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+202: {
+    name: "Mekbuda",
+    sector: Valdis,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+203: {
+    name: "Menkent",
+    sector: Hydra,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+204: {
+    name: "Merak",
+    sector: Valdis,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+205: {
+    name: "Merga IV",
+    sector: Valdis,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+206: {
+    name: "Minchir",
+    sector: Gellert,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+207: {
+    name: "Mintoria",
+    sector: Gellert,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+208: {
+    name: "Mordia 9",
+    sector: Hawking,
+    biome: Ethereal,
+    environmentals: []
+},
+209: {
+    name: "Nabatea Secundus",
+    sector: Lestrade,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+210: {
+    name: "Navi VII",
+    sector: Lestrade,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+211: {
+    name: "Nivel 43",
+    sector: Mirin,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+212: {
+    name: "Oshaune",
+    sector: Mirin,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+213: {
+    name: "Overgoe Prime",
+    sector: Sten,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+214: {
+    name: "Pandion-XXIV",
+    sector: JinXi,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+215: {
+    name: "Partion",
+    sector: Sten,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+216: {
+    name: "Peacock",
+    sector: Sten,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+217: {
+    name: "Phact Bay",
+    sector: JinXi,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+218: {
+    name: "Pherkad Secundus",
+    sector: Farsight,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+219: {
+    name: "Polaris Prime",
+    sector: Farsight,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+220: {
+    name: "Pollux 31",
+    sector: Farsight,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+221: {
+    name: "Prasa",
+    sector: Farsight,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+222: {
+    name: "Propus",
+    sector: Leo,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+223: {
+    name: "Ras Algethi",
+    sector: Leo,
+    biome: null,
+    environmentals: []
+},
+224: {
+    name: "RD-4",
+    sector: Rigel,
+    biome: Moon,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+225: {
+    name: "Rogue 5",
+    sector: Rigel,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+226: {
+    name: "Rirga Bay",
+    sector: Rigel,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+227: {
+    name: "Seasse",
+    sector: Omega,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+228: {
+    name: "Senge 23",
+    sector: Omega,
+    biome: Canyon,
+    environmentals: [Tremors]
+},
+229: {
+    name: "Setia",
+    sector: Omega,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+230: {
+    name: "Shete",
+    sector: XiTauri,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+231: {
+    name: "Siemnot",
+    sector: XiTauri,
+    biome: RainForest,
+    environmentals: [IonStorms]
+},
+232: {
+    name: "Sirius",
+    sector: XiTauri,
+    biome: Moon,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+233: {
+    name: "Skat Bay",
+    sector: XiTauri,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+234: {
+    name: "Spherion",
+    sector: Quintus,
+    biome: Jungle,
+    environmentals: [VolcanicActivity, Rainstorms]
+},
+235: {
+    name: "Stor Tha Prime",
+    sector: Quintus,
+    biome: IceMoss,
+    environmentals: [ExtremeCold]
+},
+236: {
+    name: "Stout",
+    sector: Quintus,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+237: {
+    name: "Termadon",
+    sector: Quintus,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+238: {
+    name: "Tibit",
+    sector: Severin,
+    biome: Ethereal,
+    environmentals: []
+},
+239: {
+    name: "Tien Kwan",    
+    sector: Theseus,
+    biome: IceMossSpecial,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+240: {
+    name: "Troost",
+    sector: Trigon,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+241: {
+    name: "Ubanea",
+    sector: Severin,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+242: {
+    name: "Ustotu",
+    sector: Trigon,
+    biome: Desert,
+    environmentals: [IntenseHeat, Tremors]
+},
+243: {
+    name: "Vandalon IV",
+    sector: Trigon,
+    biome: Moon,
+    environmentals: [ExtremeCold, Blizzards]
+},
+244: {
+    name: "Varylia 5",
+    sector: Trigon,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+245: {
+    name: "Wasat",
+    sector: Ymir,
+    biome: null,
+    environmentals: [IntenseHeat, AcidStorms]
+},
+246: {
+    name: "Vega Bay",
+    sector: Ymir,
+    biome: Winter,
+    environmentals: [ExtremeCold, Blizzards]
+},
+247: {
+    name: "Wezen",
+    sector: Ymir,
+    biome: Desolate,
+    environmentals: [IntenseHeat, FireTornadoes]
+},
+248: {
+    name: "Vindemitarix Prime",
+    sector: Valdis,
+    biome: Ethereal,
+    environmentals: []
+},
+249: {
+    name: "X-45",
+    sector: Ymir,
+    biome: Swamp,
+    environmentals: [ThickFog]
+},
+250: {
+    name: "Yed Prior",
+    sector: Tanis,
+    biome: CrimsonMoor,
+    environmentals: [IonStorms]
+},
+251: {
+    name: "Zefia",
+    sector: Tanis,
+    biome: Ethereal,
+    environmentals: []
+},
+252: {
+    name: "Zosma",
+    sector: Gellert,
+    biome: Moon,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+253: {
+    name: "Zzaniah Prime",
+    sector: Gellert,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+254: {
+    name: "Skitter",
+    sector: Hawking,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+255: {
+    name: "Euphoria III",
+    sector: Hawking,
+    biome: Moon,
+    environmentals: [ExtremeCold, MeteorStorms]
+},
+256: {
+    name: "Diaspora X",
+    sector: Lestrade,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+257: {
+    name: "Gemstone Bluffs",
+    sector: Lestrade,
+    biome: Highlands,
+    environmentals: [ThickFog, Rainstorms]
+},
+258: {
+    name: "Zagon Prime",
+    sector: Mirin,
+    biome: null,
+    environmentals: [IntenseHeat, Sandstorms]
+},
+259: {
+    name: "Omicron",
+    sector: Lestrade,
+    biome: Tundra,
+    environmentals: []
+},
+260: {
+    name: "Cyberstan",
+    sector: Valdis,
+    biome: Canyon,
+    environmentals: [Tremors]
+}
