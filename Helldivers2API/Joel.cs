@@ -14,19 +14,29 @@ namespace Helldivers2API
     /// <summary>
     /// Main entry point to retrieve data and use this library.
     /// </summary>
-    public class Joel
+    /// <remarks>
+    /// Singleton, there can only be one Joel.
+    /// </remarks>
+    public sealed class Joel
     {
-        private Helldivers2Client _client = default!;      
+        private static readonly Lazy<Joel> lazy = new Lazy<Joel>(() => new Joel());
+        public static Joel Instance { get { return lazy.Value; } }
+        private Joel() {}
+        
+        public int WarId { get; internal set; } = default!;
+        internal Helldivers2Client Client { get; set; } = default!;
+
 
         /// <summary>
-        /// Main entry point to retrieve data and use this library.
+        /// Set the current war id
         /// </summary>
-        /// <param name="warId">
-        /// The current season or war Id.  The first season is/was 801.
-        /// </param>
-        public Joel(int warId)
-        {            
-            _client = new Helldivers2Client(warId);
+        /// <param name="warId">The current war id</param>
+        /// <returns></returns>
+        public Joel SetWarId(int warId) 
+        { 
+            WarId = warId;
+            Client = new Helldivers2Client(warId); 
+            return this; 
         }
 
         /// <summary>
@@ -58,25 +68,42 @@ namespace Helldivers2API
         /// Get information about the current assignments.  This is the MAJOR ORDER.
         /// </summary>
         /// <returns></returns>
-        public Assignment[] GetAssignments() => Web.Cache.WebCache.GetAssignments(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+        public Assignment[] GetAssignments()
+        {
+            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
+            return Web.Cache.WebCache.GetAssignments().ConfigureAwait(false).GetAwaiter().GetResult();
+        }
 
         /// <summary>
         /// Gets the news feed.
         /// </summary>
         /// <returns></returns>
-        public NewsFeed[] GetNewsFeed() => Web.Cache.WebCache.GetWarFeeds(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+        public NewsFeed[] GetNewsFeed() 
+        {
+            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
+            return Web.Cache.WebCache.GetWarFeeds().ConfigureAwait(false).GetAwaiter().GetResult(); 
+        }
 
         /// <summary>
         /// Gets the status of the war
         /// </summary>
         /// <returns></returns>
-        public WarStatus GetWarStatus() => Web.Cache.WebCache.GetWarStatus(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+        public WarStatus GetWarStatus() 
+        {
+            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
+            return Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+        
 
         /// <summary>
         /// Gets info on the war
         /// </summary>
         /// <returns></returns>
-        public WarInfo GetWarInfo() => Web.Cache.WebCache.GetWarInfo(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+        public WarInfo GetWarInfo()
+        {
+            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
+            return Web.Cache.WebCache.GetWarInfo().ConfigureAwait(false).GetAwaiter().GetResult();
+        }
 
 
         /// <summary>
