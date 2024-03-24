@@ -10,7 +10,7 @@
   </a>
 </h1>
 
-Another open source library for the undocumented Helldivers2 API, and in .NET!
+Another open source library for the undocumented Helldivers2 API
 
 ### Features
  
