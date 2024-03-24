@@ -14,11 +14,11 @@ namespace Helldivers2API.Data.Models.Extensions
     /// </summary>
     public static class APIExtensions
     {
-        public static PlanetInfo PlanetInfo(this IPlanet planet)
-        {
-            //return APICache.GetPlanetInfo(planet.Id);
-            throw new NotImplementedException();
-        }
+        //public static PlanetInfo PlanetInfo(this IPlanet planet)
+        //{
+        //    //return APICache.GetPlanetInfo(planet.Id);
+        //    throw new NotImplementedException();
+        //}
 
         //public static Web.PlanetAttack[] PlanetAttacks(this IPlanet planet)
         //{

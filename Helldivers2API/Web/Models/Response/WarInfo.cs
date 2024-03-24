@@ -28,11 +28,13 @@ namespace Helldivers2API.Web
         [JsonProperty("homeWorlds")]
         public List<HomeWorld> HomeWorlds { get; set; } = default!;
 
-        [JsonProperty("capitalInfos")]
-        public List<string> CapitalInfos { get; set; } = default!;
+        // TBD
+        //[JsonProperty("capitalInfos")]
+        //public List<string> CapitalInfos { get; set; } = default!;
 
-        [JsonProperty("planetPermanentEffects")]
-        public List<int> PlanetPermanentEffects { get; set; } = default!;
+        // TBD
+        //[JsonProperty("planetPermanentEffects")]
+        //public List<int> PlanetPermanentEffects { get; set; } = default!;
     }   
 }
 
