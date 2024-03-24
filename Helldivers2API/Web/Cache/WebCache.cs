@@ -19,8 +19,6 @@ namespace Helldivers2API.Web.Cache
         private static Dictionary<long, WarStatus> _warStatuses = default!;
         private static long tickInterval = 60 * 10000000;
 
-        private static Dictionary<string, long> _lastRefreshed = new Dictionary<string, long>();
-
         // assignments
         public static async Task<Helldivers2API.Data.Models.Assignment[]> GetAssignments(Helldivers2Client hdClient)
         {
@@ -37,13 +35,8 @@ namespace Helldivers2API.Web.Cache
         {
             var assignments = await hdClient.Assignments.Get(hdClient.warId).ConfigureAwait(false);
             if (assignments != null)
-            {
                 _assignments.Add(DateTime.Now.Ticks, assignments);
-                if (!_lastRefreshed.ContainsKey("Assignments"))
-                    _lastRefreshed.Add("Assignments", 0);
-                _lastRefreshed["Assignments"] = DateTime.Now.Ticks;
-            }
-                
+
         }
 
         // war status
@@ -61,13 +54,8 @@ namespace Helldivers2API.Web.Cache
         {
             var warStatus = await hdClient.WarStatus.Get(hdClient.warId).ConfigureAwait(false);
             if (warStatus != null)
-            {
                 _warStatuses.Add(DateTime.Now.Ticks, warStatus);
-                if (!_lastRefreshed.ContainsKey("WarStatus"))
-                    _lastRefreshed.Add("WarStatus", 0);
-                _lastRefreshed["WarStatus"] = DateTime.Now.Ticks;
-            }
-                
+
         }
 
         // news feed
@@ -85,12 +73,7 @@ namespace Helldivers2API.Web.Cache
         {
             var warFeeds = await hdClient.WarFeeds.Get(hdClient.warId).ConfigureAwait(false);
             if (warFeeds != null)
-            {
                 _warFeeds.Add(DateTime.Now.Ticks, warFeeds);
-                if (!_lastRefreshed.ContainsKey("WarFeed"))
-                    _lastRefreshed.Add("WarFeed", 0);
-                _lastRefreshed["WarFeed"] = DateTime.Now.Ticks;
-            }                
         }
 
         // war info
@@ -108,26 +91,26 @@ namespace Helldivers2API.Web.Cache
         {
             var warInfo = await hdClient.WarInfo.Get(hdClient.warId).ConfigureAwait(false);
             if (warInfo != null)
-            {
                 _warInfos.Add(DateTime.Now.Ticks, warInfo);
-                if (!_lastRefreshed.ContainsKey("WarInfo"))
-                    _lastRefreshed.Add("WarInfo", 0);
-                _lastRefreshed["WarInfo"] = DateTime.Now.Ticks;
-            }                
         }
 
         private static Dictionary<string, DateTime?> GetLastRefreshed()
         {
             var lastRefreshed = new Dictionary<string, DateTime?>();
 
-            if (_lastRefreshed.ContainsKey("Assignment"))
-                lastRefreshed.Add("Assignment", new DateTime(_lastRefreshed["Assignment"]));
-            if (_lastRefreshed.ContainsKey("WarStatus"))
-                lastRefreshed.Add("WarStatus", new DateTime(_lastRefreshed["WarStatus"]));
-            if (_lastRefreshed.ContainsKey("WarFeed"))
-                lastRefreshed.Add("WarFeed", new DateTime(_lastRefreshed["WarFeed"]));
-            if (_lastRefreshed.ContainsKey("WarInfo"))
-                lastRefreshed.Add("WarInfo", new DateTime(_lastRefreshed["WarInfo"]));
+            DateTime? assignmentRef = null;
+            if (_assignments != default) assignmentRef = _assignments.Count() == 0 ? null : new DateTime(_assignments.OrderBy(o => o.Key).Last().Key);
+            DateTime? warfeedRef = null;
+            if (_warFeeds != default) warfeedRef = _warFeeds.Count() == 0 ? null : new DateTime(_warFeeds.OrderBy(o => o.Key).Last().Key);
+            DateTime? warinfoRef = null;
+            if (_warInfos != default) warinfoRef = _warInfos.Count() == 0 ? null : new DateTime(_warInfos.OrderBy(o => o.Key).Last().Key);
+            DateTime? warstatusRef = null;
+            if (_warStatuses != default) warstatusRef = _warStatuses.Count() == 0 ? null : new DateTime(_warStatuses.OrderBy(o => o.Key).Last().Key);
+
+            lastRefreshed.Add("Assignments", assignmentRef);
+            lastRefreshed.Add("WarInfo", warinfoRef);
+            lastRefreshed.Add("WarStatus", warstatusRef);
+            lastRefreshed.Add("NewsFeed", warfeedRef);
 
             return lastRefreshed;
         }
