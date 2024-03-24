@@ -5,7 +5,7 @@
     <img
       height="128"
       width="128"
-      src="Helldivers2API-NET/hdlogo.png"
+      src="Helldivers2API/hdlogo.png"
       >
   </a>
 </h1>
