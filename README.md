@@ -1,4 +1,3 @@
-
 <h1 align="center">
   <p align="center">Helldivers2API-NET</p>
   <a href="#">
@@ -9,6 +8,8 @@
       >
   </a>
 </h1>
+
+![example branch parameter](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml/badge.svg?branch=master)
 
 Another open source library for the undocumented Helldivers2 API
 
