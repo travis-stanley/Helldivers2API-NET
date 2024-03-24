@@ -3,6 +3,8 @@
   <p align="center">Helldivers2API-NET</p>
   <a href="#">
     <img
+      height="205"
+      width="364"
       src="Helldivers2API/hdlogo.png"
       >
   </a>
