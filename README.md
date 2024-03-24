@@ -1,6 +1,13 @@
 
 <h1 align="center">
   <p align="center">Helldivers2API-NET</p>
+  <a href="#">
+    <img
+      height="128"
+      width="128"
+      src="Helldivers2API-NET/hdlogo.png"
+      >
+  </a>
 </h1>
 
 Another *unofficial* open source library for the Helldivers2 API, but in .NET!
