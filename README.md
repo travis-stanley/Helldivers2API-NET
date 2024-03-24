@@ -3,7 +3,8 @@
   <p align="center">Helldivers2API-NET</p>
 </h1>
 
-Another open source library for the Helldivers2 API, but in .NET!
+Another *unofficial* open source library for the Helldivers2 API, but in .NET!
+
 ### Features
 
 ### Example
