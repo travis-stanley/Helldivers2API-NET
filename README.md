@@ -22,13 +22,13 @@ Another open source library for the undocumented Helldivers2 API
 ### Getting Started
 
 All information is retrievable through the convenient `Joel` class.
-* Get current assignments, aka the `Major Order`
+* Get current assignments, e.g. the `Major Order`
 * Get news from the galaxy
 * Get status of the on-going war efforts
 * Get information of the on-going war
-* Get all the known planets in the galaxy, including
+* Get all the known planets in the galaxy, including their
   * Sector
-  * Biomes
+  * Biome
   * Envrionmental conditions (fire storms, etc)  
   * Supply lines to other planets
   * Player count
