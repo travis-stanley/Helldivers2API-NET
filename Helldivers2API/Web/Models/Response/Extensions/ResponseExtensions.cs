@@ -10,6 +10,8 @@ namespace Helldivers2API.Web.Models.Response.Extensions
 {
     internal static class ResponseExtensions
     {
+
+        // assignments
         internal static Helldivers2API.Data.Models.Assignment GetDataModel(this Assignment assignment)
         {
             var dataAssignment = new Helldivers2API.Data.Models.Assignment()
@@ -42,6 +44,7 @@ namespace Helldivers2API.Web.Models.Response.Extensions
             return dataAssignment;
         }
 
+        // news feed
         internal static Helldivers2API.Data.Models.NewsFeed GetDataModel(this WarFeed warfeed)
         {
             var dataNewsfeed = new NewsFeed()
@@ -56,6 +59,48 @@ namespace Helldivers2API.Web.Models.Response.Extensions
             return dataNewsfeed;
         }
 
+        // war info
+        internal static Helldivers2API.Data.Models.WarInfo GetDataModel(this WarInfo warinfo)
+        {
+            var dataWarinfo = new Helldivers2API.Data.Models.WarInfo()
+            {
+                WarId = warinfo.WarId,
+                EndDate = warinfo.EndDate,
+                StartDate = warinfo.StartDate
+            };
+
+            // planet infos
+            var planetInfos = new List<Helldivers2API.Data.Models.PlanetInfo>();
+            foreach (var item in warinfo.PlanetInfos)
+            {
+                planetInfos.Add(new Helldivers2API.Data.Models.PlanetInfo()
+                {
+                    Id = item.Index,
+                    Disabled = item.Disabled,
+                    InitialOwner = item.InitialOwner,
+                    MaxHealth = item.MaxHealth,
+                    Waypoints = item.Waypoints.ToArray(),
+                    Position = new Helldivers2API.Data.Models.Position() { X = item.Position.X, Y = item.Position.Y }
+                });
+            }
+            dataWarinfo.PlanetInfos = planetInfos.ToArray();
+
+            // home worlds
+            var homes = new List<Helldivers2API.Data.Models.HomeWorld>();
+            foreach (var item in warinfo.HomeWorlds)
+            {
+                homes.Add(new Helldivers2API.Data.Models.HomeWorld()
+                {
+                    PlanetIndices = item.PlanetIndices.ToArray(),
+                    Faction = item.Race
+                });
+            }
+            dataWarinfo.HomeWorlds = homes.ToArray();
+
+            return dataWarinfo;
+        }
+
+        // war status
         internal static Helldivers2API.Data.Models.WarStatus GetDataModel(this WarStatus warstatus)
         {
             var dataWarStatus = new Helldivers2API.Data.Models.WarStatus()

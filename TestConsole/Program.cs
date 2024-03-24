@@ -19,7 +19,9 @@ namespace TestConsole
 
             var warstatus  = hdClient.GetWarStatus();
 
-            //var lastRef = hdClient.GetLastRefreshed();            
+            var warinfo = hdClient.GetWarInfo();  
+
+            var lastRef = hdClient.GetLastRefreshed();            
 
             Debug.Print("");
         }

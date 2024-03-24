@@ -54,14 +54,6 @@ namespace Helldivers2API
         /// <returns></returns>
         public IFaction[] GetFactions() => Data.Cache.DataCache<IFaction>.GetAll();
 
-
-        /// <summary>
-        /// Returns a dictionary of when each of the known api endpoints were last refreshed.
-        /// </summary>
-        /// <returns></returns>
-        public Dictionary<string, DateTime?> GetLastRefreshed() => Web.Cache.WebCache.LastRefreshed;
-
-
         /// <summary>
         /// Get information about the current assignments.  This is the MAJOR ORDER.
         /// </summary>
@@ -80,6 +72,18 @@ namespace Helldivers2API
         /// <returns></returns>
         public WarStatus GetWarStatus() => Web.Cache.WebCache.GetWarStatus(_client).ConfigureAwait(false).GetAwaiter().GetResult();
 
+        /// <summary>
+        /// Gets info on the war
+        /// </summary>
+        /// <returns></returns>
+        public WarInfo GetWarInfo() => Web.Cache.WebCache.GetWarInfo(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+
+
+        /// <summary>
+        /// Returns a dictionary of when each of the known api endpoints were last refreshed.
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, DateTime?> GetLastRefreshed() => Web.Cache.WebCache.LastRefreshed;
     }
 
 }
