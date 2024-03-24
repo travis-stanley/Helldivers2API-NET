@@ -1,4 +1,5 @@
-﻿using Helldivers2API.Data.Models.Interfaces;
+﻿using Helldivers2API.Data.Models;
+using Helldivers2API.Data.Models.Interfaces;
 using Helldivers2API.Web.Clients;
 using Helldivers2API.Web.Clients.Interfaces;
 using System;
@@ -66,7 +67,7 @@ namespace Helldivers2API
         /// Get information about the current assignments.  This is the MAJOR ORDER.
         /// </summary>
         /// <returns></returns>
-        public Web.Assignment[] GetAssignments() => Web.Cache.WebCache.GetAssignments(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+        public Assignment[] GetAssignments() => Web.Cache.WebCache.GetAssignments(_client).ConfigureAwait(false).GetAwaiter().GetResult();
 
         /// <summary>
         /// Gets the news feed.

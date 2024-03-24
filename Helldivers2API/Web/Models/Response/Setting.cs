@@ -8,11 +8,8 @@ namespace Helldivers2API.Web
     /// <summary>
     /// Nested property in Assignment
     /// </summary>
-    public class Setting
+    internal class Setting
     {
-
-        // TODO: define enums for types
-        // TODO: define enums for flags
 
         [JsonProperty("type")]
         public int Type { get; set; } = default!;

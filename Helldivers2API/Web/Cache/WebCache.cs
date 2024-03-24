@@ -1,12 +1,5 @@
-﻿using Helldivers2API.Data.Models.Interfaces;
-using Helldivers2API.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Helldivers2API.Web;
-using Helldivers2API.Web.Clients;
+﻿using Helldivers2API.Web.Clients;
+using Helldivers2API.Web.Models.Response.Extensions;
 
 namespace Helldivers2API.Web.Cache
 {
@@ -25,7 +18,7 @@ namespace Helldivers2API.Web.Cache
         private static Dictionary<long, WarStatus> _warStatuses = default!;
         private static long tickInterval = 60 * 10000000;       
 
-        public static async Task<Assignment[]> GetAssignments(Helldivers2Client hdClient)
+        public static async Task<Helldivers2API.Data.Models.Assignment[]> GetAssignments(Helldivers2Client hdClient)
         {
             if (_assignments == default) _assignments = new Dictionary<long, Assignment[]>();
 
@@ -33,7 +26,8 @@ namespace Helldivers2API.Web.Cache
                 await RefreshAssignments(hdClient).ConfigureAwait(false);
             else if (DateTime.Now.Ticks - _assignments.OrderBy(o => o.Key).Last().Key >= tickInterval)
                 await RefreshAssignments(hdClient).ConfigureAwait(false);
-            return _assignments.OrderBy(o => o.Key).Last().Value;
+
+            return _assignments.OrderBy(o => o.Key).Last().Value.Select(s => s.GetDataModel()).ToArray();
         }
         private static async Task RefreshAssignments(Helldivers2Client hdClient)
         {

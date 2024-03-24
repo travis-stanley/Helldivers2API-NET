@@ -4,12 +4,8 @@ using Newtonsoft.Json.Converters;
 
 namespace Helldivers2API.Web
 {
-  public class AssignmentTask
+    internal class AssignmentTask
     {
-        // TODO: define enums for type
-        // TODO: define enums for values
-        // TODO: define enums for value types
-
         [JsonProperty("type")]
         public int Type { get; set; } = default!;
 

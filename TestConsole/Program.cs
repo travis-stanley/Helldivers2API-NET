@@ -18,6 +18,8 @@ namespace TestConsole
 
             var lastRef = hdClient.GetLastRefreshed();
 
+            
+
             Debug.Print("");
         }
 

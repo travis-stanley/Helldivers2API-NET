@@ -4,12 +4,10 @@ using Newtonsoft.Json.Converters;
 
 namespace Helldivers2API.Web
 {
-    // TODO: determine what the progress list is    
-
     /// <summary>
     /// Assignment model, aka the Major Order
     /// </summary>
-    public class Assignment
+    internal class Assignment
     {
         [JsonProperty("id32")]
         public long Id32 { get; set; } = default!;
