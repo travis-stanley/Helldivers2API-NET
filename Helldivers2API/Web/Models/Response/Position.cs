@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Helldivers2API.Web
 {
-    public class Position
+    internal class Position
     {
         [JsonProperty("x")]
         public double X { get; set; } = default!;

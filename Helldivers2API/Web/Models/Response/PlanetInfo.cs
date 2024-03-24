@@ -9,7 +9,7 @@ namespace Helldivers2API.Web
     /// <summary>
     /// PlanetInfo
     /// </summary>
-    public class PlanetInfo
+    internal class PlanetInfo
     {
         [JsonProperty("index")]
         public int Index { get; set; } = default!;
