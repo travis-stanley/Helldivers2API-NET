@@ -20,23 +20,23 @@ namespace Helldivers2API.Data.Models.Extensions
             throw new NotImplementedException();
         }
 
-        public static PlanetAttack[] PlanetAttacks(this IPlanet planet)
-        {
-            //return APICache.GetPlanetAttacks(planet.Id);
-            throw new NotImplementedException();
-        }
+        //public static Web.PlanetAttack[] PlanetAttacks(this IPlanet planet)
+        //{
+        //    //return APICache.GetPlanetAttacks(planet.Id);
+        //    throw new NotImplementedException();
+        //}
 
-        public static PlanetEvent[] PlanetEvents(this IPlanet planet)
-        {
-            //return APICache.GetPlanetEvents(planet.Id);
-            throw new NotImplementedException();
-        }
+        //public static PlanetEvent[] PlanetEvents(this IPlanet planet)
+        //{
+        //    //return APICache.GetPlanetEvents(planet.Id);
+        //    throw new NotImplementedException();
+        //}
 
-        public static PlanetStatus PlanetStatus(this IPlanet planet)
-        {
-            //return APICache.GetPlanetStatus(planet.Id);
-            throw new NotImplementedException();
-        }
+        //public static Web.PlanetStatus PlanetStatus(this IPlanet planet)
+        //{
+        //    //return APICache.GetPlanetStatus(planet.Id);
+        //    throw new NotImplementedException();
+        //}
 
     }
 }

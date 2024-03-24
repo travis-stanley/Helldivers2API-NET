@@ -31,35 +31,31 @@ namespace Helldivers2API.Web
         [JsonProperty("campaigns")]
         public List<Campaign> Campaigns { get; set; } = default!;
 
-        /// <summary>
-        /// TODO: unknown type (probably int)
-        /// </summary>
-        [JsonProperty("communityTargets")]
-        public List<string> CommunityTargets { get; set; } = default!;
-
         [JsonProperty("jointOperations")]
         public List<JointOperation> JointOperations { get; set; } = default!;
 
         [JsonProperty("planetEvents")]
         public List<PlanetEvent> PlanetEvents { get; set; } = default!;
 
-        [JsonProperty("planetActiveEffects")]
-        public List<int> PlanetActiveEffects { get; set; } = default!;
+        // TBD
+        //[JsonProperty("communityTargets")]
+        //public List<string> CommunityTargets { get; set; } = default!;
 
-        [JsonProperty("activeElectionPolicyEffects")]
-        public List<int> ActiveElectionPolicyEffects { get; set; } = default!;
+        // TBD
+        //[JsonProperty("planetActiveEffects")]
+        //public List<int> PlanetActiveEffects { get; set; } = default!;
 
-        /// <summary>
-        /// TODO: unknown type
-        /// </summary>
-        [JsonProperty("globalEvents")]
-        public List<object> GlobalEvents { get; set; } = default!;
+        // TBD
+        //[JsonProperty("activeElectionPolicyEffects")]
+        //public List<int> ActiveElectionPolicyEffects { get; set; } = default!;
 
-        /// <summary>
-        /// TODO: unknown type
-        /// </summary>
-        [JsonProperty("superEarthWarResults")]
-        public List<object> SuperEarthWarResults { get; set; } = default!;
+        // TBD
+        //[JsonProperty("globalEvents")]
+        //public List<object> GlobalEvents { get; set; } = default!;
+
+        // TBD
+        //[JsonProperty("superEarthWarResults")]
+        //public List<object> SuperEarthWarResults { get; set; } = default!;
     }
 
 }

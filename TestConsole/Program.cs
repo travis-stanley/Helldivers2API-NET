@@ -13,17 +13,15 @@ namespace TestConsole
 
             var planets = hdClient.GetPlanets();
             var assignments = hdClient.GetAssignments();
-
             var assignments2 = hdClient.GetAssignments();
 
-            var lastRef = hdClient.GetLastRefreshed();
+            var newsfeeds = hdClient.GetNewsFeed();
 
-            
+            var warstatus  = hdClient.GetWarStatus();
+
+            //var lastRef = hdClient.GetLastRefreshed();            
 
             Debug.Print("");
         }
-
-
-
     }
 }

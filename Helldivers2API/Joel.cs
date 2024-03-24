@@ -23,7 +23,6 @@ namespace Helldivers2API
         /// </summary>
         /// <param name="warId">
         /// The current season or war Id.  The first season is/was 801.
-        /// I have not found an endpoint that exposes this without prior knowledge of the id first.
         /// </param>
         public Joel(int warId)
         {            
@@ -73,7 +72,14 @@ namespace Helldivers2API
         /// Gets the news feed.
         /// </summary>
         /// <returns></returns>
-        public Web.WarFeed[] GetNewsFeed() => Web.Cache.WebCache.GetWarFeeds(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+        public NewsFeed[] GetNewsFeed() => Web.Cache.WebCache.GetWarFeeds(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+
+        /// <summary>
+        /// Gets the status of the war
+        /// </summary>
+        /// <returns></returns>
+        public WarStatus GetWarStatus() => Web.Cache.WebCache.GetWarStatus(_client).ConfigureAwait(false).GetAwaiter().GetResult();
+
     }
 
 }

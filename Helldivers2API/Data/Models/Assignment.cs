@@ -13,6 +13,7 @@ using Helldivers2API.Data.Cache;
 
 namespace Helldivers2API.Data.Models
 {
+
     // TODO: confirm what progress is - probably progress for each item in tasks[]
     // TODO: define enums for types
     // TODO: define enums for reward types
@@ -39,4 +40,20 @@ namespace Helldivers2API.Data.Models
         public int Flags { get; set; } = default!;
     }
 
+
+    // TODO: define enums for types
+    // TODO: define enums for value types
+    // TODO: values are probably planet ids - e.g. defend planets
+
+    /// <summary>
+    /// Contains information about the current assignment tasks.
+    /// </summary>
+    public class AssignmentTask
+    {
+        public int Type { get; set; } = default!;
+
+        public int[] Values { get; set; } = default!;
+
+        public int[] ValueTypes { get; set; } = default!;
+    }
 }

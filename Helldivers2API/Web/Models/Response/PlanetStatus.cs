@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 namespace Helldivers2API.Web
 {
 
-    public class PlanetStatus
+    internal class PlanetStatus
     {
         [JsonProperty("index")]
         public int Index { get; set; } = default!;

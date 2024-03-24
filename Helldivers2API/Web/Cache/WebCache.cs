@@ -1,4 +1,5 @@
-﻿using Helldivers2API.Web.Clients;
+﻿using Helldivers2API.Data.Models;
+using Helldivers2API.Web.Clients;
 using Helldivers2API.Web.Models.Response.Extensions;
 
 namespace Helldivers2API.Web.Cache
@@ -18,6 +19,7 @@ namespace Helldivers2API.Web.Cache
         private static Dictionary<long, WarStatus> _warStatuses = default!;
         private static long tickInterval = 60 * 10000000;       
 
+        // assignments
         public static async Task<Helldivers2API.Data.Models.Assignment[]> GetAssignments(Helldivers2Client hdClient)
         {
             if (_assignments == default) _assignments = new Dictionary<long, Assignment[]>();
@@ -36,7 +38,26 @@ namespace Helldivers2API.Web.Cache
                 _assignments.Add(DateTime.Now.Ticks, assignments);
         }
 
-        public static async Task<WarFeed[]> GetWarFeeds(Helldivers2Client hdClient)
+        // war status
+        public static async Task<Helldivers2API.Data.Models.WarStatus> GetWarStatus(Helldivers2Client hdClient)
+        {
+            if (_warStatuses == default) _warStatuses = new Dictionary<long, WarStatus>();
+
+            if (_warStatuses.Count == 0)
+                await RefreshWarStatuses(hdClient).ConfigureAwait(false);
+            else if (DateTime.Now.Ticks - _warStatuses.OrderBy(o => o.Key).Last().Key >= tickInterval)
+                await RefreshWarStatuses(hdClient).ConfigureAwait(false);
+            return _warStatuses.OrderBy(o => o.Key).Last().Value.GetDataModel();
+        }
+        private static async Task RefreshWarStatuses(Helldivers2Client hdClient)
+        {
+            var warStatus = await hdClient.WarStatus.Get(hdClient.warId).ConfigureAwait(false);
+            if (warStatus != null)
+                _warStatuses.Add(DateTime.Now.Ticks, warStatus);
+        }
+
+        // news feed
+        public static async Task<NewsFeed[]> GetWarFeeds(Helldivers2Client hdClient)
         {
             if (_warFeeds == default) _warFeeds = new Dictionary<long, WarFeed[]>();
 
@@ -44,7 +65,7 @@ namespace Helldivers2API.Web.Cache
                 await RefreshWarFeeds(hdClient).ConfigureAwait(false);
             else if (DateTime.Now.Ticks - _warFeeds.OrderBy(o => o.Key).Last().Key >= tickInterval)
                 await RefreshWarFeeds(hdClient).ConfigureAwait(false);
-            return _warFeeds.OrderBy(o => o.Key).Last().Value;
+            return _warFeeds.OrderBy(o => o.Key).Last().Value.Select(s => s.GetDataModel()).ToArray();
         }
         private static async Task RefreshWarFeeds(Helldivers2Client hdClient)
         {
@@ -53,6 +74,7 @@ namespace Helldivers2API.Web.Cache
                 _warFeeds.Add(DateTime.Now.Ticks, warFeeds);
         }
 
+        // todo - convert to datamodel
         public static async Task<WarInfo> GetWarInfo(Helldivers2Client hdClient)
         {
             if (_warInfos == default) _warInfos = new Dictionary<long, WarInfo>();
@@ -70,22 +92,6 @@ namespace Helldivers2API.Web.Cache
                 _warInfos.Add(DateTime.Now.Ticks, warInfo);
         }
 
-        public static async Task<WarStatus> GetWarStatus(Helldivers2Client hdClient)
-        {
-            if (_warStatuses == default) _warStatuses = new Dictionary<long, WarStatus>();
-
-            if (_warStatuses.Count == 0)
-                await RefreshWarStatuses(hdClient).ConfigureAwait(false);
-            else if (DateTime.Now.Ticks - _warStatuses.OrderBy(o => o.Key).Last().Key >= tickInterval)
-                await RefreshWarStatuses(hdClient).ConfigureAwait(false);
-            return _warStatuses.OrderBy(o => o.Key).Last().Value;
-        }
-        private static async Task RefreshWarStatuses(Helldivers2Client hdClient)
-        {
-            var warStatus = await hdClient.WarStatus.Get(hdClient.warId).ConfigureAwait(false);
-            if (warStatus != null)
-                _warStatuses.Add(DateTime.Now.Ticks, warStatus);
-        }
 
         private static Dictionary<string, DateTime?> GetLastRefreshed()
         {

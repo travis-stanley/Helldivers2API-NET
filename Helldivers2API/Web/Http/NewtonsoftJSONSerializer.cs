@@ -22,8 +22,7 @@ namespace Helldivers2API.Web.Http
             _serializerSettings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                ContractResolver = contractResolver,
-                MissingMemberHandling = MissingMemberHandling.Error
+                ContractResolver = contractResolver
       };
     }
 

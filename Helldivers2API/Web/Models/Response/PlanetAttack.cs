@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 namespace Helldivers2API.Web
 {
 
-    public class PlanetAttack
+    internal class PlanetAttack
     {
         public int source { get; set; }
         public int target { get; set; }
