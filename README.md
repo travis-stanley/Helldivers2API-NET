@@ -82,6 +82,52 @@ Get information about the war
 var warinfo = hdClient.GetWarInfo();
 ```
 
+### Cache System
+
+The built-in cache system was designed to avoid sending unnecessary requests to the web api endpoints.  It's entirely internal and you do not need to manage it.  Just request the data and it will handle the rest.
+
+The default cache expiration is about `5 minutes`, although this may change in the future.  If you modify this value, please be considerate to the game servers.
+
+> [!TIP]
+> The web api is never hit until the first request for data is made, at which point only the necessary endpoints are requested.
+```csharp
+static void HDClient()
+{
+    // Instantiate using the current war id, aka game season
+    // The current war id is 801
+    var hdClient = new Helldivers2API.Joel(801);
+
+    var planets = hdClient.GetPlanets();
+    foreach (var planet in planets)
+        Debug.Print($"Planet {planet.Name} resides in the {planet.SectorName} sector");
+
+    var assignments = hdClient.GetAssignments();
+    foreach (var assignment in assignments)
+        Debug.Print($"Assignment: {assignment.Brief}");
+
+    // this call will return data from the local cache since it was just requested (web api endpoint is not hit again)
+    var assignments2 = hdClient.GetAssignments();
+
+    var newsfeeds = hdClient.GetNewsFeed();
+    foreach (var newsfeed in newsfeeds)
+        Debug.Print($"{newsfeed.Message}");
+
+    // omitted for cache example
+    //var warstatus  = hdClient.GetWarStatus();
+
+    // omitted for cache example
+    //var warinfo = hdClient.GetWarInfo();
+
+    var lastRef = hdClient.GetLastRefreshed();
+    foreach (var lastRefreshed in lastRef)
+        Debug.Print($"{lastRefreshed.Key} was last refreshed {lastRefreshed.Value}");
+}
+
+// Assignments was last refreshed 3/24/2024 12:25:25 PM
+// WarInfo was last refreshed    <-- date is null because it was never called, thus a request was never sent to the web api endpoint
+// WarStatus was last refreshed  <-- date is null because it was never called, thus a request was never sent to the web api endpoint
+// NewsFeed was last refreshed 3/24/2024 12:25:25 PM
+```
 
 ### Documentation
 
