@@ -12,8 +12,9 @@ Another *unofficial* open source library for the Helldivers2 API, but in .NET!
 
 ### Features
  
-* ✅ Easy to use
-* ✅ Spreading managed democracy
+* Easy to use
+* Built-in cache system
+* Spreading managed democracy
 
 ### Example
 
