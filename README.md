@@ -142,7 +142,7 @@ static void HDClient()
 // NewsFeed was last refreshed 3/24/2024 12:25:25 PM
 ```
 
-### Data Models
+### Incomplete Data Models
 
 There are still a handful of `type` attributes from the Helldivers2 API that have not been researched.  They will return the raw value from the api (typically int) for now.
 
