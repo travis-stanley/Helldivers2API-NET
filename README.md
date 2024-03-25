@@ -145,3 +145,9 @@ static void HDClient()
 ### Documentation
 
 Work in progress
+
+### Data Models
+
+There are still a handful of `type` attributes from the Helldivers2 API that have not been researched.  They will return the raw value from the api (typically int) for now.
+
+Data structures that have not been observed from the Helldivers2 API may be omitted until they return a structure we can map safely (capitalInfos, activeElectionPolicyEffects, etc).
