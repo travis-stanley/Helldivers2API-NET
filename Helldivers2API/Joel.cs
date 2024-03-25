@@ -119,6 +119,12 @@ namespace Helldivers2API
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, DateTime?> GetLastRefreshed() => Web.Cache.WebCache.LastRefreshed;
+
+        /// <summary>
+        /// Returns a list of calls to the api endpoints and when.
+        /// </summary>
+        /// <returns></returns>
+        public List<KeyValuePair<string, long>> GetWebApiCalls() => Web.Cache.WebCache.WebApiCalls;
     }
 
 }

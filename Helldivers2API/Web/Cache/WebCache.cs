@@ -13,6 +13,7 @@ namespace Helldivers2API.Web.Cache
     internal class WebCache
     {
         public static Dictionary<string, DateTime?> LastRefreshed { get => GetLastRefreshed(); }
+        public static List<KeyValuePair<string, long>> WebApiCalls { get; internal set; } = new();
 
         private static Dictionary<long, Assignment[]> _assignments = default!;
         private static Dictionary<long, WarFeed[]> _warFeeds = default!;
@@ -20,6 +21,7 @@ namespace Helldivers2API.Web.Cache
         private static Dictionary<long, WarStatus> _warStatuses = default!;
         private static long tickInterval = 60 * 5 * 10000000L;
 
+       
         // assignments
         public static async Task<Helldivers2API.Data.Models.Assignment[]> GetAssignments()
         {            
@@ -34,7 +36,7 @@ namespace Helldivers2API.Web.Cache
         }
         private static async Task RefreshAssignments()
         {
-            Debug.Print($"Web API Hit");
+            WebApiCalls.Add(new KeyValuePair<string, long>("Assignments", DateTime.Now.Ticks ));
             var assignments = await Joel.Instance.Client.Assignments.Get(Joel.Instance.WarId).ConfigureAwait(false);
             if (assignments != null)
                 _assignments.Add(DateTime.Now.Ticks, assignments);
@@ -54,7 +56,7 @@ namespace Helldivers2API.Web.Cache
         }
         private static async Task RefreshWarStatuses()
         {
-            Debug.Print($"Web API Hit");
+            WebApiCalls.Add(new KeyValuePair<string, long>("WarStatus", DateTime.Now.Ticks));
             var warStatus = await Joel.Instance.Client.WarStatus.Get(Joel.Instance.WarId).ConfigureAwait(false);
             if (warStatus != null)
                 _warStatuses.Add(DateTime.Now.Ticks, warStatus);
@@ -74,7 +76,7 @@ namespace Helldivers2API.Web.Cache
         }
         private static async Task RefreshWarFeeds()
         {
-            Debug.Print($"Web API Hit");
+            WebApiCalls.Add(new KeyValuePair<string, long>("NewsFeed", DateTime.Now.Ticks));
             var warFeeds = await Joel.Instance.Client.WarFeeds.Get(Joel.Instance.WarId).ConfigureAwait(false);
             if (warFeeds != null)
                 _warFeeds.Add(DateTime.Now.Ticks, warFeeds);
@@ -93,7 +95,7 @@ namespace Helldivers2API.Web.Cache
         }
         private static async Task RefreshWarInfos()
         {
-            Debug.Print($"Web API Hit");
+            WebApiCalls.Add(new KeyValuePair<string, long>("WarInfo", DateTime.Now.Ticks));
             var warInfo = await Joel.Instance.Client.WarInfo.Get(Joel.Instance.WarId).ConfigureAwait(false);
             if (warInfo != null)
                 _warInfos.Add(DateTime.Now.Ticks, warInfo);
