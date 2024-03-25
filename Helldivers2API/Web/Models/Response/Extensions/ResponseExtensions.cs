@@ -100,6 +100,7 @@ namespace Helldivers2API.Web.Models.Response.Extensions
             return dataWarinfo;
         }
 
+
         // war status
         internal static Helldivers2API.Data.Models.WarStatus GetDataModel(this WarStatus warstatus)
         {
@@ -118,10 +119,10 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                 planetStatuses.Add(new Helldivers2API.Data.Models.PlanetStatus()
                 {
                     Id = item.Index,
-                    Owner = item.Owner,                    
+                    OwnerId = item.Owner,                    
                     Health = item.Health,
                     RegenPerSecond = item.RegenPerSecond,
-                    Players = item.Players                    
+                    PlayerCount = item.Players                    
                 });
             }
             dataWarStatus.PlanetStatuses = planetStatuses.ToArray();
@@ -132,8 +133,8 @@ namespace Helldivers2API.Web.Models.Response.Extensions
             {
                 planetAttacks.Add(new Helldivers2API.Data.Models.PlanetAttack()
                 {
-                     source = item.source,
-                     target = item.target
+                     SourceId = item.source,
+                     TargetId = item.target
                 });
             }
             dataWarStatus.PlanetAttacks = planetAttacks.ToArray();  
@@ -163,6 +164,7 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                     HqNodeIndex = item.HqNodeIndex
                 });
             }
+            dataWarStatus.JointOperations = jointOps.ToArray();
 
             // planet events
             var planetEvents = new List<Helldivers2API.Data.Models.PlanetEvent>();
@@ -173,7 +175,7 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                     Id = item.Id,
                     PlanetId = item.PlanetIndex,
                     EventType = item.EventType,
-                    Race = item.Race,
+                    FactionId = item.Race,
                     Health = item.Health,
                     MaxHealth = item.MaxHealth,
                     StartTime = item.StartTime,
@@ -182,7 +184,23 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                     JointOperationIds = item.JointOperationIds.ToArray()
                 });
             }
+            dataWarStatus.PlanetEvents = planetEvents.ToArray();
 
+            // global events
+            var globalEvents = new List<Helldivers2API.Data.Models.GlobalEvent>();
+            foreach (var item in warstatus.GlobalEvents)
+            {
+                globalEvents.Add(new Helldivers2API.Data.Models.GlobalEvent()
+                {
+                    Id = item.Id,
+                    Title = item.Title,
+                    Message = item.Message,
+                    FactionId = item.Race,
+                    EffectIds = item.EffectIds.ToArray(),
+                    PlanetIds = item.PlanetIndices.ToArray()
+                });
+            }
+            dataWarStatus.GlobalEvents = globalEvents.ToArray();
 
             return dataWarStatus;
         }

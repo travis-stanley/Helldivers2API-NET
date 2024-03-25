@@ -53,7 +53,9 @@ namespace TestConsole
 
             //var warstatus  = hdClient.GetWarStatus();
 
-            //var warinfo = hdClient.GetWarInfo();
+            var warinfo = hdClient.GetWarInfo();
+
+            var homeworlds = hdClient.GetHomeWorlds();
 
 
             var lastRef = hdClient.GetLastRefreshed();

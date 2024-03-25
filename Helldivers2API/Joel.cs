@@ -1,4 +1,5 @@
 ﻿using Helldivers2API.Data.Models;
+using Helldivers2API.Data.Models.Extensions;
 using Helldivers2API.Data.Models.Interfaces;
 using Helldivers2API.Web.Clients;
 using Helldivers2API.Web.Clients.Interfaces;
@@ -47,6 +48,12 @@ namespace Helldivers2API
         public IPlanet[] GetPlanets() => Data.Cache.DataCache<IPlanet>.GetAll();
 
         /// <summary>
+        /// Get planets which are homeworlds for a faction.
+        /// </summary>
+        /// <returns></returns>
+        public IPlanet[] GetHomeWorlds() => GetPlanets().Where(w => w.HomeWorldFor().Length > 0).ToArray();
+
+        /// <summary>
         /// Get information about all the known biomes.
         /// </summary>
         /// <returns></returns>
@@ -63,6 +70,7 @@ namespace Helldivers2API
         /// </summary>
         /// <returns></returns>
         public IFaction[] GetFactions() => Data.Cache.DataCache<IFaction>.GetAll();
+
 
         /// <summary>
         /// Get information about the current assignments.  This is the MAJOR ORDER.

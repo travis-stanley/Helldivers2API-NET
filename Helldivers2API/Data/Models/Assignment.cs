@@ -14,11 +14,6 @@ using Helldivers2API.Data.Cache;
 namespace Helldivers2API.Data.Models
 {
 
-    // TODO: confirm what progress is - probably progress for each item in tasks[]
-    // TODO: define enums for types
-    // TODO: define enums for reward types
-    // TODO: define enums for flags
-
     /// <summary>
     /// Contains information about the current assignment (e.g. Major Order).
     /// </summary>
@@ -26,34 +21,30 @@ namespace Helldivers2API.Data.Models
     {
         public long Id { get; set; } = default!;
         public long ExpiresIn { get; set; } = default!;
-        public int[] Progress { get; set; } = default!;
+        public int[] Progress { get; set; } = default!;     // TODO: define what this is
 
-        public int Type { get; set; } = default!;
+        public int Type { get; set; } = default!;           // TODO: define what this is
         public string Title { get; set; } = default!;
         public string Brief { get; set; } = default!;
         public string Description { get; set; } = default!;
 
         public AssignmentTask[] Tasks { get; set; } = default!;
-        public int RewardType { get; set; } = default!;
+        public int RewardType { get; set; } = default!;     // TODO: define what this is
         public int RewardAmount { get; set; } = default!;
 
         public int Flags { get; set; } = default!;
     }
 
 
-    // TODO: define enums for types
-    // TODO: define enums for value types
-    // TODO: values are probably planet ids - e.g. defend planets
-
     /// <summary>
     /// Contains information about the current assignment tasks.
     /// </summary>
     public class AssignmentTask
     {
-        public int Type { get; set; } = default!;
+        public int Type { get; set; } = default!;           // TODO: define what this is
 
-        public int[] Values { get; set; } = default!;
+        public int[] Values { get; set; } = default!;       // TODO: define what this is
 
-        public int[] ValueTypes { get; set; } = default!;
+        public int[] ValueTypes { get; set; } = default!;   // TODO: define what this is
     }
 }

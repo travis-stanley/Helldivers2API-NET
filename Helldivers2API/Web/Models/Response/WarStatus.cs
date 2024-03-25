@@ -37,25 +37,24 @@ namespace Helldivers2API.Web
         [JsonProperty("planetEvents")]
         public List<PlanetEvent> PlanetEvents { get; set; } = default!;
 
-        // TBD
-        //[JsonProperty("communityTargets")]
-        //public List<string> CommunityTargets { get; set; } = default!;
+       // TBD
+       //[JsonProperty("communityTargets")]
+       // public List<string> CommunityTargets { get; set; } = default!;
+
+       // TBD
+       //[JsonProperty("planetActiveEffects")]
+       // public List<int> PlanetActiveEffects { get; set; } = default!;
+
+       // TBD
+       //[JsonProperty("activeElectionPolicyEffects")]
+       // public List<int> ActiveElectionPolicyEffects { get; set; } = default!;
+
+       [JsonProperty("globalEvents")]
+        public List<GlobalEvent> GlobalEvents { get; set; } = default!;
 
         // TBD
-        //[JsonProperty("planetActiveEffects")]
-        //public List<int> PlanetActiveEffects { get; set; } = default!;
-
-        // TBD
-        //[JsonProperty("activeElectionPolicyEffects")]
-        //public List<int> ActiveElectionPolicyEffects { get; set; } = default!;
-
-        // TBD
-        //[JsonProperty("globalEvents")]
-        //public List<object> GlobalEvents { get; set; } = default!;
-
-        // TBD
-        //[JsonProperty("superEarthWarResults")]
-        //public List<object> SuperEarthWarResults { get; set; } = default!;
+       //[JsonProperty("superEarthWarResults")]
+       // public List<object> SuperEarthWarResults { get; set; } = default!;
     }
 
 }

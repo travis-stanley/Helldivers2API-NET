@@ -10,17 +10,32 @@ namespace Helldivers2API.Data.Models
         public int WarId { get; set; } = default!;
         public int StartDate { get; set; } = default!;
         public int EndDate { get; set; } = default!;
-        public PlanetInfo[] PlanetInfos { get; set; } = default!;
-        public HomeWorld[] HomeWorlds { get; set; } = default!;
 
-        //public string[] CapitalInfos { get; set; } = default!;
-        //public int[] PlanetPermanentEffects { get; set; } = default!;
+        /// <summary>
+        /// Internal use only.  Get this data through the IPlanet extension methods.
+        /// </summary>
+        internal PlanetInfo[] PlanetInfos { get; set; } = default!;
+
+        /// <summary>
+        /// Internal use only.  Get this data through the IPlanet extension methods.
+        /// </summary>
+        internal HomeWorld[] HomeWorlds { get; set; } = default!;
+
+        /// <summary>
+        /// Always empty, so far
+        /// </summary>
+        internal string[] CapitalInfos { get; set; } = default!;
+
+        /// <summary>
+        /// Always empty, so far
+        /// </summary>
+        internal int[] PlanetPermanentEffects { get; set; } = default!;
     }
 
     /// <summary>
     /// Contains information about the planets
     /// </summary>
-    public class PlanetInfo
+    internal class PlanetInfo
     {
         public int Id { get; set; } = default!;
         public Position Position { get; set; } = default!;
@@ -42,7 +57,7 @@ namespace Helldivers2API.Data.Models
     /// <summary>
     /// Homeworld planets and owning faction
     /// </summary>
-    public class HomeWorld
+    internal class HomeWorld
     {
         public int Faction { get; set; } = default!;
         public int[] PlanetIndices { get; set; } = default!;

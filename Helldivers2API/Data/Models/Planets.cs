@@ -19,7 +19,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 0;
         const string Name = "Super Earth";
         const string SectorName = "Sol";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -37,7 +37,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 1;
         const string Name = "Klen Dahth II";
         const string SectorName = "Altus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -73,7 +73,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 3;
         const string Name = "Widow's Harbor";
         const string SectorName = "Altus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -163,7 +163,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 8;
         const string Name = "Darrowsport";
         const string SectorName = "Barnard";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -199,7 +199,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 10;
         const string Name = "Midasburg";
         const string SectorName = "Barnard";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -343,7 +343,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 18;
         const string Name = "Wraith";
         const string SectorName = "Idun";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -397,7 +397,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 21;
         const string Name = "Fort Justice";
         const string SectorName = "Kelvin";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -541,7 +541,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 29;
         const string Name = "Crucible";
         const string SectorName = "Korpus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -685,7 +685,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 37;
         const string Name = "Diluvia";
         const string SectorName = "Gothmar";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -703,7 +703,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 38;
         const string Name = "Viridia Prime";
         const string SectorName = "Cantolus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -829,7 +829,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 45;
         const string Name = "Mastia";
         const string SectorName = "Marspira";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -955,7 +955,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 52;
         const string Name = "Slif";
         const string SectorName = "Celeste";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -973,7 +973,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 53;
         const string Name = "Caramoor";
         const string SectorName = "Korpus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -1045,7 +1045,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 57;
         const string Name = "Kerth Secundus";
         const string SectorName = "Rictus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -1117,7 +1117,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 61;
         const string Name = "Emorath";
         const string SectorName = "Meridian";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -1135,7 +1135,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 62;
         const string Name = "Ilduna Prime";
         const string SectorName = "Meridian";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -1153,7 +1153,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 63;
         const string Name = "Maw";
         const string SectorName = "Idun";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat";
 
         int IPlanet.Id => Id;
@@ -1207,7 +1207,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 66;
         const string Name = "Curia";
         const string SectorName = "Marspira";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -1243,7 +1243,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 68;
         const string Name = "Shelt";
         const string SectorName = "Talus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -1297,7 +1297,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 71;
         const string Name = "Ratch";
         const string SectorName = "Iptus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -1369,7 +1369,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 75;
         const string Name = "Esker";
         const string SectorName = "Falstaff";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -1387,7 +1387,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 76;
         const string Name = "Terrek";
         const string SectorName = "Orion";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -1495,7 +1495,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 82;
         const string Name = "Ursica XI";
         const string SectorName = "Borgus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -1531,7 +1531,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 84;
         const string Name = "Skaash";
         const string SectorName = "Ursa";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -1549,7 +1549,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 85;
         const string Name = "Moradesh";
         const string SectorName = "Celeste";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -1567,7 +1567,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 86;
         const string Name = "Rasp";
         const string SectorName = "Gallux";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -1747,7 +1747,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 96;
         const string Name = "Outpost 32";
         const string SectorName = "Saleria";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -1981,7 +1981,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 109;
         const string Name = "Dolph";
         const string SectorName = "Nanos";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -1999,7 +1999,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 110;
         const string Name = "Bekvam III";
         const string SectorName = "Nanos";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2017,7 +2017,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 111;
         const string Name = "Duma Tyr";
         const string SectorName = "Nanos";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2035,7 +2035,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 112;
         const string Name = "Vernen Wells";
         const string SectorName = "Hydra";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -2179,7 +2179,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 120;
         const string Name = "Wilford Station";
         const string SectorName = "Arturion";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -2233,7 +2233,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 123;
         const string Name = "Socorro III";
         const string SectorName = "Falstaff";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2323,7 +2323,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 128;
         const string Name = "Darius II";
         const string SectorName = "Borgus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -2431,7 +2431,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 134;
         const string Name = "Acubens Prime";
         const string SectorName = "Gallux";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2521,7 +2521,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 139;
         const string Name = "Alamak VII";
         const string SectorName = "Hanzo";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2575,7 +2575,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 142;
         const string Name = "Andar";
         const string SectorName = "Akira";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2629,7 +2629,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 145;
         const string Name = "Botein";
         const string SectorName = "Guang";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -2647,7 +2647,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 146;
         const string Name = "Osupsam";
         const string SectorName = "Tarragon";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -2683,7 +2683,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 148;
         const string Name = "Bunda Secundus";
         const string SectorName = "Tarragon";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -2755,7 +2755,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 152;
         const string Name = "Durgen";
         const string SectorName = "Severin";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -2827,7 +2827,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 156;
         const string Name = "Charbal-VII";
         const string SectorName = "Andromeda";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -2845,7 +2845,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 157;
         const string Name = "Charon Prime";
         const string SectorName = "Andromeda";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat";
 
         int IPlanet.Id => Id;
@@ -2917,7 +2917,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 161;
         const string Name = "Claorell";
         const string SectorName = "Tanis";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -3097,7 +3097,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 171;
         const string Name = "Gacrux";
         const string SectorName = "JinXi";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -3223,7 +3223,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 178;
         const string Name = "Haldus";
         const string SectorName = "Ferris";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -3295,7 +3295,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 182;
         const string Name = "Heze Bay";
         const string SectorName = "Hanzo";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -3367,7 +3367,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 186;
         const string Name = "Keid";
         const string SectorName = "Akira";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -3475,7 +3475,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 192;
         const string Name = "Lastofe";
         const string SectorName = "Theseus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -3493,7 +3493,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 193;
         const string Name = "Leng Secundus";
         const string SectorName = "Quintus";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -3529,7 +3529,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 195;
         const string Name = "Maia";
         const string SectorName = "Severin";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "ExtremeCold, MeteorStorms";
 
         int IPlanet.Id => Id;
@@ -3601,7 +3601,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 199;
         const string Name = "Martale";
         const string SectorName = "Andromeda";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -3691,7 +3691,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 204;
         const string Name = "Merak";
         const string SectorName = "Valdis";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -3925,7 +3925,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 217;
         const string Name = "Phact Bay";
         const string SectorName = "JinXi";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -4015,7 +4015,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 222;
         const string Name = "Propus";
         const string SectorName = "Leo";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -4033,7 +4033,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 223;
         const string Name = "Ras Algethi";
         const string SectorName = "Leo";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "";
 
         int IPlanet.Id => Id;
@@ -4087,7 +4087,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 226;
         const string Name = "Rirga Bay";
         const string SectorName = "Rigel";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -4141,7 +4141,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 229;
         const string Name = "Setia";
         const string SectorName = "Omega";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -4159,7 +4159,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 230;
         const string Name = "Shete";
         const string SectorName = "XiTauri";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -4429,7 +4429,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 245;
         const string Name = "Wasat";
         const string SectorName = "Ymir";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, AcidStorms";
 
         int IPlanet.Id => Id;
@@ -4573,7 +4573,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 253;
         const string Name = "Zzaniah Prime";
         const string SectorName = "Gellert";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -4627,7 +4627,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 256;
         const string Name = "Diaspora X";
         const string SectorName = "Lestrade";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
@@ -4663,7 +4663,7 @@ namespace Helldivers2API.Data.Models
         const int Id = 258;
         const string Name = "Zagon Prime";
         const string SectorName = "Mirin";
-        const string BiomeName = "null";
+        const string BiomeName = "";
         const string EnvironmentNames = "IntenseHeat, Sandstorms";
 
         int IPlanet.Id => Id;
