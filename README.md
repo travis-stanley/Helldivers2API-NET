@@ -84,16 +84,16 @@ foreach (var newsfeed in newsfeeds)
 ```
 
 > [!NOTE]
-> The information from the WarStatus and WarInfo that relates to a Planet is retrievable from the Planet object directly.
+> The information from the WarStatus and WarInfo that relates to a Planet is retrievable from the Planet object directly.  These properties have been marked with internal to hide their visibility and prevent accidental use.
 
 Get the status of the on-going war efforts
 ```csharp
-var warstatus = hdClient.GetWarStatus();
+var warstatus = hdClient.GetWarStatus();  
 ```
 
 Get information about the war
 ```csharp
-var warinfo = hdClient.GetWarInfo();
+var warinfo = hdClient.GetWarInfo();     
 ```
 
 ### Cache System
