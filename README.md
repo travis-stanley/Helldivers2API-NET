@@ -18,7 +18,11 @@ Another open source library for the undocumented Helldivers2 API
 * `.NET 7`
 * Easy to use
 * Built-in cache system
-* Spreading managed democracy
+* Consolidates various planet data under a single source
+* Helps spread managed democracy
+
+### Planets, Planets, Planets
+The majority of data from the Helldivers2 API is associated to one or more planets.  Because of this, we have made most data retrievable directly from the IPlanet object.  There's no need to jump through multiple requests and pair the data together, this project has done this internally.  
 
 ### Getting Started
 
@@ -33,7 +37,17 @@ All information is retrievable through the convenient `Joel` class.
   * Envrionmental conditions (fire storms, etc)  
   * Supply lines to other planets
   * Player count
-  * Health
+  * Health / MaxHealth
+  * Planets attacking it
+  * Planets it is attacking
+  * Original owning faction
+  * Current owning faction
+  * Factions that claim it as a home world
+  * Regen rates
+  * Active campaigns
+  * Associated planet events
+  * Associated global events
+  * Associated joint operations
   * etc
 
 > [!TIP]
@@ -42,11 +56,10 @@ All information is retrievable through the convenient `Joel` class.
 > [!WARNING]
 > The war id will likely change when the game transitions to the next season.
 
-Create a client via `Joel`
+Get the client by setting the current war id, via `Joel`
 ```csharp
-// Instantiate using the current war id, aka game season
 // The current war id is 801
-var hdClient = new Helldivers2API.Joel(801);  
+var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
 ```
 
 Get all the known planets
@@ -71,7 +84,7 @@ foreach (var newsfeed in newsfeeds)
 ```
 
 > [!NOTE]
-> The information from the WarStatus and WarInfo that relates to a Planet will be retrievable from the Planet object directly.
+> The information from the WarStatus and WarInfo that relates to a Planet is retrievable from the Planet object directly.
 
 Get the status of the on-going war efforts
 ```csharp
@@ -94,9 +107,8 @@ The default cache expiration is about `5 minutes`, although this may change in t
 ```csharp
 static void HDClient()
 {
-    // Instantiate using the current war id, aka game season
     // The current war id is 801
-    var hdClient = new Helldivers2API.Joel(801);
+    var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
 
     var planets = hdClient.GetPlanets();
     foreach (var planet in planets)
