@@ -21,6 +21,9 @@ Another open source library for the undocumented Helldivers2 API
 * Consolidates various planet data under a single source
 * Helps spread managed democracy
 
+> [!NOTE]
+> A NuGet package is coming soon.
+
 ### Planets, Planets, Planets
 The majority of data from the Helldivers2 API is associated to one or more planets.  Because of this, we have made most data retrievable directly from the IPlanet object.  There's no need to jump through multiple requests and pair the data together, this project has done this internally.  
 
