@@ -9,7 +9,12 @@
   </a>
 </h1>
 
+<div align="center">
+  
 ![example branch parameter](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml/badge.svg?branch=master)
+[![.github/workflows/static.yml](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/static.yml/badge.svg?branch=master)](https://travis-stanley.github.io/Helldivers2API-NET/api/Helldivers2API.html)
+
+</div>
 
 Another open source library for the undocumented Helldivers2 API
 
