@@ -1,5 +1,8 @@
 # Your GitHub workflow file under .github/workflows/
 # Trigger the action on push to main
+
+name: Documentation
+
 on:
   push:
     branches:
