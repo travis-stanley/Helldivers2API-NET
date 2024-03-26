@@ -27,9 +27,10 @@ Another open source library for the undocumented Helldivers2 API
 ### Planets, Planets, Planets
 The majority of data from the Helldivers2 API is associated to one or more planets.  Because of this, we have made most data retrievable directly from the IPlanet object.  There's no need to jump through multiple requests and pair the data together, this project has done this internally.  
 
-### Getting Started
+### Overview
 
 All information is retrievable through the convenient `Joel` class.
+
 * Get current assignments, e.g. the `Major Order`
 * Get news from the galaxy
 * Get status of the on-going war efforts
@@ -53,17 +54,20 @@ All information is retrievable through the convenient `Joel` class.
   * Associated joint operations
   * etc
 
-> [!TIP]
-> The war id parameter is required to send requests to the web endpoints, but it does not appear to be advertised anywhere.
 
-> [!WARNING]
-> The war id will likely change when the game transitions to the next season.
+### Getting Started
 
 Get the client by setting the current war id, via `Joel`
 ```csharp
 // The current war id is 801
 var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
 ```
+
+> [!TIP]
+> The war id parameter is required to send requests to the web endpoints, but it does not appear to be advertised anywhere.
+
+> [!WARNING]
+> The war id will likely change when the game transitions to the next season.
 
 Get all the known planets
 ```csharp
@@ -153,10 +157,10 @@ static void HDClient()
 > [!WARNING]
 > Data structures that have not been observed from the Helldivers2 API may be omitted until they return a structure we can map safely (capitalInfos, activeElectionPolicyEffects, etc).
 
+### Documentation
+
+See technical documentation at, https://travis-stanley.github.io/Helldivers2API-NET/api/Helldivers2API.html
+
 ### Community
 
 Thanks to all the various communities and sources out there that have documented and shared information about the Helldivers2 API.
-
-### Documentation
-
-Work in progress
