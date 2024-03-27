@@ -73,7 +73,7 @@ namespace Helldivers2API
 
 
         /// <summary>
-        /// Get information about the current assignments.  This is the MAJOR ORDER.
+        /// Get information about the current assignments.  This contains the MAJOR ORDER.
         /// </summary>
         /// <returns></returns>
         public Assignment[] GetAssignments()
@@ -84,6 +84,7 @@ namespace Helldivers2API
 
         /// <summary>
         /// Gets the news feed.
+        /// // TODO: update with fromTimestamp param - only the first 10 results from the fromTimestamp are returned (oldest to new)
         /// </summary>
         /// <returns></returns>
         public NewsFeed[] GetNewsFeed() 

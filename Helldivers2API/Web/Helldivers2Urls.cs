@@ -9,7 +9,7 @@ namespace Helldivers2API.Web
         public static readonly Uri API = new("https://api.live.prod.thehelldiversgame.com/api/");
 
         public static Uri Assignment(int warId) => EUri($"v2/Assignment/War/{warId}");
-        public static Uri WarFeed(int warId) => EUri($"NewsFeed/{warId}?fromTimestamp=0");
+        public static Uri WarFeed(int warId, int fromTime = 0) => EUri($"NewsFeed/{warId}?fromTimestamp={fromTime}");
         public static Uri WarInfo(int warId) => EUri($"WarSeason/{warId}/WarInfo");
         public static Uri WarStatus(int warId) => EUri($"WarSeason/{warId}/Status");
            
