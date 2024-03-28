@@ -11,7 +11,7 @@
 
 <div align="center">
   
-![master](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml/badge.svg?branch=master)
+[![master](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml)
 [![Documentation](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/static.yml/badge.svg?branch=master)](https://travis-stanley.github.io/Helldivers2API-NET/api/Helldivers2API.html)
 </div>
 
