@@ -95,13 +95,13 @@ foreach (var assignment in assignments)
 
 Get all the news
 ```csharp
-var newsfeeds = hdClient.GetNewsFeed();
+var newsfeeds = hdClient.GetLatestNews();
 foreach (var newsfeed in newsfeeds)
     Debug.Print($"{newsfeed.Message}");
 ```
 
 > [!NOTE]
-> The information from the WarStatus and WarInfo that relates to a Planet is retrievable from the Planet object directly.  These properties have been marked with internal to hide their visibility and prevent accidental use.
+> The information from the WarStatus and WarInfo that relates to a Planet is retrievable from the Planet object directly.
 
 Get the status of the on-going war efforts
 ```csharp
@@ -117,7 +117,7 @@ var warinfo = hdClient.GetWarInfo();
 
 The built-in cache system was designed to avoid sending unnecessary requests to the web api endpoints.  It's entirely internal and you do not need to manage it.  Just request the data and it will handle the rest.
 
-The default cache expiration is about `5 minutes`, although this may change in the future.  If you modify this value, please be considerate to the game servers.
+The default cache expiration, _per endpoint_, is about `5 minutes`, although this may change in the future.
 
 > [!TIP]
 > The web api is never hit until the first request for data is made, at which point only the necessary endpoints are requested.
@@ -138,9 +138,9 @@ static void HDClient()
     // this call will return data from the local cache since it was just requested (web api endpoint is not hit again)
     var assignments2 = hdClient.GetAssignments();
 
-    var newsfeeds = hdClient.GetNewsFeed();
-    foreach (var newsfeed in newsfeeds)
-        Debug.Print($"{newsfeed.Message}");
+    // var newsfeeds = hdClient.GetLatestNews();
+    // foreach (var newsfeed in newsfeeds)
+    //     Debug.Print($"{newsfeed.Message}");
 
     // omitted for cache example
     //var warstatus  = hdClient.GetWarStatus();
@@ -156,7 +156,7 @@ static void HDClient()
 // Assignments was last refreshed 3/24/2024 12:25:25 PM
 // WarInfo was last refreshed    <-- date is null because it was never called, thus a request was never sent to the web api endpoint
 // WarStatus was last refreshed  <-- date is null because it was never called, thus a request was never sent to the web api endpoint
-// NewsFeed was last refreshed 3/24/2024 12:25:25 PM
+// NewsFeed was last refreshed   <-- date is null because it was never called, thus a request was never sent to the web api endpoint
 ```
 
 ### Incomplete Data Models
