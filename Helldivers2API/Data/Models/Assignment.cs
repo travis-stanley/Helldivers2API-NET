@@ -38,6 +38,9 @@ namespace Helldivers2API.Data.Models
         /// <remarks>4 is MajorOrder</remarks>
         public int Type { get; set; } = default!;
 
+        /// <summary>
+        /// True if this assignment is a major order.
+        /// </summary>
         public bool IsMajorOrder { get => Type == 4; }
 
         /// <summary>

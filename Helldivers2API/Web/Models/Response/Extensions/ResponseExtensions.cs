@@ -56,6 +56,9 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                 TagIds = warfeed.TagIds.ToArray()
             };
 
+            var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
+            dataNewsfeed.PublishedAsDate = DateTime.Now.AddSeconds(dataNewsfeed.Published - warStatus.Time);
+
             return dataNewsfeed;
         }
 
