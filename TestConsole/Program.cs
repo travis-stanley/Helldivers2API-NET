@@ -1,4 +1,5 @@
-﻿using Helldivers2API.Data.Models.Extensions;
+﻿using Helldivers2API;
+using Helldivers2API.Data.Models.Extensions;
 using System.Collections.Specialized;
 using System.Diagnostics;
 

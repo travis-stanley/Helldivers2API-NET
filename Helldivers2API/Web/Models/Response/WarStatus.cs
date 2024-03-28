@@ -20,7 +20,7 @@ namespace Helldivers2API.Web
         public double ImpactMultiplier { get; set; } = default!;
 
         [JsonProperty("storyBeatId32")]
-        public int StoryBeatId32 { get; set; } = default!;
+        public long StoryBeatId32 { get; set; } = default!;
 
         [JsonProperty("planetStatus")]
         public List<PlanetStatus> PlanetStatus { get; set; } = default!;

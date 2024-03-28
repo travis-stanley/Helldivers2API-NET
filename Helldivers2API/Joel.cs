@@ -22,10 +22,12 @@ namespace Helldivers2API
     {
         private static readonly Lazy<Joel> lazy = new Lazy<Joel>(() => new Joel());
         public static Joel Instance { get { return lazy.Value; } }
-        private Joel() {}
-        
+        private Joel() { }
+
         public int WarId { get; internal set; } = default!;
         internal Helldivers2Client Client { get; set; } = default!;
+
+        public bool IsClientReady { get => Client != default; }
 
 
         /// <summary>
@@ -33,19 +35,30 @@ namespace Helldivers2API
         /// </summary>
         /// <param name="warId">The current war id</param>
         /// <returns></returns>
-        public Joel SetWarId(int warId) 
-        { 
+        public Joel SetWarId(int warId)
+        {
             WarId = warId;
-            Client = new Helldivers2Client(warId); 
-            return this; 
+            Client = new Helldivers2Client(warId);
+            return this;
         }
 
         /// <summary>
-        /// Get information about all the known planets, their biomes, environmental conditions, sector, etc.
-        /// Use extension methods to pull live war data from the Helldivers2 api (player counts, health, trade routes, etc)
+        /// Get all the known biomes.
         /// </summary>
         /// <returns></returns>
-        public IPlanet[] GetPlanets() => Data.Cache.DataCache<IPlanet>.GetAll();
+        public IBiome[] GetBiomes() => Data.Cache.DataCache<IBiome>.GetAll();
+
+        /// <summary>
+        /// Get all the known environmental conditions.
+        /// </summary>
+        /// <returns></returns>
+        public IEnvironment[] GetEnvironments() => Data.Cache.DataCache<IEnvironment>.GetAll();
+
+        /// <summary>
+        /// Get all the known factions.
+        /// </summary>
+        /// <returns></returns>
+        public IFaction[] GetFactions() => Data.Cache.DataCache<IFaction>.GetAll();
 
         /// <summary>
         /// Get planets which are homeworlds for a faction.
@@ -53,66 +66,93 @@ namespace Helldivers2API
         /// <returns></returns>
         public IPlanet[] GetHomeWorlds() => GetPlanets().Where(w => w.HomeWorldFor().Length > 0).ToArray();
 
+
         /// <summary>
-        /// Get information about all the known biomes.
+        /// Get information about all the known planets, their biomes, environmental conditions, sector, etc.
+        /// Use the extension methods to pull live war data from the Helldivers2 api (player counts, health, trade routes, etc)
         /// </summary>
         /// <returns></returns>
-        public IBiome[] GetBiomes() => Data.Cache.DataCache<IBiome>.GetAll();
+        public IPlanet[] GetPlanets() => Data.Cache.DataCache<IPlanet>.GetAll();
 
         /// <summary>
-        /// Get information about all the known environmental conditions.
+        /// Get planets in the current campaign.
+        /// These are the playable planets, unless they've been 100% liberated.
         /// </summary>
         /// <returns></returns>
-        public IEnvironment[] GetEnvironment() => Data.Cache.DataCache<IEnvironment>.GetAll();
+        public IPlanet[] GetCampaignPlanets() => Data.Cache.DataCache<IPlanet>.GetAll().Where(w => w.Campaigns().Length > 0).ToArray();
 
         /// <summary>
-        /// Get information about all the known factions.
+        /// Get planets with planet events (focuses player efforts).
+        /// These are the planets with a focus on the galactic map. 
+        /// E.g. "DEFEND with a countdown"
         /// </summary>
         /// <returns></returns>
-        public IFaction[] GetFactions() => Data.Cache.DataCache<IFaction>.GetAll();
+        public IPlanet[] GetPlanetEventPlanets() => Data.Cache.DataCache<IPlanet>.GetAll().Where(w => w.PlanetEvents().Length > 0).ToArray();
+
+        /// <summary>
+        /// Get planets with global events (open access to weapons, stratagem, etc).
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// effectIds might be a weapon id, not sure but see title to know what it is
+        /// </remarks>
+        public IPlanet[] GetGlobalEventPlanets() => Data.Cache.DataCache<IPlanet>.GetAll().Where(w => w.GlobalEvents().Length > 0).ToArray();
+
+        /// <summary>
+        /// Get planets associated with an assignment.
+        /// This is where the MAJOR ORDER appears.
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Returns all planets with any assignments.  
+        /// If more than the major order begin to appear in assignments, 
+        /// the type may need to be used to filter result specific to major orders.
+        /// Assignment.IsMajorOrder will return true if the type == 4.
+        /// </remarks>
+        public IPlanet[] GetAssignmentPlanets() => Data.Cache.DataCache<IPlanet>.GetAll().Where(w => w.GetAssignments().Length > 0).ToArray();
+
+
 
 
         /// <summary>
-        /// Get information about the current assignments.  This contains the MAJOR ORDER.
+        /// Gets the latest news.
+        /// </summary>
+        /// <returns></returns>
+        public NewsFeed[] GetLatestNews()
+        {
+            return Web.Cache.WebCache.GetWarFeeds().ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get all the assignments.  
+        /// To get associated planets, use GetAssignmentPlanets().
         /// </summary>
         /// <returns></returns>
         public Assignment[] GetAssignments()
         {
-            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
             return Web.Cache.WebCache.GetAssignments().ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// Gets the news feed.
-        /// // TODO: update with fromTimestamp param - only the first 10 results from the fromTimestamp are returned (oldest to new)
+        /// Gets the status of the war.  
+        /// Use Planet extension methods to get planet associated data.
         /// </summary>
         /// <returns></returns>
-        public NewsFeed[] GetNewsFeed() 
+        public WarStatus GetWarStatus()
         {
-            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
-            return Web.Cache.WebCache.GetWarFeeds().ConfigureAwait(false).GetAwaiter().GetResult(); 
-        }
-
-        /// <summary>
-        /// Gets the status of the war
-        /// </summary>
-        /// <returns></returns>
-        public WarStatus GetWarStatus() 
-        {
-            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
             return Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
         }
-        
 
         /// <summary>
         /// Gets info on the war
+        /// Use Planet extension methods to get planet associated data.
         /// </summary>
         /// <returns></returns>
         public WarInfo GetWarInfo()
         {
-            if (Client == null) { throw new Exception("Must set the WarId before calling this method.  See SetWarId()."); }
             return Web.Cache.WebCache.GetWarInfo().ConfigureAwait(false).GetAwaiter().GetResult();
         }
+
 
 
         /// <summary>
@@ -126,6 +166,11 @@ namespace Helldivers2API
         /// </summary>
         /// <returns></returns>
         public List<KeyValuePair<string, long>> GetWebApiCalls() => Web.Cache.WebCache.WebApiCalls;
-    }
 
+
+        internal void CheckClient() 
+        {
+            if (!IsClientReady) SetWarId(801);
+        }
+    }
 }

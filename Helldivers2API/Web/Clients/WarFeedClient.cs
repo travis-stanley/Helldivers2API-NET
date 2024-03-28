@@ -10,18 +10,18 @@ namespace Helldivers2API.Web.Clients
     {
         public WarFeedClient(IAPIConnector apiConnector) : base(apiConnector) { }
 
-        public Task<WarFeedResponse> Item(WarFeedRequest request, CancellationToken cancel = default)
+        public Task<WarFeedResponse> Item(WarFeedRequest request, int fromTimestamp, CancellationToken cancel = default)
         {
             Ensure.ArgumentNotNull(request, nameof(request));
 
-            return API.Get<WarFeedResponse>(URLs.WarFeed(request.WarId), request.BuildQueryParams(), cancel);
+            return API.Get<WarFeedResponse>(URLs.WarFeed(request.WarId, fromTimestamp), request.BuildQueryParams(), cancel);
         }
 
-        public Task<WarFeed[]> Get(int warId, CancellationToken cancel = default)
+        public Task<WarFeed[]> Get(int warId, int fromTimestamp, CancellationToken cancel = default)
         {
             Ensure.ArgumentNotNull(warId, nameof(warId));
 
-            return API.Get<WarFeed[]>(URLs.WarFeed(warId), cancel);
+            return API.Get<WarFeed[]>(URLs.WarFeed(warId, fromTimestamp), cancel);
         }
 
     }

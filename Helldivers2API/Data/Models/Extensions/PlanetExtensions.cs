@@ -35,6 +35,13 @@ namespace Helldivers2API.Data.Models.Extensions
         /// <returns></returns>
         public static int? MaxHealth(this IPlanet planet)
         {
+            // if the planet is the target of a PlanetEvent, return those stats..
+            // the api doesn't appear to update PlanetInfo with MaxHealth when the planet is target of an event
+            var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
+            var planetEvent = warStatus.PlanetEvents.Where(w => w.PlanetId == planet.Id).FirstOrDefault();
+            if (planetEvent != null)
+                return planetEvent.MaxHealth;
+
             var warInfo = Web.Cache.WebCache.GetWarInfo().ConfigureAwait(false).GetAwaiter().GetResult();
             var planetInfo = warInfo.PlanetInfos.Where(w => w.Id == planet.Id).FirstOrDefault();
             return planetInfo?.MaxHealth;
@@ -121,6 +128,13 @@ namespace Helldivers2API.Data.Models.Extensions
         public static int? Health(this IPlanet planet)
         {
             var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
+
+            // if the planet is the target of a PlanetEvent, return those stats..
+            // the api doesn't appear to update PlanetStatus when the planet is target of an event
+            var planetEvent = warStatus.PlanetEvents.Where(w => w.PlanetId == planet.Id).FirstOrDefault();
+            if (planetEvent != null)
+                return planetEvent.Health;
+
             return warStatus.PlanetStatuses.Where(w => w.Id == planet.Id).Select(s => s.Health).FirstOrDefault();
         }
 
@@ -165,7 +179,7 @@ namespace Helldivers2API.Data.Models.Extensions
         /// </summary>
         /// <param name="planet"></param>
         /// <returns></returns>
-        public static IPlanet?[] Attackers(this IPlanet planet)
+        public static IPlanet?[] DefendingAgainst(this IPlanet planet)
         {
             var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
             var sourcePlanets = warStatus.PlanetAttacks.Where(w => w.TargetId == planet.Id).Select(s => s.SourceId);
@@ -183,6 +197,11 @@ namespace Helldivers2API.Data.Models.Extensions
         {
             var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
             return warStatus.Campaigns.Where(w => w.PlanetId == planet.Id).ToArray();
+        }
+
+        public static PlanetState PlanetState(this IPlanet planet)
+        {
+            return new PlanetState(planet);
         }
 
         /// <summary>
@@ -220,5 +239,24 @@ namespace Helldivers2API.Data.Models.Extensions
 
         #endregion
 
+
+        #region AssignmentApi
+
+        /// <summary>
+        /// Gets associated assignments.
+        /// The assignment is usually the MAJOR ORDER but check IsMajorOrder on the Assignment.
+        /// The Assignment Tasks always appear to include 1 in the list.. will only use last id for now.
+        /// </summary>
+        /// <param name="planet"></param>
+        public static Assignment?[] GetAssignments(this IPlanet planet)
+        {
+            var assignments = Web.Cache.WebCache.GetAssignments().ConfigureAwait(false).GetAwaiter().GetResult();
+            return assignments.Where(w => w.Tasks.Any(aa => aa.Values.Last() == planet.Id)).ToArray();
+        }
+
+        #endregion
+
+
     }
+
 }

@@ -8,8 +8,18 @@ namespace Helldivers2API.Data.Models
     public class WarInfo
     {
         public int WarId { get; set; } = default!;
+
+        /// <summary>
+        /// The time when this war season started, in unix epoch seconds.
+        /// </summary>
         public int StartDate { get; set; } = default!;
+        public DateTime? StartDateAsDate { get => StartDate != default ? DateTime.UnixEpoch.AddSeconds(StartDate) : null; }
+
+        /// <summary>
+        /// The time when this war season will end, in unix epoch seconds.
+        /// </summary>
         public int EndDate { get; set; } = default!;
+        public DateTime? EndDateAsDate { get => EndDate != default ? DateTime.UnixEpoch.AddSeconds(EndDate) : null; }
 
         /// <summary>
         /// Internal use only.  Get this data through the IPlanet extension methods.

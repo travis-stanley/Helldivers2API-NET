@@ -102,12 +102,13 @@ namespace Helldivers2API.Web.Models.Response.Extensions
 
 
         // war status
-        internal static Helldivers2API.Data.Models.WarStatus GetDataModel(this WarStatus warstatus)
+        internal static Helldivers2API.Data.Models.WarStatus GetDataModel(this WarStatus warstatus, long ticks)
         {
             var dataWarStatus = new Helldivers2API.Data.Models.WarStatus()
             {
                 WarId = warstatus.WarId,
-                Time = warstatus.Time,
+                Time = warstatus.Time,       
+                TimeAsDateTime = new DateTime(ticks),
                 ImpactMultiplier = warstatus.ImpactMultiplier,
                 StoryBeatId32 = warstatus.StoryBeatId32                        
             };
@@ -148,7 +149,7 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                     Id = item.Id,
                     PlanetId = item.PlanetIndex,
                     Count = item.Count,                                       
-                    Type = item.Type
+                    Type = item.Type                    
                 });
             }
             dataWarStatus.Campaigns = campaigns.ToArray();  
@@ -181,8 +182,12 @@ namespace Helldivers2API.Web.Models.Response.Extensions
                     StartTime = item.StartTime,
                     ExpireTime = item.ExpireTime,
                     CampaignId = item.CampaignId,
-                    JointOperationIds = item.JointOperationIds.ToArray()
+                    Started = DateTime.Now.AddSeconds(item.StartTime - dataWarStatus.Time),
+                    TotalTime = new TimeSpan(0, 0, item.ExpireTime - item.StartTime),
+                    Ending = DateTime.Now.AddSeconds(item.ExpireTime - dataWarStatus.Time),
+                    JointOperationIds = item.JointOperationIds.ToArray()                    
                 });
+                
             }
             dataWarStatus.PlanetEvents = planetEvents.ToArray();
 

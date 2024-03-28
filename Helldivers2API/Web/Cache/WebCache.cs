@@ -24,7 +24,8 @@ namespace Helldivers2API.Web.Cache
        
         // assignments
         public static async Task<Helldivers2API.Data.Models.Assignment[]> GetAssignments()
-        {            
+        {
+            Joel.Instance.CheckClient();
             if (_assignments == default) _assignments = new Dictionary<long, Assignment[]>();
 
             if (_assignments.Count == 0)
@@ -45,14 +46,17 @@ namespace Helldivers2API.Web.Cache
 
         // war status
         public static async Task<Helldivers2API.Data.Models.WarStatus> GetWarStatus()
-        {            
+        {
+            Joel.Instance.CheckClient();
             if (_warStatuses == default) _warStatuses = new Dictionary<long, WarStatus>();
 
             if (_warStatuses.Count == 0)
                 await RefreshWarStatuses().ConfigureAwait(false);
             else if (DateTime.Now.Ticks - _warStatuses.OrderBy(o => o.Key).Last().Key >= tickInterval)
                 await RefreshWarStatuses().ConfigureAwait(false);
-            return _warStatuses.OrderBy(o => o.Key).Last().Value.GetDataModel();
+
+            var last = _warStatuses.OrderBy(o => o.Key).Last();
+            return last.Value.GetDataModel(last.Key);
         }
         private static async Task RefreshWarStatuses()
         {
@@ -66,18 +70,27 @@ namespace Helldivers2API.Web.Cache
         // news feed
         public static async Task<NewsFeed[]> GetWarFeeds()
         {
+            Joel.Instance.CheckClient();
             if (_warFeeds == default) _warFeeds = new Dictionary<long, WarFeed[]>();
+            
+            // Only the first 10 results from the fromTimestamp are returned (oldest to new).
+            // Using too early of a timestamp will result is not seeing the latest news.    
+            // get warstatus time as a starting point, subtract a few days
+            int fromTimestamp = 0;
+            var warStatus = await GetWarStatus();
+            if (warStatus != null)
+                fromTimestamp = warStatus.Time - (int)new TimeSpan(3, 0, 0, 0).TotalSeconds;
 
             if (_warFeeds.Count == 0)
-                await RefreshWarFeeds().ConfigureAwait(false);
+                await RefreshWarFeeds(fromTimestamp).ConfigureAwait(false);
             else if (DateTime.Now.Ticks - _warFeeds.OrderBy(o => o.Key).Last().Key >= tickInterval)
-                await RefreshWarFeeds().ConfigureAwait(false);
-            return _warFeeds.OrderBy(o => o.Key).Last().Value.Select(s => s.GetDataModel()).ToArray();
+                await RefreshWarFeeds(fromTimestamp).ConfigureAwait(false);
+            return _warFeeds.OrderBy(o => o.Key).Last().Value.Select(s => s.GetDataModel()).OrderByDescending(o => o.Published).ToArray();
         }
-        private static async Task RefreshWarFeeds()
-        {
+        private static async Task RefreshWarFeeds(int fromTimestamp)
+        {               
             WebApiCalls.Add(new KeyValuePair<string, long>("NewsFeed", DateTime.Now.Ticks));
-            var warFeeds = await Joel.Instance.Client.WarFeeds.Get(Joel.Instance.WarId).ConfigureAwait(false);
+            var warFeeds = await Joel.Instance.Client.WarFeeds.Get(Joel.Instance.WarId, fromTimestamp).ConfigureAwait(false);
             if (warFeeds != null)
                 _warFeeds.Add(DateTime.Now.Ticks, warFeeds);
         }
@@ -85,6 +98,7 @@ namespace Helldivers2API.Web.Cache
         // war info
         public static async Task<Helldivers2API.Data.Models.WarInfo> GetWarInfo()
         {
+            Joel.Instance.CheckClient();
             if (_warInfos == default) _warInfos = new Dictionary<long, WarInfo>();
 
             if (_warInfos.Count == 0)
