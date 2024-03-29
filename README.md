@@ -43,8 +43,7 @@ All information is retrievable through the convenient `Joel` class.
   * Supply lines to other planets
   * Player count
   * Health / MaxHealth
-  * Planets attacking it
-  * Planets it is attacking
+  * Planets in conflict
   * Original owning faction
   * Current owning faction
   * Factions that claim it as a home world
