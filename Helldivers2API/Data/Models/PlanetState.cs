@@ -84,13 +84,13 @@ namespace Helldivers2API.Data.Models
             if (this.State == PlanetStateCL.BeingDefended)
             {
                 // this is the product of remaining time, found in PlanetEvent
-                // TODO: not positive about this.  
+                // some public data has a different calculation for this
                 var planetEvent = planet.PlanetEvents().FirstOrDefault();
                 if (planetEvent != null)
                 {
                     var totalTime = planetEvent.TotalTime!.Value.TotalSeconds;
                     var remainingTime = planetEvent.Ending!.Value.Subtract(DateTime.Now).TotalSeconds;
-                    return remainingTime / totalTime;
+                    return 1 - (remainingTime / totalTime);
                 }
             }                
 

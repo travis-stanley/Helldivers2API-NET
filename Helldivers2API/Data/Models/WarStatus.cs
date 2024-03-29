@@ -161,6 +161,18 @@ namespace Helldivers2API.Data.Models
         /// When this event will expire
         /// </summary>
         public DateTime? Ending { get; set;} = default!;
+
+        /// <summary>
+        /// If this event has expired
+        /// </summary>
+        public bool HasEnded
+        {
+            get
+            {
+                if (!Ending.HasValue) return true;
+                return DateTime.Now.CompareTo(Ending.Value) >= 0 ? true : false;
+            }
+        }
     }
 
     /// <summary>
