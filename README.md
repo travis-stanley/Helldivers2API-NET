@@ -54,6 +54,9 @@ All information is retrievable through the convenient `Joel` class.
   * Associated global events
   * Associated joint operations
   * etc
+ 
+> [!NOTE]
+> If you know the endpoint to get game statistics, please submit an issue and we'll implement.
 
 ### Installation
 
