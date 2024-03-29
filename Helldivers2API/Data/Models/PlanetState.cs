@@ -49,10 +49,10 @@ namespace Helldivers2API.Data.Models
                 // all other factions are hostile at this time
                 var isFriendly = currentOwner.GetType() == typeof(Humans);
 
-                var defending = planet.DefendingAgainst();
-                if (defending != null)
+                var conflicts = planet.Conflicts();
+                if (conflicts.Length > 0)
                 {
-                    // if the planet is being defended, and is friendly, we are defended
+                    // if the planet is in conflict, and is friendly, we are defending
                     if (isFriendly) return PlanetStateCL.BeingDefended;
                     
                     // hostile is defending, thus we are liberating

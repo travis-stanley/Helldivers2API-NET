@@ -160,31 +160,50 @@ namespace Helldivers2API.Data.Models.Extensions
             return warStatus.PlanetStatuses.Where(w => w.Id == planet.Id).Select(s => s.PlayerCount).FirstOrDefault();
         }
 
-        /// <summary>
-        /// List of planets being attacked by this planet.
-        /// </summary>
-        /// <param name="planet"></param>
-        /// <returns></returns>
-        public static IPlanet?[] Attacking(this IPlanet planet)
-        {
-            var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
-            var targetPlanets = warStatus.PlanetAttacks.Where(w => w.SourceId == planet.Id).Select(s => s.TargetId);
-            if (targetPlanets.Count() > 0)
-                return Data.Cache.DataCache<IPlanet>.GetAll().Where(w => targetPlanets.Contains(w.Id)).ToArray();
-            return Array.Empty<IPlanet?>();
-        }
+
+        ///// <summary>
+        ///// List of planets being attacked by this planet.
+        ///// </summary>
+        ///// <param name="planet"></param>
+        ///// <returns></returns>
+        //public static IPlanet?[] Attacking(this IPlanet planet)
+        //{
+        //    var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
+        //    var targetPlanets = warStatus.PlanetAttacks.Where(w => w.SourceId == planet.Id).Select(s => s.TargetId);
+        //    if (targetPlanets.Count() > 0)
+        //        return Data.Cache.DataCache<IPlanet>.GetAll().Where(w => targetPlanets.Contains(w.Id)).ToArray();
+        //    return Array.Empty<IPlanet?>();
+        //}
+
+        ///// <summary>
+        ///// List of planets attacking this planet.
+        ///// </summary>
+        ///// <param name="planet"></param>
+        ///// <returns></returns>
+        //public static IPlanet?[] DefendingAgainst(this IPlanet planet)
+        //{
+        //    var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
+        //    var sourcePlanets = warStatus.PlanetAttacks.Where(w => w.TargetId == planet.Id).Select(s => s.SourceId);
+        //    if (sourcePlanets.Count() > 0)
+        //        return Data.Cache.DataCache<IPlanet>.GetAll().Where(w => sourcePlanets.Contains(w.Id)).ToArray();
+        //    return Array.Empty<IPlanet?>();
+        //}
 
         /// <summary>
-        /// List of planets attacking this planet.
+        /// List of conflicts this planet participates in.
         /// </summary>
         /// <param name="planet"></param>
         /// <returns></returns>
-        public static IPlanet?[] DefendingAgainst(this IPlanet planet)
+        /// <remarks>
+        /// Previously thought the source/target in the raw data implied which were attacking vs defending.
+        /// This is not the case.  The source always appears to be friendly planets.
+        /// </remarks>
+        public static IPlanet?[] Conflicts(this IPlanet planet)
         {
             var warStatus = Web.Cache.WebCache.GetWarStatus().ConfigureAwait(false).GetAwaiter().GetResult();
-            var sourcePlanets = warStatus.PlanetAttacks.Where(w => w.TargetId == planet.Id).Select(s => s.SourceId);
-            if (sourcePlanets.Count() > 0)
-                return Data.Cache.DataCache<IPlanet>.GetAll().Where(w => sourcePlanets.Contains(w.Id)).ToArray();
+            var targetPlanets = warStatus.PlanetAttacks.Where(w => w.SourceId == planet.Id || w.TargetId == planet.Id).SelectMany(s => new List<int> { s.TargetId, s.SourceId }).Distinct().ToArray();
+            if (targetPlanets.Count() > 0)
+                return Data.Cache.DataCache<IPlanet>.GetAll().Where(w => targetPlanets.Contains(w.Id) && w.Id != planet.Id).ToArray();
             return Array.Empty<IPlanet?>();
         }
 
