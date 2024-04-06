@@ -75,8 +75,8 @@ namespace Helldivers2API.Data.Models
 
         private double GetProgress(IPlanet planet)
         {
-            if (this.State == PlanetStateCL.Unknown) return 100f;
-            if (this.State == PlanetStateCL.IdleFriendly) return 100f;
+            if (this.State == PlanetStateCL.Unknown) return 1f;
+            if (this.State == PlanetStateCL.IdleFriendly) return 1f;
             if (this.State == PlanetStateCL.IdleHostile) return 0f;
 
             if (this.State == PlanetStateCL.BeingLiberated)
@@ -94,7 +94,7 @@ namespace Helldivers2API.Data.Models
                 }
             }                
 
-            return 100f;
+            return 1f;
         }
     }
 
