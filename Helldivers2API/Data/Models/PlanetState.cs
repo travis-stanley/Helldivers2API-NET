@@ -98,12 +98,34 @@ namespace Helldivers2API.Data.Models
         }
     }
 
+    /// <summary>
+    /// The combat state of a planet
+    /// </summary>
     public enum PlanetStateCL
     {
+        /// <summary>
+        /// Unknown
+        /// </summary>
         Unknown,
+
+        /// <summary>
+        /// Under friendly control, not being attacked
+        /// </summary>
         IdleFriendly,
+
+        /// <summary>
+        /// Under hostile control, not being liberated
+        /// </summary>
         IdleHostile,
+
+        /// <summary>
+        /// Under hostile control, being liberated
+        /// </summary>
         BeingLiberated,
+
+        /// <summary>
+        /// Under friendly control, being defended
+        /// </summary>
         BeingDefended
     }
 }

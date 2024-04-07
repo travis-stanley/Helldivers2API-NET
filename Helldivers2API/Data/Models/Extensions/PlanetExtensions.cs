@@ -276,6 +276,21 @@ namespace Helldivers2API.Data.Models.Extensions
         #endregion
 
 
+        #region StatsApi
+
+        /// <summary>
+        /// Stats for this planet
+        /// </summary>
+        /// <param name="planet"></param>
+        /// <returns></returns>
+        public static PlanetStats? Stats(this IPlanet planet)
+        {
+            var warStats = Web.Cache.WebCache.GetWarStats().ConfigureAwait(false).GetAwaiter().GetResult();
+            return warStats.PlanetStats.Where(w => w.Id == planet.Id).FirstOrDefault();
+        }
+
+        #endregion
+
     }
 
 }

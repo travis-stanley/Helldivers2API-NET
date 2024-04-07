@@ -212,5 +212,57 @@ namespace Helldivers2API.Web.Models.Response.Extensions
 
             return dataWarStatus;
         }
+
+        // war stats
+        internal static Helldivers2API.Data.Models.WarStats GetDataModel(this WarStats warstats)
+        {
+            var dataWarstats = new Helldivers2API.Data.Models.WarStats()
+            {
+                GalaxyStats = new Helldivers2API.Data.Models.GalaxyStats()
+                {
+                    Accurracy = warstats.GalaxyStats.Accurracy,
+                    AutomatonKills = warstats.GalaxyStats.AutomatonKills,
+                    BugKills = warstats.GalaxyStats.BugKills,
+                    BulletsFired = warstats.GalaxyStats.BulletsFired,
+                    BulletsHit = warstats.GalaxyStats.BulletsHit,
+                    Deaths = warstats.GalaxyStats.Deaths,
+                    Friendlies = warstats.GalaxyStats.Friendlies,
+                    IlluminateKills = warstats.GalaxyStats.IlluminateKills,
+                    MissionsLost = warstats.GalaxyStats.MissionsLost,
+                    MissionSuccessRate = warstats.GalaxyStats.MissionSuccessRate,
+                    MissionsWon = warstats.GalaxyStats.MissionsWon,
+                    MissionTime = warstats.GalaxyStats.MissionTime,
+                    Revives = warstats.GalaxyStats.Revives,
+                    TimePlayed = warstats.GalaxyStats.TimePlayed
+                }
+            };
+
+            // planet stats
+            var planetStats = new List<Helldivers2API.Data.Models.PlanetStats>();
+            foreach (var item in warstats.PlanetStats)
+            {
+                planetStats.Add(new Helldivers2API.Data.Models.PlanetStats()
+                {
+                    Id = item.PlanetIndex,
+                    Accurracy = item.Accurracy,
+                    AutomatonKills = item.AutomatonKills,
+                    BugKills = item.BugKills,
+                    BulletsFired = item.BulletsFired,
+                    BulletsHit = item.BulletsHit,
+                    Deaths = item.Deaths,
+                    Friendlies = item.Friendlies,
+                    IlluminateKills = item.IlluminateKills,
+                    MissionsLost = item.MissionsLost,
+                    MissionSuccessRate = item.MissionSuccessRate,
+                    MissionsWon = item.MissionsWon,
+                    MissionTime = item.MissionTime,
+                    Revives = item.Revives,
+                    TimePlayed = item.TimePlayed
+                });
+            }
+            dataWarstats.PlanetStats = planetStats.ToArray();
+
+            return dataWarstats;
+        }
     }    
 }

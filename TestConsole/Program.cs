@@ -9,7 +9,6 @@ namespace TestConsole
     {
         static async Task Main(string[] args)
         {
-
             var hdClient = Joel.Instance.SetWarId(801);
         }
     }

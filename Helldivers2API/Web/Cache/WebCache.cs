@@ -19,6 +19,7 @@ namespace Helldivers2API.Web.Cache
         private static Dictionary<long, WarFeed[]> _warFeeds = default!;
         private static Dictionary<long, WarInfo> _warInfos = default!;
         private static Dictionary<long, WarStatus> _warStatuses = default!;
+        private static Dictionary<long, WarStats> _warStats = default!;
         private static long tickInterval = 60 * 5 * 10000000L;
 
        
@@ -113,6 +114,26 @@ namespace Helldivers2API.Web.Cache
             var warInfo = await Joel.Instance.Client.WarInfo.Get(Joel.Instance.WarId).ConfigureAwait(false);
             if (warInfo != null)
                 _warInfos.Add(DateTime.Now.Ticks, warInfo);
+        }
+
+        // war stats
+        public static async Task<Helldivers2API.Data.Models.WarStats> GetWarStats()
+        {
+            Joel.Instance.CheckClient();
+            if (_warStats == default) _warStats = new Dictionary<long, WarStats>();
+
+            if (_warStats.Count == 0)
+                await RefreshWarStats().ConfigureAwait(false);
+            else if (DateTime.Now.Ticks - _warStats.OrderBy(o => o.Key).Last().Key >= tickInterval)
+                await RefreshWarStats().ConfigureAwait(false);
+            return _warStats.OrderBy(o => o.Key).Last().Value.GetDataModel();
+        }
+        private static async Task RefreshWarStats()
+        {
+            WebApiCalls.Add(new KeyValuePair<string, long>("WarStats", DateTime.Now.Ticks));
+            var warStats = await Joel.Instance.Client.WarStats.Get(Joel.Instance.WarId).ConfigureAwait(false);
+            if (warStats != null)
+                _warStats.Add(DateTime.Now.Ticks, warStats);
         }
 
         private static Dictionary<string, DateTime?> GetLastRefreshed()

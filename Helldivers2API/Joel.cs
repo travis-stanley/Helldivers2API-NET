@@ -21,12 +21,22 @@ namespace Helldivers2API
     public sealed class Joel
     {
         private static readonly Lazy<Joel> lazy = new Lazy<Joel>(() => new Joel());
+
+        /// <summary>
+        /// Singleton instance
+        /// </summary>
         public static Joel Instance { get { return lazy.Value; } }
         private Joel() { }
 
+        /// <summary>
+        /// The target war id
+        /// </summary>
         public int WarId { get; internal set; } = default!;
         internal Helldivers2Client Client { get; set; } = default!;
 
+        /// <summary>
+        /// True if the client has been set to a war id
+        /// </summary>
         public bool IsClientReady { get => Client != default; }
 
 
@@ -153,7 +163,15 @@ namespace Helldivers2API
             return Web.Cache.WebCache.GetWarInfo().ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
-
+        /// <summary>
+        /// Gets stats on the war
+        /// Use Planet extension methods to get planet associated data.
+        /// </summary>
+        /// <returns></returns>
+        public WarStats GetWarStats()
+        {
+            return Web.Cache.WebCache.GetWarStats().ConfigureAwait(false).GetAwaiter().GetResult();
+        }
 
         /// <summary>
         /// Returns a dictionary of when each of the known api endpoints were last refreshed.

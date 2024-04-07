@@ -33,13 +33,14 @@ namespace Helldivers2API.Web.Clients
             WarFeeds = new WarFeedClient(_apiConnector);
             WarInfo = new WarInfoClient(_apiConnector);
             WarStatus = new WarStatusClient(_apiConnector);
+            WarStats = new WarStatsClient(_apiConnector);
         }
 
         public IAssignmentClient Assignments { get; }
         public IWarFeedClient WarFeeds { get; }
         public IWarInfoClient WarInfo { get; }
         public IWarStatusClient WarStatus { get; }
-
+        public IWarStatsClient WarStats { get; }
 
         public IResponse? LastResponse { get; private set; }
 

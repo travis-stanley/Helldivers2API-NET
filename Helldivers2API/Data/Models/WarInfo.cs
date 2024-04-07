@@ -7,6 +7,9 @@ namespace Helldivers2API.Data.Models
     /// </summary>
     public class WarInfo
     {
+        /// <summary>
+        /// Associated war id
+        /// </summary>
         public int WarId { get; set; } = default!;
 
         /// <summary>
@@ -60,7 +63,14 @@ namespace Helldivers2API.Data.Models
     /// </summary>
     public class Position
     {
+        /// <summary>
+        /// Longitude
+        /// </summary>
         public double X { get; set; } = default!;
+
+        /// <summary>
+        /// Latitude
+        /// </summary>
         public double Y { get; set; } = default!;
     }
 

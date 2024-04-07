@@ -10,7 +10,7 @@ namespace Helldivers2API.Web.Clients.Interfaces
     internal interface IWarInfoClient
     {
         /// <summary>
-        /// Get assignments
+        /// Get info
         /// </summary>
         /// <param name="request">The request-model which contains required and optional parameters.</param>
         /// <param name="cancel">The cancellation-token to allow to cancel the request.</param>
@@ -18,7 +18,7 @@ namespace Helldivers2API.Web.Clients.Interfaces
         Task<WarInfoResponse> Item(WarInfoRequest request, CancellationToken cancel = default);
 
         /// <summary>
-        /// Get assignments
+        /// Get info
         /// </summary>
         /// <param name="warId">The season to get assignments from</param>
         /// <param name="cancel"></param>
