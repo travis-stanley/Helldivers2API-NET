@@ -54,16 +54,11 @@ All information is retrievable through the convenient `Joel` class.
   * Associated joint operations
   * etc
  
-> [!NOTE]
-> If you know the endpoint to get game statistics, please submit an issue and we'll implement.
-
 ### Installation
 
-Install the NuGet package via...
-
+Install the NuGet package via 
 the package manager
 ```NuGet\Install-Package Helldivers2API```
-
 or .NET CLI
 ```dotnet add package Helldivers2API```
 
