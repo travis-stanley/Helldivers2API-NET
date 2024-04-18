@@ -4,20 +4,9 @@ _layout: landing
 
 <h1 align="center">
   <p align="center">Helldivers2API-NET</p>
-  <a href="#">
-    <img
-      height="205"
-      width="364"
-      src="Helldivers2API/hdlogo.png"
-      >
-  </a>
 </h1>
 
 <div align="center">
-  
-[![master](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/dotnet.yml)
-[![Documentation](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/static.yml/badge.svg?branch=master)](https://travis-stanley.github.io/Helldivers2API-NET/api/Helldivers2API.html)
-</div>
 
 Another open source library for the undocumented [Helldivers2 API](https://store.steampowered.com/app/553850/HELLDIVERS_2/).
 
