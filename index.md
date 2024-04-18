@@ -1,6 +1,8 @@
 ---
 _layout: landing
 ---
+<meta name="title" content="Helldivers 2 API for .NET — Open and Free" />
+<meta name="description" content="A .NET project for obtaining data directly from the Helldivers 2 api." />
 
 <h1 align="center">
   <p align="center">Helldivers2API-NET</p>
