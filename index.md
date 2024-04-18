@@ -10,7 +10,7 @@ _layout: landing
 
 Another open source library for the undocumented [Helldivers2 API](https://store.steampowered.com/app/553850/HELLDIVERS_2/).
 
-🌟 This project reads directly from Helldiver's api. 🌟
+🌟 This project reads directly from Helldivers 2 api 🌟
 
 ### Features
  
