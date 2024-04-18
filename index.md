@@ -5,12 +5,14 @@ _layout: landing
 <meta name="description" content="A .NET project for obtaining data directly from the Helldivers 2 api." />
 
 <h1 align="center">
-  <p align="center">Helldivers2API-NET</p>
+  <p align="center">Helldivers2API-NET</p>    
 </h1>
 
 Another open source library for the undocumented [Helldivers2 API](https://store.steampowered.com/app/553850/HELLDIVERS_2/).
 
 🌟 This project reads directly from Helldivers 2 api 🌟
+
+See [GitHub Project](https://github.com/travis-stanley/Helldivers2API-NET) for more information.
 
 ### Features
  
