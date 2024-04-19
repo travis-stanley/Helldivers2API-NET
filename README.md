@@ -15,7 +15,9 @@
 [![Documentation](https://github.com/travis-stanley/Helldivers2API-NET/actions/workflows/static.yml/badge.svg?branch=master)](https://travis-stanley.github.io/Helldivers2API-NET/api/Helldivers2API.html)
 </div>
 
-Another open source library for the undocumented Helldivers2 API
+Another open source library for the undocumented [Helldivers2 API](https://store.steampowered.com/app/553850/HELLDIVERS_2/).
+
+🌟 This project reads directly from Helldivers 2 api 🌟
 
 ### Features
  
@@ -23,6 +25,7 @@ Another open source library for the undocumented Helldivers2 API
 * Easy to use
 * Built-in cache system
 * Consolidates various planet data under a single source
+* Leverages the game's api directly, e.g. does not use an intermediary api that may stop working
 * Helps spread managed democracy
 
 ### Planets, Planets, Planets
@@ -32,6 +35,7 @@ The majority of data from the Helldivers2 API is associated to one or more plane
 
 All information is retrievable through the convenient `Joel` class.
 
+* Get statistics `added in version 1.1.3`
 * Get current assignments, e.g. the `Major Order`
 * Get news from the galaxy
 * Get status of the on-going war efforts

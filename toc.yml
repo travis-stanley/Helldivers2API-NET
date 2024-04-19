@@ -1,4 +1,4 @@
-- name: Docs
-  href: docs/
+- name: GitHub Project
+  href: https://github.com/travis-stanley/Helldivers2API-NET
 - name: API
   href: api/
