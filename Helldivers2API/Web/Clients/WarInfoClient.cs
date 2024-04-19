@@ -25,5 +25,9 @@ namespace Helldivers2API.Web.Clients
             return API.Get<WarInfo>(URLs.WarInfo(warId), cancel);
         }
 
+        public Task<WarId> GetCurrentWarId(CancellationToken cancel = default)
+        {
+            return API.Get<WarId>(URLs.CurrentWarId(), cancel);
+        }
     }
 }

@@ -8,7 +8,8 @@
     <Title>Helldivers2API</Title>
     <Authors>Travis S.</Authors>
     <PackageProjectUrl>https://github.com/travis-stanley/Helldivers2API-NET</PackageProjectUrl>
-    <Description>An api client for the undocumented Helldivers2 game api.</Description>
+    <Description>An api client for the undocumented Helldivers2 api. 
+This project reads directly from game's api and does not use an intermediary-hosted api.</Description>
     <Copyright>Travis S.</Copyright>
     <PackageTags>helldivers2; api</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -16,7 +17,7 @@
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 

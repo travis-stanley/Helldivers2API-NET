@@ -25,5 +25,12 @@ namespace Helldivers2API.Web.Clients.Interfaces
         /// <returns></returns>
         Task<WarInfo> Get(int warId, CancellationToken cancel = default);
 
+        /// <summary>
+        /// Get current war id
+        /// </summary>
+        /// <param name="cancel"></param>
+        /// <returns></returns>
+        Task<WarId> GetCurrentWarId(CancellationToken cancel = default);
+
     }
 }

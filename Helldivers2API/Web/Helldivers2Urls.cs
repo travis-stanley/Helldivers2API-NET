@@ -31,6 +31,12 @@ namespace Helldivers2API.Web
         public static Uri WarFeed(int warId, int fromTimestamp) => EUri($"NewsFeed/{warId}?fromTimestamp={fromTimestamp}");
 
         /// <summary>
+        /// Current war id
+        /// </summary>
+        /// <returns></returns>
+        public static Uri CurrentWarId() => EUri($"WarSeason/current/WarID");
+
+        /// <summary>
         /// Info api
         /// </summary>
         /// <param name="warId"></param>

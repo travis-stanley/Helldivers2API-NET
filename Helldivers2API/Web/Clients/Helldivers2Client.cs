@@ -13,7 +13,7 @@ namespace Helldivers2API.Web.Clients
     internal class Helldivers2Client : IHelldivers2Client
     {
         public readonly int warId;
-        private readonly IAPIConnector _apiConnector;        
+        private readonly IAPIConnector _apiConnector;
 
         public Helldivers2Client(int warId) : this(warId, Helldivers2ClientConfig.CreateCustomHeaders()) { }
 

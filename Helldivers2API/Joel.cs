@@ -2,7 +2,6 @@
 using Helldivers2API.Data.Models.Extensions;
 using Helldivers2API.Data.Models.Interfaces;
 using Helldivers2API.Web.Clients;
-using Helldivers2API.Web.Clients.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +19,7 @@ namespace Helldivers2API
     /// </remarks>
     public sealed class Joel
     {
-        private static readonly Lazy<Joel> lazy = new Lazy<Joel>(() => new Joel());
+        private static readonly Lazy<Joel> lazy = new(() => new Joel());
 
         /// <summary>
         /// Singleton instance
@@ -41,7 +40,8 @@ namespace Helldivers2API
 
 
         /// <summary>
-        /// Set the current war id
+        /// Set the current war id.
+        /// As of 1.1.4, the war id will automatically be set to the current season id.
         /// </summary>
         /// <param name="warId">The current war id</param>
         /// <returns></returns>
@@ -188,7 +188,16 @@ namespace Helldivers2API
 
         internal void CheckClient() 
         {
-            if (!IsClientReady) SetWarId(801);
+            if (!IsClientReady)
+            {
+                var lastKnownWarId = 801;
+                SetWarId(lastKnownWarId);                
+
+                // check for newer warid
+                var currentWarId = Web.Cache.WebCache.GetCurrentWarId().ConfigureAwait(false).GetAwaiter().GetResult();
+                if (currentWarId != null)
+                    SetWarId(currentWarId.Value);
+            }
         }
     }
 }

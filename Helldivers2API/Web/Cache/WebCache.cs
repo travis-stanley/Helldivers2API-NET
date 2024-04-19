@@ -9,7 +9,6 @@ namespace Helldivers2API.Web.Cache
     /// <summary>
     /// web cache
     /// </summary>
-    /// <typeparam name="T"></typeparam>
     internal class WebCache
     {
         public static Dictionary<string, DateTime?> LastRefreshed { get => GetLastRefreshed(); }
@@ -20,9 +19,20 @@ namespace Helldivers2API.Web.Cache
         private static Dictionary<long, WarInfo> _warInfos = default!;
         private static Dictionary<long, WarStatus> _warStatuses = default!;
         private static Dictionary<long, WarStats> _warStats = default!;
-        private static long tickInterval = 60 * 5 * 10000000L;
+        private static readonly long tickInterval = 60 * 5 * 10000000L;
 
-       
+
+        // current war id
+        internal static async Task<int?> GetCurrentWarId()
+        {
+            WebApiCalls.Add(new KeyValuePair<string, long>("CurrentWarId", DateTime.Now.Ticks));
+            var warId = await Joel.Instance.Client.WarInfo.GetCurrentWarId().ConfigureAwait(false);
+            if (warId != null)
+                return warId.Id;
+            
+            return null;
+        }
+
         // assignments
         public static async Task<Helldivers2API.Data.Models.Assignment[]> GetAssignments()
         {
@@ -141,13 +151,13 @@ namespace Helldivers2API.Web.Cache
             var lastRefreshed = new Dictionary<string, DateTime?>();
 
             DateTime? assignmentRef = null;
-            if (_assignments != default) assignmentRef = _assignments.Count() == 0 ? null : new DateTime(_assignments.OrderBy(o => o.Key).Last().Key);
+            if (_assignments != default) assignmentRef = _assignments.Count == 0 ? null : new DateTime(_assignments.OrderBy(o => o.Key).Last().Key);
             DateTime? warfeedRef = null;
-            if (_warFeeds != default) warfeedRef = _warFeeds.Count() == 0 ? null : new DateTime(_warFeeds.OrderBy(o => o.Key).Last().Key);
+            if (_warFeeds != default) warfeedRef = _warFeeds.Count == 0 ? null : new DateTime(_warFeeds.OrderBy(o => o.Key).Last().Key);
             DateTime? warinfoRef = null;
-            if (_warInfos != default) warinfoRef = _warInfos.Count() == 0 ? null : new DateTime(_warInfos.OrderBy(o => o.Key).Last().Key);
+            if (_warInfos != default) warinfoRef = _warInfos.Count == 0 ? null : new DateTime(_warInfos.OrderBy(o => o.Key).Last().Key);
             DateTime? warstatusRef = null;
-            if (_warStatuses != default) warstatusRef = _warStatuses.Count() == 0 ? null : new DateTime(_warStatuses.OrderBy(o => o.Key).Last().Key);
+            if (_warStatuses != default) warstatusRef = _warStatuses.Count == 0 ? null : new DateTime(_warStatuses.OrderBy(o => o.Key).Last().Key);
 
             lastRefreshed.Add("Assignments", assignmentRef);
             lastRefreshed.Add("WarInfo", warinfoRef);

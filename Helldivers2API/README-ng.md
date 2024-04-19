@@ -1,4 +1,5 @@
-Another open source library for the undocumented Helldivers2 API
+Another open source library for the undocumented Helldivers2 API.
+This project reads directly from game's api and does not use an intermediary-hosted api.
 
 ### Features
  
@@ -6,6 +7,7 @@ Another open source library for the undocumented Helldivers2 API
 * Easy to use
 * Built-in cache system
 * Consolidates various planet data under a single source
+* Leverages the game's api directly, e.g. does not use an intermediary api that may stop working
 * Helps spread managed democracy
 
 ### Planets, Planets, Planets
@@ -15,6 +17,8 @@ The majority of data from the Helldivers2 API is associated to one or more plane
 
 All information is retrievable through the convenient `Joel` class.
 
+* Initializes itself to the current war id (added in version 1.1.4)
+* Get statistics (added in version 1.1.3)
 * Get current assignments, e.g. the `Major Order`
 * Get news from the galaxy
 * Get status of the on-going war efforts
@@ -52,15 +56,12 @@ or .NET CLI
 
 Get the client by setting the current war id, via `Joel`
 ```csharp
-// The current war id is 801
-var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
+// Sets the current war id, as of 1.1.4
+var hdClient = Helldivers2API.Joel.Instance;
+
+// No longer needed, unless you want to override war id
+// var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
 ```
-
-> [!TIP]
-> The war id parameter is required to send requests to the web endpoints, but it does not appear to be advertised anywhere.
-
-> [!WARNING]
-> The war id will likely change when the game transitions to the next season.
 
 Get all the known planets
 ```csharp
@@ -100,15 +101,15 @@ var warinfo = hdClient.GetWarInfo();
 
 The built-in cache system was designed to avoid sending unnecessary requests to the web api endpoints.  It's entirely internal and you do not need to manage it.  Just request the data and it will handle the rest.
 
-The default cache expiration is about `5 minutes`, although this may change in the future.  If you modify this value, please be considerate to the game servers.
+The default cache expiration is about `5 minutes`, although this may change in the future.
 
 > [!TIP]
 > The web api is never hit until the first request for data is made, at which point only the necessary endpoints are requested.
 ```csharp
 static void HDClient()
 {
-    // The current war id is 801
-    var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
+    // Sets the current war id, as of 1.1.4
+    var hdClient = Helldivers2API.Joel.Instance;
 
     var planets = hdClient.GetPlanets();
     foreach (var planet in planets)
