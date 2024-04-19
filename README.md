@@ -35,7 +35,7 @@ The majority of data from the Helldivers2 API is associated to one or more plane
 
 All information is retrievable through the convenient `Joel` class.
 
-* Initializes itself to the current war id (added in version 1.1.4)
+* Initializes itself to the current war id `added in version 1.1.4`
 * Get statistics `added in version 1.1.3`
 * Get current assignments, e.g. the `Major Order`
 * Get news from the galaxy
