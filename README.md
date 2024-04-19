@@ -35,6 +35,7 @@ The majority of data from the Helldivers2 API is associated to one or more plane
 
 All information is retrievable through the convenient `Joel` class.
 
+* Initializes itself to the current war id (added in version 1.1.4)
 * Get statistics `added in version 1.1.3`
 * Get current assignments, e.g. the `Major Order`
 * Get news from the galaxy
@@ -70,15 +71,12 @@ or .NET CLI
 
 Get the client by setting the current war id, via `Joel`
 ```csharp
-// The current war id is 801
-var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
+// Sets the current war id, as of 1.1.4
+var hdClient = Helldivers2API.Joel.Instance;
+
+// No longer needed, unless you want to override war id
+// var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
 ```
-
-> [!TIP]
-> The war id parameter is required to send requests to the web endpoints, but it does not appear to be advertised anywhere.
-
-> [!WARNING]
-> The war id will likely change when the game transitions to the next season.
 
 Get all the known planets
 ```csharp
@@ -125,8 +123,8 @@ The default cache expiration, _per endpoint_, is about `5 minutes`, although thi
 ```csharp
 static void HDClient()
 {
-    // The current war id is 801
-    var hdClient = Helldivers2API.Joel.Instance.SetWarId(801);
+    // Sets the current war id, as of 1.1.4
+    var hdClient = Helldivers2API.Joel.Instance;
 
     var planets = hdClient.GetPlanets();
     foreach (var planet in planets)
